@@ -1,0 +1,34 @@
+title: "The Farmoxel Project"
+author: "FaR Team"
+description: "This is a devlog for our on-development game."
+
+email: "ACÁ VA UN MAIL"
+twitter_username: "TWITTER"
+github_username: "GITHUB"
+linkedin_username: "LINKEDIN"
+
+#########################################################################################
+######### código ah #########
+#########################################################################################
+theme: "minima"
+
+rss: rss
+
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+    
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+titles_from_headings:
+  strip_title: true
+  collections: true
+
+defaults:
+  - scope:
+      path: ""
+      type: post
+    values:
+      tags: Other
