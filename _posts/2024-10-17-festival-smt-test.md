@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "We took room makers to a festival"
-date: 
+title: "Festival smt test"
+date: 2024-10-17T04:40
 tags: []
 comments: allow
 sharing: allow
