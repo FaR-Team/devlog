@@ -261,10 +261,11 @@ sharing: ${sharing}
                     content: base64Image
                 });
 
+                TOKEN: process.env.AUTH_TOKEN;
                 const response = await fetch(apiUrl, {
                     method: 'PUT',
                     headers: {
-                        'Authorization': 'token ${{ secrets.TOKEN }}',
+                        'Authorization': 'token TOKEN',
                         'Content-Type': 'application/json'
                     },
                     body: body
