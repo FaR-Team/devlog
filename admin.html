@@ -246,35 +246,45 @@ sharing: ${sharing}
 
 
         async function uploadImageToGitHub(file) {
-            // GitHub API endpoint
-            const newFilename = generateImageFilename(file.name);
-            const apiUrl = 'https://api.github.com/repos/FaR-Team/devlog/contents/images/' + newFilename;
+            try {
+                const newFilename = generateImageFilename(file.name);
+                const apiUrl = 'https://api.github.com/repos/FaR-Team/devlog/contents/images/' + newFilename;
 
-            // Convert file to base64
-            const reader = new FileReader();
-            const base64Image = await new Promise(resolve => {
-                reader.onload = e => resolve(reader.result.split(',')[1]);
-                reader.readAsDataURL(file);
-            });
+                const reader = new FileReader();
+                const base64Image = await new Promise(resolve => {
+                    reader.onload = e => resolve(reader.result.split(',')[1]);
+                    reader.readAsDataURL(file);
+                });
 
-            // Prepare the request body
-            const body = JSON.stringify({
-                message: 'Upload image',
-                content: base64Image
-            });
+                const body = JSON.stringify({
+                    message: 'Upload image',
+                    content: base64Image
+                });
 
-            // Make the API request
-            const response = await fetch(apiUrl, {
-                method: 'PUT',
-                headers: {
-                'Authorization': 'token secrets.TOKEN',
-                'Content-Type': 'application/json'
-                },
-                body: body
-            });
+                const response = await fetch(apiUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': 'token ${{ secrets.TOKEN }}',
+                        'Content-Type': 'application/json'
+                    },
+                    body: body
+                });
 
-            const data = await response.json();
-            return data.content.download_url;
+                if (!response.ok) {
+                    throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                if (!data.content || !data.content.download_url) {
+                    throw new Error('Unexpected response format from GitHub API');
+                }
+
+                return data.content.download_url;
+            } catch (error) {
+                console.error('Error uploading image:', error);
+                alert(`Failed to upload image: ${error.message}`);
+                throw error;
+            }
         }
 
         function generateImageFilename(originalFilename) {
