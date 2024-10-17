@@ -140,14 +140,6 @@
 
             const undoButton = document.getElementById('undoButton');
             const redoButton = document.getElementById('redoButton');
-
-            undoButton.addEventListener('click', () => {
-                simplemde.codemirror.undo();
-            });
-
-            redoButton.addEventListener('click', () => {
-                simplemde.codemirror.redo();
-            });
         });
 
         document.getElementById('previewButton').addEventListener('click', () => {
@@ -173,13 +165,12 @@
             const title = document.getElementById('title').value;
             const date = document.getElementById('date').value;
             const tags = document.getElementById('tags').value.split(',').map(tag => tag.trim());
-            const permalink = document.getElementById('permalink').value;
             const comments = document.getElementById('comments').value;
             const sharing = document.getElementById('sharing').value;
 
             const markdownContent = simplemde.value().trim();
 
-            const fileName = `${date.split('T')[0]}-${permalink || title.toLowerCase().replace(/\s+/g, '-')}.md`;
+            const fileName = `${date.split('T')[0]}-${title.toLowerCase().replace(/\s+/g, '-')}.md`;
             const fileContent = `---
 layout: post
 title: "${title}"
@@ -239,6 +230,58 @@ sharing: ${sharing}
                 const cursor = cm.getCursor();
                 cm.replaceRange(replacement, {line: cursor.line, ch: 0}, {line: cursor.line, ch: text.length});
             }
+        }
+
+        document.addEventListener('paste', async function(e) {
+        const items = (e.clipboardData || e.originalEvent.clipboardData).items;
+        for (let item of items) {
+            if (item.type.indexOf('image') === 0) {
+            e.preventDefault();
+            const blob = item.getAsFile();
+            const imageUrl = await uploadImageToGitHub(blob);
+            simplemde.codemirror.replaceSelection(`![](${imageUrl})`);
+            }
+        }
+        });
+
+
+        async function uploadImageToGitHub(file) {
+            // GitHub API endpoint
+            const newFilename = generateImageFilename(file.name);
+            const apiUrl = 'https://api.github.com/repos/FaR-Team/devlog/contents/images/' + newFilename;
+
+            // Convert file to base64
+            const reader = new FileReader();
+            const base64Image = await new Promise(resolve => {
+                reader.onload = e => resolve(reader.result.split(',')[1]);
+                reader.readAsDataURL(file);
+            });
+
+            // Prepare the request body
+            const body = JSON.stringify({
+                message: 'Upload image',
+                content: base64Image
+            });
+
+            // Make the API request
+            const response = await fetch(apiUrl, {
+                method: 'PUT',
+                headers: {
+                'Authorization': 'token secrets.TOKEN',
+                'Content-Type': 'application/json'
+                },
+                body: body
+            });
+
+            const data = await response.json();
+            return data.content.download_url;
+        }
+
+        function generateImageFilename(originalFilename) {
+            const postTitle = document.getElementById('title').value;
+            const randomString = Math.random().toString(36).substring(2, 8);
+            const extension = originalFilename.split('.').pop();
+            return `${postTitle}-${randomString}.${extension}`;
         }
     </script>
 </body>
