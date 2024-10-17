@@ -10,6 +10,9 @@
         body { font-family: Arial, sans-serif; }
         #editor { height: 500px; }
         .sidebar { height: 100vh; overflow-y: auto; }
+        .text-left { text-align: left; }
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
     </style>
 </head>
 <body>
@@ -97,40 +100,27 @@
                     "quote", "unordered-list", "ordered-list", "|",
                     "link", "image",
                     "|",
-                {
-                    name: "align-left",
-                    action: (editor) => {
-                        const cm = editor.codemirror;
-                        const text = cm.getSelection();
-                        cm.replaceSelection(`::: {style="text-align:left;"}\n${text}\n:::`);
+                    {
+                        name: "align-left",
+                        action: alignLeft,
+                        className: "fa fa-align-left",
+                        title: "Align Left",
                     },
-                    className: "fa fa-align-left",
-                    title: "Align Left",
-                },
-                {
-                    name: "align-center",
-                    action: (editor) => {
-                        const cm = editor.codemirror;
-                        const text = cm.getSelection();
-                        cm.replaceSelection(`::: {style="text-align:center;"}\n${text}\n:::`);
+                    {
+                        name: "align-center",
+                        action: alignCenter,
+                        className: "fa fa-align-center",
+                        title: "Align Center",
                     },
-                    className: "fa fa-align-center",
-                    title: "Align Center",
-                },
-                {
-                    name: "align-right",
-                    action: (editor) => {
-                        const cm = editor.codemirror;
-                        const text = cm.getSelection();
-                        cm.replaceSelection(`::: {style="text-align:right;"}\n${text}\n:::`);
-                    },
-                    className: "fa fa-align-right",
-                    title: "Align Right",
-                }, "|",
+                    {
+                        name: "align-right",
+                        action: alignRight,
+                        className: "fa fa-align-right",
+                        title: "Align Right",
+                    }, "|",
                     "preview", "side-by-side", "fullscreen",
                 ],
-            });
-        let autoSaveInterval;
+            });        let autoSaveInterval;
 
         function autoSave() {
             const title = document.getElementById('title').value;
@@ -177,53 +167,79 @@
             previewWindow.document.close();
         });
 
-document.getElementById('postForm').addEventListener('submit', (e) => {
-    e.preventDefault();
+        document.getElementById('postForm').addEventListener('submit', (e) => {
+            e.preventDefault();
 
-    const title = document.getElementById('title').value;
-    const date = document.getElementById('date').value;
-    const tags = document.getElementById('tags').value.split(',').map(tag => tag.trim());
-    const permalink = document.getElementById('permalink').value;
-    const comments = document.getElementById('comments').value;
-    const sharing = document.getElementById('sharing').value;
+            const title = document.getElementById('title').value;
+            const date = document.getElementById('date').value;
+            const tags = document.getElementById('tags').value.split(',').map(tag => tag.trim());
+            const permalink = document.getElementById('permalink').value;
+            const comments = document.getElementById('comments').value;
+            const sharing = document.getElementById('sharing').value;
 
-    const markdownContent = simplemde.value().trim();
+            const markdownContent = simplemde.value().trim();
 
-    const fileName = `${date.split('T')[0]}-${permalink || title.toLowerCase().replace(/\s+/g, '-')}.md`;
-    const fileContent = `---
-layout: post
-title: "${title}"
-date: ${date}
-tags: [${tags.join(', ')}]
-comments: ${comments}
-sharing: ${sharing}
----
+            const fileName = `${date.split('T')[0]}-${permalink || title.toLowerCase().replace(/\s+/g, '-')}.md`;
+            const fileContent = `---
+        layout: post
+        title: "${title}"
+        date: ${date}
+        tags: [${tags.join(', ')}]
+        comments: ${comments}
+        sharing: ${sharing}
+        ---
 
-${markdownContent}`;
+        ${markdownContent}`;
 
-    // Create a Blob with the file content
-    const blob = new Blob([fileContent], { type: 'text/markdown' });
+            // Create a Blob with the file content
+            const blob = new Blob([fileContent], { type: 'text/markdown' });
 
-    // Create a temporary URL for the Blob
-    const url = URL.createObjectURL(blob);
+            // Create a temporary URL for the Blob
+            const url = URL.createObjectURL(blob);
 
-    // Create a link element and trigger the download
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = fileName;
-    link.click();
+            // Create a link element and trigger the download
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = fileName;
+            link.click();
 
-    // Clean up the temporary URL
-    URL.revokeObjectURL(url);
+            // Clean up the temporary URL
+            URL.revokeObjectURL(url);
 
-    alert('Post saved locally!');
-    localStorage.removeItem('autoSaveTitle');
-    localStorage.removeItem('autoSaveContent');
-});
+            alert('Post saved locally!');
+            localStorage.removeItem('autoSaveTitle');
+            localStorage.removeItem('autoSaveContent');
+        });
         document.getElementById('saveButton').addEventListener('click', () => {
             autoSave();
             alert('Post saved as draft');
         });
+
+        function alignLeft(editor) {
+            wrapTextWithDiv(editor, 'text-align: left;');
+        }
+
+        function alignCenter(editor) {
+            wrapTextWithDiv(editor, 'text-align: center;');
+        }
+
+        function alignRight(editor) {
+            wrapTextWithDiv(editor, 'text-align: right;');
+        }
+
+        function wrapTextWithDiv(editor, style) {
+            const cm = editor.codemirror;
+            const selection = cm.getSelection();
+            const text = selection || cm.getLine(cm.getCursor().line);
+            const replacement = `<div style="${style}">${text}</div>`;
+            
+            if (selection) {
+                cm.replaceSelection(replacement);
+            } else {
+                const cursor = cm.getCursor();
+                cm.replaceRange(replacement, {line: cursor.line, ch: 0}, {line: cursor.line, ch: text.length});
+            }
+        }
     </script>
 </body>
 </html>
