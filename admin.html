@@ -18,7 +18,7 @@
             <!-- Main Content Area -->
             <main class="col-md-9 col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Create New Blog Post</h1>
+                    <h1 class="h2">Bloggern't</h1>
                 </div>
 
                 <form id="postForm">
@@ -136,12 +136,20 @@
             const title = document.getElementById('title').value;
             const date = document.getElementById('date').value;
             const tags = document.getElementById('tags').value.split(',').map(tag => tag.trim());
-            const content = tinymce.get('editor').getContent();
             const permalink = document.getElementById('permalink').value;
             const comments = document.getElementById('comments').value;
             const sharing = document.getElementById('sharing').value;
 
-            const fileName = `${date.split('T')[0]}-${permalink || title.toLowerCase().replace(/\s+/g, '-')}.md`;
+
+            const htmlContent = tinymce.get('editor').getContent();
+            const markdownContent = converter.makeMarkdown(htmlContent)
+                .replace(/\n\s*\n/g, '\n\n')  // Fix extra line breaks
+                .replace(/\*\*(.*?)\*\*/g, '**$1**')  // Fix bold text
+                .replace(/\*(.*?)\*/g, '*$1*')  // Fix italic text
+                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)')  // Fix links
+                .trim();  // Remove leading/trailing whitespace
+
+            const fileName = `_posts/${date.split('T')[0]}-${permalink || title.toLowerCase().replace(/\s+/g, '-')}.md`;
             const fileContent = `---
 layout: post
 title: "${title}"
@@ -151,19 +159,11 @@ comments: ${comments}
 sharing: ${sharing}
 ---
 
-${converter.makeMarkdown(content)}`;
+${markdownContent}`;
 
             try {
-                const handle = await window.showSaveFilePicker({
-                    suggestedName: fileName,
-                    types: [{
-                        description: 'Markdown Files',
-                        accept: {'text/markdown': ['.md']}
-                    }],
-                });
-                const writable = await handle.createWritable();
-                await writable.write(fileContent);
-                await writable.close();
+                // Use a method to write directly to the file system
+                await writeFile(fileName, fileContent);
                 alert('Post published successfully!');
                 localStorage.removeItem('autoSaveTitle');
                 localStorage.removeItem('autoSaveContent');
