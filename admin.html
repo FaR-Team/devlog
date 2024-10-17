@@ -181,13 +181,13 @@
 
             const fileName = `${date.split('T')[0]}-${permalink || title.toLowerCase().replace(/\s+/g, '-')}.md`;
             const fileContent = `---
-        layout: post
-        title: "${title}"
-        date: ${date}
-        tags: [${tags.join(', ')}]
-        comments: ${comments}
-        sharing: ${sharing}
-        ---
+layout: post
+title: "${title}"
+date: ${date}
+tags: [${tags.join(', ')}]
+comments: ${comments}
+sharing: ${sharing}
+---
 
         ${markdownContent}`;
 
