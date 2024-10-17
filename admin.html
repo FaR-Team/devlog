@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devlog Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tinymce@5.10.0/skins/ui/oxide/skin.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <style>
         body { font-family: Arial, sans-serif; }
         #editor { height: 500px; }
@@ -29,13 +29,12 @@
                     <div class="mb-3">
                         <textarea id="editor"></textarea>
                     </div>
-
-                    <div class="mb-3">
-                        <button type="submit" class="btn btn-primary">Publish</button>
-                        <button type="button" id="saveButton" class="btn btn-secondary">Save</button>
-                        <button type="button" id="previewButton" class="btn btn-info">Preview</button>
-                    </div>
-                </form>
+                      <div class="mb-3">
+                          <button type="submit" class="btn btn-primary">Publish</button>
+                          <button type="button" id="saveButton" class="btn btn-secondary">Save</button>
+                          <button type="button" id="previewButton" class="btn btn-info">Preview</button>
+                      </div>
+                  </form>
             </main>
 
             <!-- Right Sidebar -->
@@ -76,23 +75,36 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tinymce@5.10.0/tinymce.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <script>
-        tinymce.init({
-            selector: '#editor',
-            plugins: 'advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount',
-            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
-            height: 500
-        });
-
-        const converter = new showdown.Converter();
+            let simplemde = new SimpleMDE({
+                element: document.getElementById("editor"),
+                spellChecker: false,
+                toolbar: [
+                    {
+                        name: "undo",
+                        action: SimpleMDE.undo,
+                        className: "fa fa-undo",
+                        title: "Undo",
+                    },
+                    {
+                        name: "redo",
+                        action: SimpleMDE.redo,
+                        className: "fa fa-repeat",
+                        title: "Redo",
+                    }, "|",
+                    "bold", "italic", "heading", "|",
+                    "quote", "unordered-list", "ordered-list", "|",
+                    "link", "image", "|",
+                    "preview", "side-by-side", "fullscreen",
+                ],
+            });
 
         let autoSaveInterval;
 
         function autoSave() {
             const title = document.getElementById('title').value;
-            const content = tinymce.get('editor').getContent();
+            const content = simplemde.value();
             localStorage.setItem('autoSaveTitle', title);
             localStorage.setItem('autoSaveContent', content);
             console.log('Auto-saved');
@@ -102,27 +114,32 @@
             const savedTitle = localStorage.getItem('autoSaveTitle');
             const savedContent = localStorage.getItem('autoSaveContent');
             if (savedTitle) document.getElementById('title').value = savedTitle;
-            if (savedContent) tinymce.get('editor').setContent(savedContent);
+            if (savedContent) simplemde.value(savedContent);
 
             autoSaveInterval = setInterval(autoSave, 60000); // Auto-save every minute
+
+            const undoButton = document.getElementById('undoButton');
+            const redoButton = document.getElementById('redoButton');
+
+            undoButton.addEventListener('click', () => {
+                simplemde.codemirror.undo();
+            });
+
+            redoButton.addEventListener('click', () => {
+                simplemde.codemirror.redo();
+            });
         });
 
         document.getElementById('previewButton').addEventListener('click', () => {
             const title = document.getElementById('title').value;
-            const content = tinymce.get('editor').getContent();
+            const content = simplemde.value();
             const date = document.getElementById('date').value;
-
-            // Convert HTML to Markdown
-            const markdownContent = converter.makeMarkdown(content);
-
-            // Convert Markdown back to HTML for preview
-            const htmlContent = converter.makeHtml(markdownContent);
 
             const previewContent = `
                 <h1>${title}</h1>
                 <p>Published on: ${new Date(date).toLocaleDateString()}</p>
 
-                ${htmlContent}
+                ${simplemde.markdown(content)}
             `;
 
             const previewWindow = window.open();
@@ -130,27 +147,20 @@
             previewWindow.document.close();
         });
 
-        document.getElementById('postForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
+document.getElementById('postForm').addEventListener('submit', (e) => {
+    e.preventDefault();
 
-            const title = document.getElementById('title').value;
-            const date = document.getElementById('date').value;
-            const tags = document.getElementById('tags').value.split(',').map(tag => tag.trim());
-            const permalink = document.getElementById('permalink').value;
-            const comments = document.getElementById('comments').value;
-            const sharing = document.getElementById('sharing').value;
+    const title = document.getElementById('title').value;
+    const date = document.getElementById('date').value;
+    const tags = document.getElementById('tags').value.split(',').map(tag => tag.trim());
+    const permalink = document.getElementById('permalink').value;
+    const comments = document.getElementById('comments').value;
+    const sharing = document.getElementById('sharing').value;
 
+    const markdownContent = simplemde.value().trim();
 
-            const htmlContent = tinymce.get('editor').getContent();
-            const markdownContent = converter.makeMarkdown(htmlContent)
-                .replace(/\n\s*\n/g, '\n\n')  // Fix extra line breaks
-                .replace(/\*\*(.*?)\*\*/g, '**$1**')  // Fix bold text
-                .replace(/\*(.*?)\*/g, '*$1*')  // Fix italic text
-                .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '[$1]($2)')  // Fix links
-                .trim();  // Remove leading/trailing whitespace
-
-            const fileName = `_posts/${date.split('T')[0]}-${permalink || title.toLowerCase().replace(/\s+/g, '-')}.md`;
-            const fileContent = `---
+    const fileName = `${date.split('T')[0]}-${permalink || title.toLowerCase().replace(/\s+/g, '-')}.md`;
+    const fileContent = `---
 layout: post
 title: "${title}"
 date: ${date}
@@ -161,18 +171,25 @@ sharing: ${sharing}
 
 ${markdownContent}`;
 
-            try {
-                // Use a method to write directly to the file system
-                await writeFile(fileName, fileContent);
-                alert('Post published successfully!');
-                localStorage.removeItem('autoSaveTitle');
-                localStorage.removeItem('autoSaveContent');
-            } catch (err) {
-                console.error('Error creating file:', err);
-                alert('Error publishing post. See console for details.');
-            }
-        });
+    // Create a Blob with the file content
+    const blob = new Blob([fileContent], { type: 'text/markdown' });
 
+    // Create a temporary URL for the Blob
+    const url = URL.createObjectURL(blob);
+
+    // Create a link element and trigger the download
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = fileName;
+    link.click();
+
+    // Clean up the temporary URL
+    URL.revokeObjectURL(url);
+
+    alert('Post saved locally!');
+    localStorage.removeItem('autoSaveTitle');
+    localStorage.removeItem('autoSaveContent');
+});
         document.getElementById('saveButton').addEventListener('click', () => {
             autoSave();
             alert('Post saved as draft');
