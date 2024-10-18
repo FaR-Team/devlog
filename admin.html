@@ -261,6 +261,8 @@ sharing: ${sharing}
                     message: 'Upload image',
                     content: base64Image
                 });
+                
+                const AUTH_TOKEN = process.env.AUTH_TOKEN;
 
                 const response = await fetch(apiUrl, {
                     method: 'PUT',
