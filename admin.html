@@ -267,7 +267,7 @@ sharing: ${sharing}
                 const response = await fetch(apiUrl, {
                     method: 'PUT',
                     headers: {
-                        'Authorization': 'token  AUTH_TOKEN',
+                        'Authorization': `token ${AUTH_TOKEN}`,
                         'Content-Type': 'application/json'
                     },
                     body: body
