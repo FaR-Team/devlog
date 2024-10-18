@@ -262,7 +262,7 @@ sharing: ${sharing}
                     content: base64Image
                 });
                 
-                const AUTH_TOKEN = process.env.AUTH_TOKEN;
+                const AUTH_TOKEN = 'AUTH_TOKEN';
 
                 const response = await fetch(apiUrl, {
                     method: 'PUT',
