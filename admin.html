@@ -261,13 +261,11 @@ sharing: ${sharing}
                     message: 'Upload image',
                     content: base64Image
                 });
-                
-                const AUTH_TOKEN_CONST = 'AUTH_TOKEN';
 
                 const response = await fetch(apiUrl, {
                     method: 'PUT',
                     headers: {
-                        'Authorization': `token ${AUTH_TOKEN_CONST}`,
+                        'Authorization': `token AUTH_TOKEN`,
                         'Content-Type': 'application/json'
                     },
                     body: body
