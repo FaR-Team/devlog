@@ -81,6 +81,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <script>
+        window.AUTH_TOKEN = '{{ env.AUTH_TOKEN }}';
+    </script>
+    <script>
             let simplemde = new SimpleMDE({
                 element: document.getElementById("editor"),
                 spellChecker: false,
@@ -265,11 +268,12 @@ sharing: ${sharing}
                 const response = await fetch(apiUrl, {
                     method: 'PUT',
                     headers: {
-                        'Authorization': `token ${process.env.AUTH_TOKEN}`,
+                        'Authorization': `token ${getAuthToken()}`,
                         'Content-Type': 'application/json'
                     },
                     body: body
                 });
+
 
                 if (!response.ok) {
                     throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
@@ -286,6 +290,10 @@ sharing: ${sharing}
                 alert(`Failed to upload image: ${error.message}`);
                 throw error;
             }
+        }
+
+        function getAuthToken() {
+            return window.AUTH_TOKEN;
         }
 
         function generateImageFilename(originalFilename) {
