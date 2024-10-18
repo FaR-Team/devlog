@@ -262,12 +262,12 @@ sharing: ${sharing}
                     content: base64Image
                 });
                 
-                const AUTH_TOKEN = 'AUTH_TOKEN';
+                const AUTH_TOKEN_CONST = 'AUTH_TOKEN';
 
                 const response = await fetch(apiUrl, {
                     method: 'PUT',
                     headers: {
-                        'Authorization': `token ${AUTH_TOKEN}`,
+                        'Authorization': `token ${AUTH_TOKEN_CONST}`,
                         'Content-Type': 'application/json'
                     },
                     body: body
