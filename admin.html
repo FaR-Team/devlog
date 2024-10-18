@@ -293,6 +293,7 @@ sharing: ${sharing}
         }
 
         function getAuthToken() {
+            console.log('Auth token available:', !!window.AUTH_TOKEN);
             return window.AUTH_TOKEN;
         }
 
