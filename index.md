@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Project Farmoxel Devlog
 ---
 
 # Welcome to the Project Farmoxel Devlog
