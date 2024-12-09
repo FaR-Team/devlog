@@ -1,0 +1,52 @@
+---
+---
+
+@import "minima";
+
+:root {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --link-color: #4da3ff;
+  --heading-color: #cccccc;
+  --border-color: #404040;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border-color);
+}
+
+a {
+  color: var(--link-color);
+  &:visited {
+    color: darken(var(--link-color), 15%);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+.post-meta {
+  color: #888;
+}
+
+pre, code {
+  background-color: #2d2d2d;
+}
+
+.light-theme {
+  --background-color: #ffffff;
+  --text-color: #2d2d2d;
+  --link-color: #0366d6;
+  --heading-color: #24292e;
+  --border-color: #e8e8e8;
+}

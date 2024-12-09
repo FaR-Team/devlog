@@ -2,6 +2,10 @@ title: "The Farmoxel Project"
 author: "FaR Team"
 description: "This is a devlog for our on-development game."
 
+sass:
+  style: compressed
+
+# Keep rest of your existing config
 email: "ACÁ VA UN MAIL"
 twitter_username: "FaRTeamStudio"
 github_username: "FaR-Team"
