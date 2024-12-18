@@ -84,7 +84,6 @@
     color: #ffffff;
   }
 
-  /* Header styles */
   .site-header {
     padding: 1rem;
     transition: background-color 0.3s, border-color 0.3s;
@@ -97,7 +96,80 @@
     border-bottom-color: #333;
   }
 
-  /* Sidebar boxes in dark mode */
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    position: relative;
+  }
+
+  .site-logo {
+    height: 40px;
+    transition: opacity 0.3s;
+  }
+
+  .dark-logo {
+    display: none;
+  }
+
+  body.dark-theme .light-logo {
+    display: none;
+  }
+
+  body.dark-theme .dark-logo {
+    display: block;
+  }
+
+  .site-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  body.dark-theme .nav-link {
+    color: #ffffff;
+  }
+
+  .theme-toggle {
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .theme-icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+  }
+
+  .light-icon {
+    display: none;
+  }
+
+  body.dark-theme .light-icon {
+    display: block;
+  }
+
+  body.dark-theme .dark-icon {
+    display: none;
+  }
+
   body.dark-theme #projectFilter,
   body.dark-theme #searchPosts {
     background: #2d2d2d;
@@ -134,13 +206,11 @@
     background: #333 !important;
   }
 
-  /* Dropdown and select elements */
   body.dark-theme select option {
     background-color: #2d2d2d;
     color: #ffffff;
   }
 
-  /* Post cards text */
   body.dark-theme #postsContainer h2 a {
     color: #ffffff;
   }
