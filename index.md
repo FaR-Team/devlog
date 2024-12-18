@@ -46,33 +46,37 @@
     </div>
   </div>
 
-  <!-- Project Filter Box -->
-  <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content; position: sticky; top: 20px; margin-top: 40px; margin-bottom: 20px;">
-    <select id="projectFilter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: #f8f8f8; cursor: pointer;">
-      <option value="all">All Projects</option>
-      <option value="farmoxel">Farmoxel</option>
-      <option value="roommakers">Room Makers</option>
-      <option value="kta">KTA</option>
-    </select>
-  </div>
+  <!-- Sidebar Section -->
+  <div style="display: flex; flex-direction: column; gap: 20px;">
+    <!-- Project Filter Box -->
+    <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
+      <select id="projectFilter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: #f8f8f8; cursor: pointer;">
+        <option value="all">All Projects</option>
+        <option value="farmoxel">Farmoxel</option>
+        <option value="roommakers">Room Makers</option>
+        <option value="kta">KTA</option>
+      </select>
+    </div>
 
-  <!-- Search and Archives Box -->
-  <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
-    <input type="search" id="searchPosts" placeholder="Search posts..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px;">
+    <!-- Search and Archives Box -->
+    <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
+      <input type="search" id="searchPosts" placeholder="Search posts..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px;">
 
-    <h3 style="color: #333; font-size: 1.2em; margin-bottom: 15px;">Archives</h3>
-    {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
-    {% for year in postsByYear %}
-      <details style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 12px;">
-        <summary style="cursor: pointer; font-weight: 500; color: #444;">{{ year.name }}</summary>
-        <ul style="list-style: none; padding-left: 15px; margin-top: 10px;">
-          {% for post in year.items %}
-            <li style="margin-bottom: 8px;"><a href="/devlog/{{ post.url }}" style="color: #666; text-decoration: none; transition: color 0.2s;">{{ post.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </details>
-    {% endfor %}
+      <h3 style="color: #333; font-size: 1.2em; margin-bottom: 15px;">Archives</h3>
+      {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+      {% for year in postsByYear %}
+        <details style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 12px;">
+          <summary style="cursor: pointer; font-weight: 500; color: #444;">{{ year.name }}</summary>
+          <ul style="list-style: none; padding-left: 15px; margin-top: 10px;">
+            {% for post in year.items %}
+              <li style="margin-bottom: 8px;"><a href="/devlog/{{ post.url }}" style="color: #666; text-decoration: none; transition: color 0.2s;">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </details>
+      {% endfor %}
+    </div>
   </div>
+</div>
 <script>
   document.getElementById('projectFilter').addEventListener('change', filterPosts);
   document.getElementById('searchPosts').addEventListener('input', filterPosts);
