@@ -62,15 +62,15 @@
       <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
         <input type="search" id="searchPosts" placeholder="Search posts..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px;">
 
-        <div style="height: 500px; overflow-y: auto; width: 100%;">
+        <div style="height: 500px; overflow-y: auto; width: 100%; overflow-x: hidden;">
           <h3 style="color: #333; font-size: 1.2em; margin-bottom: 15px;">Archives</h3>
           {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
           {% for year in postsByYear %}
             <details style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 12px; width: 100%; overflow-x: hidden;">
               <summary style="cursor: pointer; font-weight: 500; color: #444;">{{ year.name }}</summary>
-              <ul style="list-style: none; padding-left: 15px; margin-top: 10px; width: 100%; word-wrap: break-word;">
+              <ul style="list-style: none; padding-left: 15px; margin-top: 10px; width: 100%; overflow-x: hidden;">
                 {% for post in year.items %}
-                  <li style="margin-bottom: 8px;"><a href="/devlog/{{ post.url }}" style="color: #666; text-decoration: none; transition: color 0.2s;">{{ post.title }}</a></li>
+                  <li style="margin-bottom: 8px; white-space: normal; overflow-wrap: break-word;"><a href="/devlog/{{ post.url }}" style="color: #666; text-decoration: none; transition: color 0.2s;">{{ post.title }}</a></li>
                 {% endfor %}
               </ul>
             </details>
