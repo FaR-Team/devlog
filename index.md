@@ -16,7 +16,7 @@
     <div style="padding: 20px; flex: 1;">
       <h2 style="margin-top: 0;"><a href="{{ post.url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
       <p style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
-      <a href="{{ post.url }}" style="color: #4CAF50; text-decoration: none;">Read more →</a>
+      <a href="/devlog{{ post.url }}" style="color: #4CAF50; text-decoration: none;">Read more →</a>
     </div>
   </div>
 {% endfor %}
