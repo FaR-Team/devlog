@@ -170,7 +170,6 @@
     display: none;
   }
 
-  /* Sidebar boxes in dark mode */
   body.dark-theme #projectFilter,
   body.dark-theme #searchPosts {
     background: #2d2d2d;
@@ -205,5 +204,29 @@
 
   body.dark-theme div[style*="background: #f5f5f5"] {
     background: #333 !important;
+  }
+
+  body.dark-theme select option {
+    background-color: #2d2d2d;
+    color: #ffffff;
+  }
+
+  body.dark-theme #postsContainer h2 a {
+    color: #ffffff;
+  }
+
+  body.dark-theme #postsContainer p,
+  body.dark-theme #postsContainer span {
+    color: #e0e0e0;
+  }
+
+  body.dark-theme #postsContainer .post-meta,
+  body.dark-theme #postsContainer .post-excerpt {
+    color: #cccccc;
+  }
+
+  body.dark-theme #postsContainer span[style*="background: #e0e0e0"] {
+    background: #444 !important;
+    color: #e0e0e0;
   }
 </style>
