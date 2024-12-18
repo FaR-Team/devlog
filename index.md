@@ -17,18 +17,18 @@
         {% endif %}
         <div style="display: flex; margin: 20px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
           <!-- Image Section -->
-          <div style="flex: 0 0 200px; position: relative;">
+          <div style="flex: 0 0 300px; position: relative;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url({{ imageUrl }}); background-size: cover; background-position: center;"></div>
             <div style="position: absolute; top: 0; right: 0; width: 50px; height: 100%; background: linear-gradient(to right, transparent, rgba(245, 245, 245, 0.9));"></div>
           </div>
-    
+          
           <!-- Content Section -->
           <div style="padding: 20px; flex: 1; background: rgba(245, 245, 245, 0.9);">
             <h2 style="margin-top: 0;"><a href="/devlog/{{ post.url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
             <p style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
               <div style="display: flex; align-items: center;">
-       <img src="{{ '/assets/images/' | append: post.project | append: '-icon.png' | relative_url }}"
+             <img src="{{ '/assets/images/' | append: post.project | append: '-icon.png' | relative_url }}"
                   alt="{{ post.project }}" 
                   data-project="{{ post.project }}"
                   style="height: 24px; margin-right: 10px;">
@@ -45,7 +45,8 @@
             </div>
           </div>
         </div>
-      {% endfor %}    </div>
+      {% endfor %}
+    </div>
   </div>
 
   <!-- Sidebar Section -->
