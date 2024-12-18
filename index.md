@@ -10,14 +10,13 @@
 
     <div id="postsContainer">
       {% for post in site.posts %}
-        <div style="display: flex; margin: 20px 0; background: #f5f5f5; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          {% if post.content contains "![" %}
-            {% assign images = post.content | split: "![" %}
-            {% assign firstImage = images[1] | split: ")" | first %}
-            {% assign imageUrl = firstImage | split: "](" | last %}
-            <div style="flex: 0 0 200px; background-image: url({{ imageUrl }}); background-size: cover; background-position: center;"></div>
-          {% endif %}
-          <div style="padding: 20px; flex: 1;">
+        {% if post.content contains "![" %}
+          {% assign images = post.content | split: "![" %}
+          {% assign firstImage = images[1] | split: ")" | first %}
+          {% assign imageUrl = firstImage | split: "](" | last %}
+        {% endif %}
+        <div style="display: flex; margin: 20px 0; background-image: url({{ imageUrl }}); background-size: cover; background-position: center; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <div style="padding: 20px; flex: 1; background: rgba(245, 245, 245, 0.9);">
             <h2 style="margin-top: 0;"><a href="/devlog/{{ post.url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
             <p style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
