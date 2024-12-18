@@ -82,19 +82,26 @@
   document.getElementById('searchPosts').addEventListener('input', filterPosts);
 
   function filterPosts() {
-    const project = document.getElementById('projectFilter').value;
-    const searchTerm = document.getElementById('searchPosts').value.toLowerCase();
-    const posts = document.querySelectorAll('#postsContainer > div');
+      const project = document.getElementById('projectFilter').value;
+      const searchTerm = document.getElementById('searchPosts').value.toLowerCase();
+      const posts = document.querySelectorAll('#postsContainer > div');
 
-    posts.forEach(post => {
-        const postProject = post.querySelector('img')?.getAttribute('data-project') || 'all';
-        const postContent = post.textContent.toLowerCase();
-        const projectMatch = project === 'all' || postProject === project;
-        const searchMatch = postContent.includes(searchTerm);
+      posts.forEach(post => {
+          // Get the full post URL from the "Read more" link
+          const postUrl = post.querySelector('a[href^="/devlog/"]').getAttribute('href');
+        
+          // Fetch and search through the full post content
+          fetch(postUrl)
+              .then(response => response.text())
+              .then(content => {
+                  const postProject = post.querySelector('img')?.getAttribute('data-project') || 'all';
+                  const projectMatch = project === 'all' || postProject === project;
+                  const searchMatch = content.toLowerCase().includes(searchTerm);
 
-        post.style.display = projectMatch && searchMatch ? 'flex' : 'none';
-    });
-  }
+                  post.style.display = projectMatch && searchMatch ? 'flex' : 'none';
+              });
+      });
+  }  
   const select = document.getElementById('projectFilter');
   const icon = document.getElementById('selectedIcon');
 
