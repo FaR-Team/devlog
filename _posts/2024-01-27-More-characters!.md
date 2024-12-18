@@ -1,3 +1,12 @@
+---
+layout: post
+title: "More Characters!"
+date: 2024-01-27
+project: farmoxel
+tags: [devlog, characters, art]
+---
+
+
 ** HAPPY NEW YEAR!** (Still January, not late yet.)  
   
 With that out of the way... As you may remember, back in [**THIS POST**](https://farteamdev.blogspot.com/2023/09/character-design-on-farmoxel-project.html#more) we talked about all the character that were designed at that point for the game. We presented you the humble amount of 7 characters. In today's post, we'll talk about the rest of the cast, which sums up the whacking amount of _19 CHARACTERS!_

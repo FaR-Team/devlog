@@ -1,3 +1,11 @@
+---
+layout: post
+title: "June 15th Update!"
+date: 2024-06-15
+project: farmoxel
+tags: [devlog]
+---
+
 Last time we actually updated you about the contents of our games was August 15th 2023. It's been a LONG time, but I can promise that none of our projects have been abandoned. In fact, we've made tons of progress on all of them, but not much worth to be shown.
 
   

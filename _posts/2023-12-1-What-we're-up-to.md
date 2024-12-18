@@ -1,3 +1,11 @@
+---
+layout: post
+title: "June 15th Update!"
+date: 2023-12-01
+tags: [devlog]
+---
+
+
 During October and November, the team started working in 4 different projects, which divided us in Team A and team B. Does that mean we are crunching? Not at all! In fact, we haven't been working much these past months cause of university and such. Does this mean we take terrible decisions? Yes. Definitively.
 
 There are no huge updates about the Farmoxel Project to showcase since the team is working in one of its biggest features: a proper save/load system. Therefore, we cannot show anything about that game.

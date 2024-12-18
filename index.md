@@ -14,7 +14,7 @@
       <div style="flex: 0 0 200px; background-image: url({{ imageUrl }}); background-size: cover; background-position: center;"></div>
     {% endif %}
     <div style="padding: 20px; flex: 1;">
-      <h2 style="margin-top: 0;"><a href="{{ post.url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
+      <h2 style="margin-top: 0;"><a href="/devlog/{{ post.url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
       <p style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
         <div style="display: flex; align-items: center;">
