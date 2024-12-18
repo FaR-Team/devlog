@@ -22,13 +22,10 @@
             <p style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
               <div style="display: flex; align-items: center;">
-                {% if post.project == "farmoxel" %}
-                  <img src="{{ '/assets/images/farmoxel-icon.png' | relative_url }}" alt="Farmoxel" style="height: 24px; margin-right: 10px;">
-                {% elsif post.project == "roommakers" %}
-                  <img src="{{ '/assets/images/roommakers-icon.png' | relative_url }}" alt="Room Makers" style="height: 24px; margin-right: 10px;">
-                {% elsif post.project == "kta" %}
-                  <img src="{{ '/assets/images/kta-icon.png' | relative_url }}" alt="KTA" style="height: 24px; margin-right: 10px;">
-                {% endif %}
+             <img src="{{ '/assets/images/' | append: post.project | append: '-icon.png' | relative_url }}"
+                  alt="{{ post.project }}" 
+                  data-project="{{ post.project }}"
+                  style="height: 24px; margin-right: 10px;">
                 <span style="color: #888; font-size: 0.9em;">{{ post.date | date: "%B %d, %Y" }}</span>
                 {% if post.tags %}
                   <div style="margin-left: 15px;">
@@ -91,15 +88,14 @@
     const posts = document.querySelectorAll('#postsContainer > div');
 
     posts.forEach(post => {
-      const postProject = post.querySelector('img')?.alt.toLowerCase();
-      const postContent = post.textContent.toLowerCase();
-      const projectMatch = project === 'all' || postProject === project;
-      const searchMatch = postContent.includes(searchTerm);
+        const postProject = post.querySelector('img')?.getAttribute('data-project') || 'all';
+        const postContent = post.textContent.toLowerCase();
+        const projectMatch = project === 'all' || postProject === project;
+        const searchMatch = postContent.includes(searchTerm);
 
-      post.style.display = projectMatch && searchMatch ? 'flex' : 'none';
+        post.style.display = projectMatch && searchMatch ? 'flex' : 'none';
     });
   }
-
   const select = document.getElementById('projectFilter');
   const icon = document.getElementById('selectedIcon');
 
