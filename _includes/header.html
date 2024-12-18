@@ -236,27 +236,42 @@ body.dark-theme input[type="search"] {
       background: #BA6F4A !important;
   }
 
-  /* Project Filter Box and Search/Archives Box */
-  #projectFilter,
-  #searchPosts,
-  div[style*="width: 100%; padding: 25px; background: #D88E49"] {
-      background: #D88E49 !important;
-  }
-
-  body.dark-theme #projectFilter,
-  body.dark-theme #searchPosts,
-  body.dark-theme div[style*="width: 100%; padding: 25px; background: #D88E49"] {
-      background: #BA6F4A !important;
-  }
-
-  body.dark-theme div[style*="background: #333"] {
-    background: #333 !important;
-  }
-
-  body.dark-theme select option {
-    background-color: #2d2d2d;
+/* Make inputs match our theme */
+#projectFilter,
+#searchPosts,
+div[style*="width: 100%; padding: 25px;"] {
+    background: #D88E49 !important;
+    border: 1px solid #ddd;
     color: #ffffff;
-  }
+}
+
+body.dark-theme #projectFilter,
+body.dark-theme #searchPosts,
+body.dark-theme div[style*="width: 100%; padding: 25px;"] {
+    background: #BA6F4A !important;
+    border-color: #444;
+    color: #ffffff;
+}
+
+/* Style dropdown options */
+#projectFilter option {
+    background-color: #D88E49 !important;
+    color: #ffffff;
+}
+
+body.dark-theme #projectFilter option {
+    background-color: #BA6F4A !important;
+    color: #ffffff;
+}
+
+body.dark-theme div[style*="background: #333"] {
+  background: #333 !important;
+}
+
+body.dark-theme select option {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
 
   body.dark-theme #postsContainer h2 a {
     color: #ffffff;
