@@ -5,12 +5,6 @@ description: "This is a devlog for our on-development game."
 sass:
   style: compressed
 
-# Keep rest of your existing config
-email: "ACÁ VA UN MAIL"
-twitter_username: "FaRTeamStudio"
-github_username: "FaR-Team"
-linkedin_username: "Linkedin"
-
 #########################################################################################
 ######### NO MODIFICAR #########
 #########################################################################################
@@ -38,4 +32,4 @@ defaults:
       path: ""
       type: post
     values:
-      tags: Other
+      tags: Other, devlog, characters, art
