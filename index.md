@@ -52,12 +52,11 @@
       <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
         <select id="projectFilter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: #f8f8f8; cursor: pointer;">
           <option value="all">All Projects</option>
-          <option value="farmoxel">Farmoxel</option>
-          <option value="roommakers">Room Makers</option>
-          <option value="kta">KTA</option>
+          <option value="farmoxel" style="background: url('{{ '/assets/images/farmoxel-icon.png' | relative_url }}') no-repeat left center; padding-left: 30px;">Farmoxel</option>
+          <option value="roommakers" style="background: url('{{ '/assets/images/roommakers-icon.png' | relative_url }}') no-repeat left center; padding-left: 30px;">Room Makers</option>
+          <option value="kta" style="background: url('{{ '/assets/images/kta-icon.png' | relative_url }}') no-repeat left center; padding-left: 30px;">KTA</option>
         </select>
       </div>
-
       <!-- Search and Archives Box -->
       <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
         <input type="search" id="searchPosts" placeholder="Search posts..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px;">
