@@ -1,4 +1,12 @@
-  **TOP NOTE: Since this festival took place in Argentina, the post will be in Spanish. But worry not! For an English version scroll down past a duck picture.**
+---
+layout: post
+title: "We Took Room Makers to a Festival!"
+date: 2024-10-01
+project: roommakers
+tags: [event]
+---
+
+**TOP NOTE: Since this festival took place in Argentina, the post will be in Spanish. But worry not! For an English version scroll down past a duck picture.**
 
 [![](https://blogger.googleusercontent.com/img/a/AVvXsEhnQHeUHblFNywlL6HbN06W-XmSyF4YDqwyvGazEVaLowCqMoodmse05DUHd-l6_nTJjz9IE6kk-vLkmSEjR8hkdVm3Yn7VxD2_goY8nuCSuEI1RmdzJEh1W7ZsmY70TimlOKVr8wRTxbCxUj2nE1XM-xm7aqiaJYbUFurRsOVu-X4VplLR-phTFDUQOoUf=w640-h262)](https://blogger.googleusercontent.com/img/a/AVvXsEhnQHeUHblFNywlL6HbN06W-XmSyF4YDqwyvGazEVaLowCqMoodmse05DUHd-l6_nTJjz9IE6kk-vLkmSEjR8hkdVm3Yn7VxD2_goY8nuCSuEI1RmdzJEh1W7ZsmY70TimlOKVr8wRTxbCxUj2nE1XM-xm7aqiaJYbUFurRsOVu-X4VplLR-phTFDUQOoUf)
 

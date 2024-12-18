@@ -3,6 +3,7 @@ layout: post
 title: "About the Game"
 date: 2022-05-01
 project: farmoxel
+tags: [devlog]
 ---
 
 *    **What is The Farmoxel Project?**

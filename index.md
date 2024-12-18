@@ -19,11 +19,11 @@
       <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
         <div style="display: flex; align-items: center;">
           {% if post.project == "farmoxel" %}
-            <img src="/assets/images/farmoxel-icon.png" alt="Farmoxel" style="height: 24px; margin-right: 10px;">
+            <img src="{{ '/assets/images/farmoxel-icon.png' | relative_url }}" alt="Farmoxel" style="height: 24px; margin-right: 10px;">
           {% elsif post.project == "roommakers" %}
-            <img src="/assets/images/roommakers-icon.png" alt="Room Makers" style="height: 24px; margin-right: 10px;">
+            <img src="{{ '/assets/images/roommakers-icon.png' | relative_url }}" alt="Room Makers" style="height: 24px; margin-right: 10px;">
           {% elsif post.project == "kta" %}
-            <img src="/assets/images/kta-icon.png" alt="KTA" style="height: 24px; margin-right: 10px;">
+            <img src="{{ '/assets/images/kta-icon.png' | relative_url }}" alt="KTA" style="height: 24px; margin-right: 10px;">
           {% endif %}
           <span style="color: #888; font-size: 0.9em;">{{ post.date | date: "%B %d, %Y" }}</span>
           {% if post.tags %}
@@ -34,7 +34,7 @@
             </div>
           {% endif %}
         </div>
-        <a href="/devlog{{ post.url }}" style="color: #4CAF50; text-decoration: none;">Read more →</a>
+        <a href="/devlog/{{ post.url }}" style="color: #4CAF50; text-decoration: none;">Read more →</a>
       </div>
     </div>
   </div>
