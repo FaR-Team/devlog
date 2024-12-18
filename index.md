@@ -1,31 +1,5 @@
-<div style="display: flex;">
-  <!-- Sidebar -->
-  <div style="width: 250px; padding: 20px; background: #f9f9f9; margin-right: 20px;">
-    <select id="projectFilter" style="width: 100%; padding: 8px; margin-bottom: 15px;">
-      <option value="all">All Projects</option>
-      <option value="farmoxel">Farmoxel</option>
-      <option value="roommakers">Room Makers</option>
-      <option value="kta">KTA</option>
-    </select>
-
-    <!-- Search -->
-    <input type="search" id="searchPosts" placeholder="Search posts..." style="width: 100%; padding: 8px; margin-bottom: 15px;">
-
-    <!-- Archives -->
-    <h3>Archives</h3>
-    {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
-    {% for year in postsByYear %}
-      <details style="margin-bottom: 10px;">
-        <summary style="cursor: pointer;">{{ year.name }}</summary>
-        <ul style="list-style: none; padding-left: 15px;">
-          {% for post in year.items %}
-            <li><a href="/devlog/{{ post.url }}">{{ post.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </details>
-    {% endfor %}
-  </div>
-
+<div style="display: flex; gap: 30px; max-width: 1200px; margin: 0 auto;">
+  <!-- Main Content -->
   <div style="flex: 1;">
     <div style="text-align: center; margin: 40px 0;">
       <h1>F.a.R. Team Devlog</h1>
@@ -34,7 +8,6 @@
       </blockquote>
     </div>
 
-    <!-- Existing posts loop -->
     <div id="postsContainer">
       {% for post in site.posts %}
         <div style="display: flex; margin: 20px 0; background: #f5f5f5; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
@@ -71,6 +44,36 @@
         </div>
       {% endfor %}
     </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div style="width: 300px; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content; position: sticky; top: 20px; margin-top: 40px;">
+    <!-- Project Filter -->
+    <h3 style="margin-top: 0; color: #333; font-size: 1.2em; margin-bottom: 15px;">Filter by Project</h3>
+    <select id="projectFilter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px; background: #f8f8f8; cursor: pointer;">
+      <option value="all">All Projects</option>
+      <option value="farmoxel">Farmoxel</option>
+      <option value="roommakers">Room Makers</option>
+      <option value="kta">KTA</option>
+    </select>
+
+    <!-- Search -->
+    <h3 style="color: #333; font-size: 1.2em; margin-bottom: 15px;">Search Posts</h3>
+    <input type="search" id="searchPosts" placeholder="Search posts..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px;">
+
+    <!-- Archives -->
+    <h3 style="color: #333; font-size: 1.2em; margin-bottom: 15px;">Archives</h3>
+    {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+    {% for year in postsByYear %}
+      <details style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 12px;">
+        <summary style="cursor: pointer; font-weight: 500; color: #444;">{{ year.name }}</summary>
+        <ul style="list-style: none; padding-left: 15px; margin-top: 10px;">
+          {% for post in year.items %}
+            <li style="margin-bottom: 8px;"><a href="/devlog/{{ post.url }}" style="color: #666; text-decoration: none; transition: color 0.2s;">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+    {% endfor %}
   </div>
 </div>
 
