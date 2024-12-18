@@ -77,6 +77,7 @@
     </div>
   </div>
 </div>
+
 <script>
   document.getElementById('projectFilter').addEventListener('change', filterPosts);
   document.getElementById('searchPosts').addEventListener('input', filterPosts);
@@ -85,13 +86,13 @@
     const project = document.getElementById('projectFilter').value;
     const searchTerm = document.getElementById('searchPosts').value.toLowerCase();
     const posts = document.querySelectorAll('#postsContainer > div');
-    
+
     posts.forEach(post => {
       const postProject = post.querySelector('img')?.alt.toLowerCase();
       const postContent = post.textContent.toLowerCase();
       const projectMatch = project === 'all' || postProject === project;
       const searchMatch = postContent.includes(searchTerm);
-      
+
       post.style.display = projectMatch && searchMatch ? 'flex' : 'none';
     });
   }
