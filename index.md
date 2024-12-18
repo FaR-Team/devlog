@@ -50,14 +50,13 @@
   <div style="display: flex; flex-direction: column; gap: 20px; width: 300px; flex-shrink: 0;">
       <!-- Project Filter Box -->
       <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
-        <div style="position: relative; width: 100%;">
-          <select id="projectFilter" style="width: 100%; padding: 10px 10px 10px 35px; border: 1px solid #ddd; border-radius: 6px; background: #f8f8f8; cursor: pointer; appearance: none;">
+        <div class="custom-select" style="position: relative; width: 100%;">
+          <select id="projectFilter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: #f8f8f8; cursor: pointer;">
             <option value="all">All Projects</option>
-            <option value="farmoxel" data-icon="{{ '/assets/images/farmoxel-icon.png' | relative_url }}">Farmoxel</option>
-            <option value="roommakers" data-icon="{{ '/assets/images/roommakers-icon.png' | relative_url }}">Room Makers</option>
-            <option value="kta" data-icon="{{ '/assets/images/kta-icon.png' | relative_url }}">KTA</option>
+            <option value="farmoxel" style="background-image: url('{{ '/assets/images/farmoxel-icon.png' | relative_url }}'); background-repeat: no-repeat; background-position: 10px center; padding-left: 35px;">Farmoxel</option>
+            <option value="roommakers" style="background-image: url('{{ '/assets/images/roommakers-icon.png' | relative_url }}'); background-repeat: no-repeat; background-position: 10px center; padding-left: 35px;">Room Makers</option>
+            <option value="kta" style="background-image: url('{{ '/assets/images/kta-icon.png' | relative_url }}'); background-repeat: no-repeat; background-position: 10px center; padding-left: 35px;">KTA</option>
           </select>
-          <img id="selectedIcon" src="" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; pointer-events: none;">
         </div>
       </div>
       <!-- Search and Archives Box -->
