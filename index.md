@@ -58,7 +58,6 @@
 
   <!-- Search and Archives Box -->
   <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
-    <h3 style="color: #333; font-size: 1.2em; margin-bottom: 15px;">Search Posts</h3>
     <input type="search" id="searchPosts" placeholder="Search posts..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px;">
 
     <h3 style="color: #333; font-size: 1.2em; margin-bottom: 15px;">Archives</h3>
