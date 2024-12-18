@@ -2,8 +2,8 @@
   <!-- Main Content -->
   <div style="flex: 1;">
     <div style="text-align: center; margin: 40px 0;">
-      <h1>F.a.R. Team Devlog</h1>
-      <blockquote style="font-style: italic; color: #666;">
+      <h1 style="font-family: 'Montserrat', sans-serif;">F.a.R. Team Devlog</h1>
+      <blockquote style="font-style: italic; color: #666; font-size: 0.9em;">
         "Dive into the F.a.R. Team Devlog! From dev updates to creative insights, we share everything that goes into crafting our unique gaming experiences."
       </blockquote>
     </div>
