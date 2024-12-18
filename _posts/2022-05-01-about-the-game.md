@@ -1,3 +1,10 @@
+---
+layout: post
+title: "About the Game"
+date: 2022-05-01
+project: farmoxel
+---
+
 *    **What is The Farmoxel Project?**
 
 The Farmoxel Project (This is a placeholder name, don't get too attached to it), is a resource management farming game in a voxel art style highly inspired in games like _'Stardew Valley'_ and _'Slime Rancher'._ Our main goal is to understand where these games succeeded and where they failed, and try to solve their mistakes.
