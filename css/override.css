@@ -210,11 +210,27 @@ code {
   padding: 0 20px;
 }
 
-/* Fix for the orange background issue */
+
+.post-content,
+.post,
+article.post,
+.page-content .wrapper .post {
+  background-color: #ffffff !important;
+}
+
 .page-content {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5 !important;
+}
+
+.post-content {
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .site-header, .site-footer {
   background-color: #fff;
+}
+
+.white-background {
+  background-color: #ffffff !important;
 }

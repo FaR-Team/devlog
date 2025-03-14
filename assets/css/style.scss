@@ -28,10 +28,16 @@ body {
   background-color: var(--background-color);
 }
 
-.post, .home {
-  background-color: var(--post-background);
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+
+.post, 
+article.post,
+.post-content {
+  background-color: var(--post-background) !important;
+}
+
+
+.page-content {
+  background-color: var(--background-color) !important;
 }
 
 a {
@@ -68,5 +74,3 @@ pre, code {
     color: #f0f0f0;
   }
 }
-
-/* Light theme is now the default */
