@@ -15,7 +15,24 @@ layout: default
       {% assign author = page.author | default: site.author %}
       {%- if author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-      {%- endif -%}</p>
+      {%- endif -%}
+      
+      {% if page.project %}
+      • <span class="project-badge">
+        <img src="{{ '/assets/images/' | append: page.project | append: '-icon.png' | relative_url }}" 
+             alt="{{ page.project }}" style="height: 20px; vertical-align: middle; margin-right: 5px;">
+        {{ page.project | capitalize }}
+      </span>
+      {% endif %}
+      
+      {% if page.tags %}
+        <div class="post-tags" style="margin-top: 10px;">
+          {% for tag in page.tags %}
+            <span style="background: #e0e0e0; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px;">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </p>
   </header>
 
   <div class="share-links">
@@ -24,6 +41,9 @@ layout: default
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
+  </div>
+  
+  <div class="post-navigation">
     {% include navlinks.html %}
   </div>
 
