@@ -25,19 +25,14 @@ body {
 }
 
 .page-content {
-  background-color: var(--background-color);
+  background-color: var(--background-color) !important;
 }
-
 
 .post, 
 article.post,
-.post-content {
+.post-content,
+.white-background {
   background-color: var(--post-background) !important;
-}
-
-
-.page-content {
-  background-color: var(--background-color) !important;
 }
 
 a {
