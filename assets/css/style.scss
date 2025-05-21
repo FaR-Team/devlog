@@ -34,11 +34,31 @@ article.post,
 .white-background {
   background-color: var(--post-background) !important;
 
-  td {
-    img {
-      display: block;
-      margin: 30px auto;
-      max-width: 100%;
+  table {
+    width: 100%;
+    margin: 1.5em 0;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 0.5em 0.75em;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    th {
+      background-color: darken(var(--post-background), 2%);
+    }
+
+    td {
+      text-align: center;
+
+      img {
+        display: block;
+        margin: 1em auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
     }
   }
 }
@@ -102,5 +122,25 @@ pre, code {
   pre, code {
     background-color: #3d3d3d;
     color: #f0f0f0;
+  }
+
+  .post-content table {
+    th, td {
+      border-color: var(--border-color);
+    }
+
+    th {
+      background-color: darken(var(--post-background), 5%);
+      color: var(--heading-color);
+    }
+
+    td {
+      background-color: var(--post-background);
+      color: var(--text-color);
+
+      img {
+        background-color: transparent !important;
+      }
+    }
   }
 }
