@@ -1,0 +1,296 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+  
+  <header class="site-header">
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="{{ '/assets/images/longlogo.png' | relative_url }}" alt="Blog Logo" class="site-logo light-logo">
+        <img src="{{ '/assets/images/darklonglogo.png' | relative_url }}" alt="Blog Logo" class="site-logo dark-logo">
+      </div>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+        <button onclick="toggleTheme()" class="theme-toggle">
+          <img src="{{ '/assets/images/LightMode.png' | relative_url }}" alt="Light Mode" class="theme-icon light-icon">
+          <img src="{{ '/assets/images/DarkMode.png' | relative_url }}" alt="Dark Mode" class="theme-icon dark-icon">
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- highlight.js support -->
+  <link rel="stylesheet" href="/js/highlightjs/styles/github.css">
+  <link rel="stylesheet" href="/js/highlightjs/styles/ssms.css" />
+
+  <script type="text/javascript" src="/js/highlightjs/highlight.min.js"></script>
+  <script type="text/javascript" src="/js/highlightjs/languages/plaintext.min.js"></script>
+  <script type="text/javascript" src="/js/highlightjs/languages/powershell.min.js"></script>
+  <script type="text/javascript" src="/js/highlightjs/languages/tsql.min.js"></script>
+  <script type="text/javascript"> hljs.highlightAll(); </script>
+</head>
+
+<script>
+  function toggleTheme() {
+      const body = document.body;
+      body.classList.toggle('dark-theme');
+      localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
+  }
+  
+  // Check saved theme preference
+  document.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+          document.body.classList.add('dark-theme');
+      }
+  });
+</script>
+<style>
+  /* Base theme styles */
+  body {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #ffffff;
+    color: #1a1a1a;
+  }
+
+  /* Dark theme for entire page */
+  body.dark-theme {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  /* Links in dark mode */
+  body.dark-theme a {
+    color: #64B5F6;
+  }
+
+  /* Post content in dark mode */
+  body.dark-theme .post-content {
+    color: #e0e0e0;
+  }
+
+  /* Headers in dark mode */
+  body.dark-theme h1, 
+  body.dark-theme h2, 
+  body.dark-theme h3, 
+  body.dark-theme h4, 
+  body.dark-theme h5, 
+  body.dark-theme h6 {
+    color: #ffffff;
+  }
+
+  .site-header {
+    padding: 1rem;
+    transition: background-color 0.3s, border-color 0.3s;
+    background-color: #D88E49;
+  }
+
+  body.dark-theme .site-header {
+    background-color: #BA6F4A;
+    border-bottom-color: #1a1a1a;
+  }
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    position: relative;
+  }
+
+  .site-logo {
+    height: 40px;
+    transition: opacity 0.3s;
+  }
+
+  .dark-logo {
+    display: none;
+  }
+
+  body.dark-theme .light-logo {
+    display: none;
+  }
+
+  body.dark-theme .dark-logo {
+    display: block;
+  }
+
+  .site-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+  body.dark-theme .nav-link {
+    color: #E8F5D5;
+  }
+
+  .nav-link:hover,
+  body.dark-theme .nav-link:hover {
+    color: #8d543a;
+  }
+  .theme-toggle {
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .theme-icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+  }
+
+  .light-icon {
+    display: none;
+  }
+
+  body.dark-theme .light-icon {
+    display: block;
+  }
+
+  body.dark-theme .dark-icon {
+    display: none;
+  }
+#projectFilter,
+#searchPosts {
+  background: #D88E49;
+  border: 1px solid #ddd;
+  color: #ffffff;
+}
+
+body.dark-theme #projectFilter,
+body.dark-theme #searchPosts {
+  background: #BA6F4A;
+  border-color: #444;
+  color: #ffffff;
+}
+
+/* For dropdown options */
+#projectFilter option {
+  background-color: #D88E49;
+  color: #ffffff;
+}
+
+body.dark-theme #projectFilter option {
+  background-color: #BA6F4A;
+  color: #ffffff;
+}
+
+body.dark-theme #postsContainer > div { /* Only style #postsContainer here if needed for its specific background */
+  background: var(--background-color); /* Use CSS variable for consistency */
+  color: #e0e0e0;
+}
+
+body.dark-theme select,
+body.dark-theme input[type="search"] {
+  background-color: #1a1a1a;
+  color: #ffffff;
+    border-color: #444;
+  }
+
+  body.dark-theme details {
+    border-color: #444;
+  }
+
+  body.dark-theme summary {
+    color: #e0e0e0;
+  }
+
+  div[style*="background: #D88E49"] {
+      background: #D88E49 !important;
+  }
+
+  body.dark-theme div[style*="background: #D88E49"] {
+      background: #BA6F4A !important;
+  }
+
+/* Make inputs match our theme */
+#projectFilter,
+#searchPosts,
+div[style*="width: 100%; padding: 25px;"] {
+    background: #D88E49 !important;
+    border: 1px solid #ddd;
+    color: #ffffff;
+}
+
+body.dark-theme #projectFilter,
+body.dark-theme #searchPosts,
+body.dark-theme div[style*="width: 100%; padding: 25px;"] {
+    background: #BA6F4A !important;
+    border-color: #444;
+    color: #ffffff;
+}
+
+/* Style dropdown options */
+#projectFilter option {
+    background-color: #D88E49 !important;
+    color: #ffffff;
+}
+
+body.dark-theme #projectFilter option {
+    background-color: #BA6F4A !important;
+    color: #ffffff;
+}
+
+body.dark-theme div[style*="background: #1a1a1a"] {
+  background: #1a1a1a !important;
+}
+
+body.dark-theme select option {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+  body.dark-theme #postsContainer h2 a {
+    color: #ffffff;
+  }
+
+  body.dark-theme #postsContainer p,
+  body.dark-theme #postsContainer span {
+    color: #e0e0e0;
+  }
+
+  body.dark-theme #postsContainer .post-meta,
+  body.dark-theme #postsContainer .post-excerpt {
+    color: #cccccc;
+  }
+
+  body.dark-theme #postsContainer span[style*="background: #e0e0e0"] {
+    background: #444 !important;
+    color: #e0e0e0;
+  }
+
+  .post-content h3,
+  #postsContainer h3,
+  details summary,
+  details li a {
+      color: #ffffff;
+  }
+
+  body.dark-theme .post-content h3,
+  body.dark-theme #postsContainer h3,
+  body.dark-theme details summary,
+  body.dark-theme details li a {
+      color: #e0e0e0;
+  }
+
+</style>
