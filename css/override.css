@@ -6,17 +6,17 @@ body {
 
 .container {
   max-width: 800px;
-  background-color: #ffffff;
-  color: #333333;   
   margin: 0 auto;
   padding: 20px;
   background-color: var(--post-background);
+  color: var(--text-color);
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-body.dark .container {
-  background-color: #000000;
-  color: #f0f0f0;
+body.dark-theme .container {
+  background-color: var(--post-background); /* Use theme variable for consistency */
+  color: var(--text-color); /* Use theme variable */
+  box-shadow: 0 0 10px rgba(255,255,255,0.05); /* Adjusted shadow for dark theme */
 }
 
 .post {

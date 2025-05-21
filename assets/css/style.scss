@@ -51,10 +51,16 @@ article.post,
 
     td {
       text-align: center;
+      /* background-color is inherited from .post-content for light theme */
+
+      a { /* Ensure anchor tags containing images behave well for centering */
+        display: inline-block; /* Allows text-align to center it */
+        line-height: 0; /* Removes extra space if image is block inside inline-block anchor */
+      }
 
       img {
         display: block;
-        margin: 1em auto;
+        margin: 1em auto; /* Centers the image within its container (the <a> or td) */
         max-width: 100%;
         height: auto;
         border-radius: 8px;
@@ -135,7 +141,7 @@ pre, code {
     }
 
     td {
-      background-color: var(--post-background);
+      background-color: var(--post-background); /* Should be #2d2d2d in dark theme */
       color: var(--text-color);
 
       img {

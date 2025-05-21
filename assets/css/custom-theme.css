@@ -1,48 +1,38 @@
-/* Base theme styles (previously in _includes/header.html) */
 body {
   transition: background-color 0.3s, color 0.3s;
-  /* Default light theme colors are now primarily driven by style.scss */
-  /* background-color: #ffffff; */ /* Use var(--background-color) from style.scss */
-  /* color: #1a1a1a; */ /* Use var(--text-color) from style.scss */
 }
 
-/* Dark theme for entire page */
 body.dark-theme {
-  background-color: #1a1a1a; /* Specific dark theme override */
-  color: #ffffff; /* Specific dark theme override */
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 
-/* Links in dark mode */
 body.dark-theme a {
-  color: #64B5F6; /* Consider var(--link-color) if defined for dark theme in style.scss */
+  color: #64B5F6;
 }
 
-/* Post content in dark mode */
 body.dark-theme .post-content {
-  /* background-color will be var(--post-background) from style.scss */
-  color: #e0e0e0; /* Text color for post content in dark mode */
+  color: #e0e0e0;
 }
 
-/* Headers in dark mode */
 body.dark-theme h1,
 body.dark-theme h2,
 body.dark-theme h3,
 body.dark-theme h4,
 body.dark-theme h5,
 body.dark-theme h6 {
-  color: #ffffff; /* Consider var(--heading-color) from style.scss */
+  color: #ffffff;
 }
 
 .site-header {
   padding: 1rem;
   transition: background-color 0.3s, border-color 0.3s;
-  background-color: #D88E49; /* Light theme header background */
-  /* border-bottom is handled by style.scss using var(--border-color) */
+  background-color: #D88E49; 
 }
 
 body.dark-theme .site-header {
-  background-color: #BA6F4A; /* Dark theme header background */
-  border-bottom-color: #1a1a1a; /* Specific border for dark header, or use var(--border-color) */
+  background-color: #BA6F4A;
+  border-bottom-color: #1a1a1a;
 }
 
 .header-content {
@@ -81,18 +71,19 @@ body.dark-theme .dark-logo {
 }
 .nav-link {
   text-decoration: none;
-  color: #ffffff; /* Nav link color for light theme header */
+  color: #ffffff;
   font-weight: 500;
 }
 
 body.dark-theme .nav-link {
-  color: #E8F5D5; /* Nav link color for dark theme header */
+  color: #E8F5D5;
 }
 
 .nav-link:hover,
 body.dark-theme .nav-link:hover {
-  color: #8d543a; /* Hover color for nav links */
+  color: #8d543a;
 }
+
 .theme-toggle {
   padding: 0.5rem;
   background: none;
@@ -110,7 +101,7 @@ body.dark-theme .nav-link:hover {
 }
 
 .light-icon {
-  display: none; /* Hidden by default, shown in dark theme */
+  display: none;
 }
 
 body.dark-theme .light-icon {
@@ -118,15 +109,14 @@ body.dark-theme .light-icon {
 }
 
 body.dark-theme .dark-icon {
-  display: none; /* Dark icon hidden in dark theme */
+  display: none;
 }
 
-/* Styles for #projectFilter, #searchPosts, etc. */
 #projectFilter,
 #searchPosts,
-div[style*="width: 100%; padding: 25px;"] { /* Be cautious with attribute selectors for styling */
+div[style*="width: 100%; padding: 25px;"] { 
     background: #D88E49 !important;
-    border: 1px solid #ddd; /* Consider var(--border-color) */
+    border: 1px solid #ddd;
     color: #ffffff;
 }
 
@@ -134,7 +124,7 @@ body.dark-theme #projectFilter,
 body.dark-theme #searchPosts,
 body.dark-theme div[style*="width: 100%; padding: 25px;"] {
     background: #BA6F4A !important;
-    border-color: #444; /* Consider var(--border-color) */
+    border-color: #444;
     color: #ffffff;
 }
 
@@ -149,23 +139,23 @@ body.dark-theme #projectFilter option {
 }
 
 body.dark-theme #postsContainer > div {
-  background: var(--background-color); /* Use CSS variable for consistency */
-  color: #e0e0e0; /* Or var(--text-color) */
+  background: var(--background-color);
+  color: #e0e0e0;
 }
 
 body.dark-theme select,
 body.dark-theme input[type="search"] {
-  background-color: #1a1a1a; /* Or var(--background-color) */
-  color: #ffffff; /* Or var(--text-color) */
-  border-color: #444; /* Or var(--border-color) */
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: #444;
 }
 
 body.dark-theme details {
-  border-color: #444; /* Or var(--border-color) */
+  border-color: #444;
 }
 
 body.dark-theme summary {
-  color: #e0e0e0; /* Or var(--text-color) */
+  color: #e0e0e0;
 }
 
 body.dark-theme div[style*="background: #1a1a1a"] { /* Attribute selectors can be brittle */
