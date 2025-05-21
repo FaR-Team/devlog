@@ -141,30 +141,29 @@ pre, code {
   .post-content table {
     border-color: var(--border-color); /* Ensure table border itself is themed */
 
-    /* Ensure all cells (th and td) and rows get the base dark background */
-    th, td {
+    thead tr th, /* Header cells in thead */
+    tbody tr th { /* Header cells in tbody (if any) */
       border-color: var(--border-color) !important; /* Ensure border color is also important */
-      background-color: var(--post-background) !important; /* Explicitly use background-color */
+      background-color: darken(var(--post-background), 5%) !important; /* Make TH slightly darker */
       background-image: none !important; /* Ensure no background image from Minima is interfering */
-      color: var(--text-color); /* Base dark theme text color for ALL cells */
+      color: var(--heading-color) !important;
     }
 
-    th {
-      background: darken(var(--post-background), 5%) !important; /* Make TH slightly darker, ensure override */
-      color: var(--heading-color);
-    }
-
-    /* Ensure even/odd row styling from Minima is overridden */
-    tr, tr:nth-child(even), tr:nth-child(odd) {
-      background-color: var(--post-background) !important; /* For the row itself */
+    tbody tr, /* All body rows */
+    tbody tr:nth-child(odd), /* Explicitly target odd rows (Minima's zebra) */
+    tbody tr:nth-child(even) { /* Explicitly target even rows */
+      background-color: transparent !important; /* Make row itself transparent to ensure td controls color */
       background-image: none !important; /* Ensure no background image on the row */
-      /* Force td within these rows to also get the correct background */
-      & > td {
+
+      td { /* Cells within ANY body row */
         background-color: var(--post-background) !important;
         background-image: none !important;
+        color: var(--text-color) !important;
+        border-color: var(--border-color) !important;
       }
     }
 
+    /* General image styling within tables for dark theme */
     img {
       background-color: transparent !important;
     }
