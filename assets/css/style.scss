@@ -141,25 +141,22 @@ pre, code {
   .post-content table {
     border-color: var(--border-color); /* Ensure table border itself is themed */
 
+    /* Ensure all cells (th and td) and rows get the base dark background */
     th, td {
       border-color: var(--border-color);
+      background: var(--post-background) !important; /* Base dark background for ALL cells */
+      color: var(--text-color); /* Base dark theme text color for ALL cells */
     }
 
     th {
-      background-color: darken(var(--post-background), 5%);
-      color: var(--heading-color); /* Text color for table headers in dark theme */
+      background: darken(var(--post-background), 5%) !important; /* Make TH slightly darker, ensure override */
+      color: var(--heading-color);
     }
 
     /* Ensure even/odd row styling from Minima is overridden */
     tr, tr:nth-child(even), tr:nth-child(odd) {
       background-color: var(--post-background) !important;
     }
-
-    td {
-      /* This ensures the cell background is the dark theme's post background */
-      /* Using background shorthand for a more forceful override */
-      background: var(--post-background) !important;
-      color: var(--text-color);
 
       img {
         background-color: transparent !important;
