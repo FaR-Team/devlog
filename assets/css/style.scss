@@ -157,8 +157,8 @@ pre, code {
 
     td {
       /* This ensures the cell background is the dark theme's post background */
-      /* Adding !important here to be absolutely sure it overrides other potential td backgrounds */
-      background-color: var(--post-background) !important;
+      /* Using background shorthand for a more forceful override */
+      background: var(--post-background) !important;
       color: var(--text-color);
 
       img {
