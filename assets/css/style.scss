@@ -33,6 +33,41 @@ article.post,
 .post-content,
 .white-background {
   background-color: var(--post-background) !important;
+
+  td {
+    img {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+    }
+  }
+}
+
+.post-content {
+
+  figure {
+    display: block;
+    margin: 30px auto;
+    padding: 0;
+    max-width: 100%;
+    text-align: center;
+
+    img {
+      .dark-theme & {
+        background-color: transparent;
+      }
+    }
+
+    figcaption {
+      margin-top: 0.8em;
+      font-size: 0.9em;
+      color: #6c757d;
+    }
+  }
+}
+
+.dark-theme .post-content figure figcaption {
+  color: #adb5bd;
 }
 
 a {
