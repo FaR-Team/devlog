@@ -157,9 +157,8 @@ body.dark-theme #projectFilter option {
   color: #ffffff;
 }
 
-body.dark-theme .post-content,
-body.dark-theme #postsContainer > div {
-  background: #1a1a1a;
+body.dark-theme #postsContainer > div { /* Only style #postsContainer here if needed for its specific background */
+  background: var(--background-color); /* Use CSS variable for consistency */
   color: #e0e0e0;
 }
 
