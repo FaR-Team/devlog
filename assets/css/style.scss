@@ -34,12 +34,11 @@ article.post,
 .white-background {
   background-color: var(--post-background) !important;
 
-  /* General Table Styling */
   table {
     width: 100%;
     margin: 1.5em 0;
     border-collapse: collapse;
-    background-color: transparent; /* Ensure table itself has no conflicting background */
+    background-color: transparent;
 
     th, td {
       padding: 0.5em 0.75em;
@@ -48,27 +47,26 @@ article.post,
     }
 
     th {
-      background-color: darken(var(--post-background), 3%); /* Slightly darker for header cells */
+      background-color: darken(var(--post-background), 3%);
       color: var(--heading-color);
     }
 
     tr {
-      background-color: transparent !important; /* Override any tr specific backgrounds like nth-child */
+      background-color: transparent !important; 
     }
 
     td {
       text-align: center;
-      background-color: var(--post-background); /* Default td background for light theme */
-      /* background-color is inherited from .post-content for light theme */
+      background-color: var(--post-background);
 
-      a { /* Ensure anchor tags containing images behave well for centering */
-        display: inline-block; /* Allows text-align to center it */
-        line-height: 0; /* Removes extra space if image is block inside inline-block anchor */
+      a {
+        display: inline-block;
+        line-height: 0;
       }
 
       img {
         display: block;
-        margin: 1em auto; /* Centers the image within its container (the <a> or td) */
+        margin: 1em auto;
         max-width: 100%;
         height: auto;
         border-radius: 8px;
@@ -124,7 +122,6 @@ pre, code {
   color: #333;
 }
 
-/* Dark theme */
 .dark-theme {
   --background-color: #1a1a1a;
   --text-color: #ffffff;
@@ -139,23 +136,23 @@ pre, code {
   }
 
   .post-content table {
-    border-color: var(--border-color); /* Ensure table border itself is themed */
+    border-color: var(--border-color);
 
-    thead tr th, /* Header cells in thead */
-    tbody tr th { /* Header cells in tbody (if any) */
-      border-color: var(--border-color) !important; /* Ensure border color is also important */
-      background-color: darken(var(--post-background), 5%) !important; /* Make TH slightly darker */
-      background-image: none !important; /* Ensure no background image from Minima is interfering */
+    thead tr th,
+    tbody tr th {
+      border-color: var(--border-color) !important;
+      background-color: darken(var(--post-background), 5%) !important;
+      background-image: none !important;
       color: var(--heading-color) !important;
     }
 
-    tbody tr, /* All body rows */
-    tbody tr:nth-child(odd), /* Explicitly target odd rows (Minima's zebra) */
-    tbody tr:nth-child(even) { /* Explicitly target even rows */
-      background-color: transparent !important; /* Make row itself transparent to ensure td controls color */
-      background-image: none !important; /* Ensure no background image on the row */
+    tbody tr,
+    tbody tr:nth-child(odd),
+    tbody tr:nth-child(even) {
+      background-color: transparent !important;
+      background-image: none !important;
 
-      td { /* Cells within ANY body row */
+      td {
         background-color: var(--post-background) !important;
         background-image: none !important;
         color: var(--text-color) !important;
@@ -163,7 +160,6 @@ pre, code {
       }
     }
 
-    /* General image styling within tables for dark theme */
     img {
       background-color: transparent !important;
     }

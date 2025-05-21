@@ -13,11 +13,9 @@
       {%- include google-analytics.html -%}
     {%- endif -%}
 
-    <!-- Highlight.js CSS -->
     <link rel="stylesheet" href="{{ '/js/highlightjs/styles/github.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/js/highlightjs/styles/ssms.css' | relative_url }}" />
 
-    <!-- Google Fonts (moved from post.html) -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   </head>
@@ -27,10 +25,8 @@
       {{ content }}
     </div>
 
-    <!-- Custom Theme JS (includes theme toggle and hljs init) -->
     <script src="{{ '/assets/js/custom-theme.js' | relative_url }}"></script>
 
-    <!-- Highlight.js Core and Languages -->
     <script type="text/javascript" src="{{ '/js/highlightjs/highlight.min.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/js/highlightjs/languages/plaintext.min.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/js/highlightjs/languages/powershell.min.js' | relative_url }}"></script>
