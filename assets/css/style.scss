@@ -34,10 +34,12 @@ article.post,
 .white-background {
   background-color: var(--post-background) !important;
 
+  /* General Table Styling */
   table {
     width: 100%;
     margin: 1.5em 0;
     border-collapse: collapse;
+    background-color: transparent; /* Ensure table itself has no conflicting background */
 
     th, td {
       padding: 0.5em 0.75em;
@@ -46,11 +48,17 @@ article.post,
     }
 
     th {
-      background-color: darken(var(--post-background), 2%);
+      background-color: darken(var(--post-background), 3%); /* Slightly darker for header cells */
+      color: var(--heading-color);
+    }
+
+    tr {
+      background-color: transparent !important; /* Override any tr specific backgrounds like nth-child */
     }
 
     td {
       text-align: center;
+      background-color: var(--post-background); /* Default td background for light theme */
       /* background-color is inherited from .post-content for light theme */
 
       a { /* Ensure anchor tags containing images behave well for centering */
@@ -131,17 +139,26 @@ pre, code {
   }
 
   .post-content table {
+    border-color: var(--border-color); /* Ensure table border itself is themed */
+
     th, td {
       border-color: var(--border-color);
     }
 
     th {
       background-color: darken(var(--post-background), 5%);
-      color: var(--heading-color);
+      color: var(--heading-color); /* Text color for table headers in dark theme */
+    }
+
+    /* Ensure even/odd row styling from Minima is overridden */
+    tr, tr:nth-child(even), tr:nth-child(odd) {
+      background-color: var(--post-background) !important;
     }
 
     td {
-      background-color: var(--post-background); /* Should be #2d2d2d in dark theme */
+      /* This ensures the cell background is the dark theme's post background */
+      /* Adding !important here to be absolutely sure it overrides other potential td backgrounds */
+      background-color: var(--post-background) !important;
       color: var(--text-color);
 
       img {
