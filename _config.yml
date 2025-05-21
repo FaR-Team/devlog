@@ -1,5 +1,6 @@
 title: "The Farmoxel Project"
 author: "FaR Team"
+baseurl: "/devlog"
 description: "This is a devlog for our on-development game."
 
 sass:
