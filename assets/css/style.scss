@@ -143,8 +143,9 @@ pre, code {
 
     /* Ensure all cells (th and td) and rows get the base dark background */
     th, td {
-      border-color: var(--border-color);
-      background: var(--post-background) !important; /* Base dark background for ALL cells */
+      border-color: var(--border-color) !important; /* Ensure border color is also important */
+      background-color: var(--post-background) !important; /* Explicitly use background-color */
+      background-image: none !important; /* Ensure no background image from Minima is interfering */
       color: var(--text-color); /* Base dark theme text color for ALL cells */
     }
 
@@ -155,12 +156,17 @@ pre, code {
 
     /* Ensure even/odd row styling from Minima is overridden */
     tr, tr:nth-child(even), tr:nth-child(odd) {
-      background-color: var(--post-background) !important;
+      background-color: var(--post-background) !important; /* For the row itself */
+      background-image: none !important; /* Ensure no background image on the row */
+      /* Force td within these rows to also get the correct background */
+      & > td {
+        background-color: var(--post-background) !important;
+        background-image: none !important;
+      }
     }
 
-      img {
-        background-color: transparent !important;
-      }
+    img {
+      background-color: transparent !important;
     }
   }
 }
