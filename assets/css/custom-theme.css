@@ -1,0 +1,213 @@
+/* Base theme styles (previously in _includes/header.html) */
+body {
+  transition: background-color 0.3s, color 0.3s;
+  /* Default light theme colors are now primarily driven by style.scss */
+  /* background-color: #ffffff; */ /* Use var(--background-color) from style.scss */
+  /* color: #1a1a1a; */ /* Use var(--text-color) from style.scss */
+}
+
+/* Dark theme for entire page */
+body.dark-theme {
+  background-color: #1a1a1a; /* Specific dark theme override */
+  color: #ffffff; /* Specific dark theme override */
+}
+
+/* Links in dark mode */
+body.dark-theme a {
+  color: #64B5F6; /* Consider var(--link-color) if defined for dark theme in style.scss */
+}
+
+/* Post content in dark mode */
+body.dark-theme .post-content {
+  /* background-color will be var(--post-background) from style.scss */
+  color: #e0e0e0; /* Text color for post content in dark mode */
+}
+
+/* Headers in dark mode */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: #ffffff; /* Consider var(--heading-color) from style.scss */
+}
+
+.site-header {
+  padding: 1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+  background-color: #D88E49; /* Light theme header background */
+  /* border-bottom is handled by style.scss using var(--border-color) */
+}
+
+body.dark-theme .site-header {
+  background-color: #BA6F4A; /* Dark theme header background */
+  border-bottom-color: #1a1a1a; /* Specific border for dark header, or use var(--border-color) */
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.site-logo {
+  height: 40px;
+  transition: opacity 0.3s;
+}
+
+.dark-logo {
+  display: none;
+}
+
+body.dark-theme .light-logo {
+  display: none;
+}
+
+body.dark-theme .dark-logo {
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.nav-link {
+  text-decoration: none;
+  color: #ffffff; /* Nav link color for light theme header */
+  font-weight: 500;
+}
+
+body.dark-theme .nav-link {
+  color: #E8F5D5; /* Nav link color for dark theme header */
+}
+
+.nav-link:hover,
+body.dark-theme .nav-link:hover {
+  color: #8d543a; /* Hover color for nav links */
+}
+.theme-toggle {
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-icon {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s;
+}
+
+.light-icon {
+  display: none; /* Hidden by default, shown in dark theme */
+}
+
+body.dark-theme .light-icon {
+  display: block;
+}
+
+body.dark-theme .dark-icon {
+  display: none; /* Dark icon hidden in dark theme */
+}
+
+/* Styles for #projectFilter, #searchPosts, etc. */
+#projectFilter,
+#searchPosts,
+div[style*="width: 100%; padding: 25px;"] { /* Be cautious with attribute selectors for styling */
+    background: #D88E49 !important;
+    border: 1px solid #ddd; /* Consider var(--border-color) */
+    color: #ffffff;
+}
+
+body.dark-theme #projectFilter,
+body.dark-theme #searchPosts,
+body.dark-theme div[style*="width: 100%; padding: 25px;"] {
+    background: #BA6F4A !important;
+    border-color: #444; /* Consider var(--border-color) */
+    color: #ffffff;
+}
+
+#projectFilter option {
+    background-color: #D88E49 !important;
+    color: #ffffff;
+}
+
+body.dark-theme #projectFilter option {
+    background-color: #BA6F4A !important;
+    color: #ffffff;
+}
+
+body.dark-theme #postsContainer > div {
+  background: var(--background-color); /* Use CSS variable for consistency */
+  color: #e0e0e0; /* Or var(--text-color) */
+}
+
+body.dark-theme select,
+body.dark-theme input[type="search"] {
+  background-color: #1a1a1a; /* Or var(--background-color) */
+  color: #ffffff; /* Or var(--text-color) */
+  border-color: #444; /* Or var(--border-color) */
+}
+
+body.dark-theme details {
+  border-color: #444; /* Or var(--border-color) */
+}
+
+body.dark-theme summary {
+  color: #e0e0e0; /* Or var(--text-color) */
+}
+
+body.dark-theme div[style*="background: #1a1a1a"] { /* Attribute selectors can be brittle */
+  background: #1a1a1a !important;
+}
+
+body.dark-theme select option {
+  background-color: #2d2d2d; /* Or var(--post-background) */
+  color: #ffffff;
+}
+
+body.dark-theme #postsContainer h2 a {
+  color: #ffffff; /* Or var(--heading-color) or var(--link-color) */
+}
+
+body.dark-theme #postsContainer p,
+body.dark-theme #postsContainer span {
+  color: #e0e0e0; /* Or var(--text-color) */
+}
+
+body.dark-theme #postsContainer .post-meta,
+body.dark-theme #postsContainer .post-excerpt {
+  color: #cccccc;
+}
+
+body.dark-theme #postsContainer span[style*="background: #e0e0e0"] {
+  background: #444 !important;
+  color: #e0e0e0;
+}
+
+/* These rules seem to conflict for light theme, h3 color should be var(--heading-color) from style.scss */
+.post-content h3,
+#postsContainer h3,
+details summary,
+details li a {
+    /* color: #ffffff; */ /* This would make text white on white in light theme */
+    color: var(--heading-color); /* Default heading color */
+}
+
+body.dark-theme .post-content h3,
+body.dark-theme #postsContainer h3,
+body.dark-theme details summary,
+body.dark-theme details li a {
+    color: #e0e0e0; /* Text color for these elements in dark mode */
+}
