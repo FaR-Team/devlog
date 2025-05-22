@@ -32,4 +32,4 @@ defaults:
       path: ""
       type: post
     values:
-      tags: Other, devlog, characters, art
+      tags: Other, Devlog, Characters, Art
