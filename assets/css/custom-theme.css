@@ -184,7 +184,7 @@ body.dark-theme select option {
 }
 
 body.dark-theme #postsContainer h2 a {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 body.dark-theme #postsContainer p,
