@@ -269,10 +269,11 @@ body.dark-theme .container > .container > div[style*="display: flex"][style*="ga
 
 .container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"][style*="margin: 0 auto;"] > div:nth-child(2) {
   position: fixed;
-  top: 92px;
+  top: 50%;
   right: 20px;
   width: 300px;
-  height: calc(100vh - 112px);
+  max-height: calc(100vh - 112px);
+  transform: translateY(-50%);
   overflow-y: auto;
   z-index: 1000;
 }
