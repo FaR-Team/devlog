@@ -189,17 +189,19 @@ body.dark-theme #postsContainer span[style*="background: #e0e0e0"] {
 }
 
 .post-content h3,
-#postsContainer h3,
 details summary,
 details li a {
     color: var(--heading-color);
 }
 
 body.dark-theme .post-content h3,
-body.dark-theme #postsContainer h3,
 body.dark-theme details summary,
 body.dark-theme details li a {
     color: #e0e0e0;
+}
+
+#postsContainer h3 {
+    color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6, .post-title {
