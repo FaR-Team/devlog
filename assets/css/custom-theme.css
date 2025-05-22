@@ -371,3 +371,37 @@ body.dark-theme .post-content blockquote {
   border-left-color: #BA6F4A;
   color: #b0b0b0;
 }
+
+
+
+.post-content > p:has(> img:first-child + em:last-child) {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0;
+  text-align: center;
+}
+
+.post-content > p:has(> img:first-child + em:last-child) > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+.post-content > p:has(> img:first-child + em:last-child) > em {
+  display: block;
+  margin-top: 0.8em;
+  font-size: 0.9em;
+  color: #6c757d;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+
+body.dark-theme .post-content > p:has(> img:first-child + em:last-child) > em {
+  color: #adb5bd;
+}
