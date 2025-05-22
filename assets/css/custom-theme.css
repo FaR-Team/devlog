@@ -200,10 +200,16 @@ body.dark-theme details li a {
     color: #e0e0e0;
 }
 
-#postsContainer h3 {
-    color: #ffffff;
-}
-
 h1, h2, h3, h4, h5, h6, .post-title {
   font-family: 'Courier Prime', monospace;
+}
+
+#searchPosts + div h3,
+#searchPosts + div details summary,
+#searchPosts + div details ul li a {
+    color: #ffffff !important;
+}
+
+#searchPosts + div details {
+    border-bottom-color: #ffffff !important;
 }
