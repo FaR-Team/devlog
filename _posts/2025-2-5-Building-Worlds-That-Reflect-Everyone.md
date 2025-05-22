@@ -3,7 +3,7 @@ layout: post
 title: "Building Worlds That Reflect Everyone"
 date: 2025-02-05
 project: farmoxel
-tags: []
+tags: [characters, art]
 ---
 
 Since the team was founded back in 2022, F.a.R. Team has embraced the belief that games are for everyone, and that not only means that accessibility should be our main pillar during development (Which it is), but it also means that representation and diversity are very important things to both create interesting and engaging stories and to help people feel seen, valued and celebrated.

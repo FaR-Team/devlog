@@ -250,15 +250,21 @@ body.dark-theme .post-meta {
 
 .post-tags .post-tag {
   display: inline-block;
-  background-color: #e8e8e8;
+  background-color: #e0e0e0;
   color: #333333;
-  padding: 5px 12px;
+  padding: 4px 10px;
   margin-right: 8px;
   margin-bottom: 8px;
-  border-radius: 15px;
-  font-size: 0.85em;
+  border-radius: 12px;
+  font-size: 0.8em;
   text-decoration: none;
   transition: background-color 0.2s, color 0.2s;
+  line-height: 1.5;
+}
+
+.post-tags .post-tag .fas.fa-tag {
+  margin-right: 5px;
+  font-size: 0.9em;
 }
 
 .post-tags .post-tag:hover {

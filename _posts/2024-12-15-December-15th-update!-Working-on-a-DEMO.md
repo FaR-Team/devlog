@@ -3,7 +3,7 @@ layout: post
 title: "December 15th update! Working on a DEMO"
 date: 2024-12-15
 project: farmoxel
-tags: []
+tags: [devlog]
 ---
 
 Last time we ever updated you about the state of our games was back in June 15th- _phew_ that was long ago. Worry not! I'm sure this may not be the first time I say this, but we are not gone. We've been dealing with some administrative issues **while** assisting to some events **while** working on The Farmoxel Project's DEMO. Yes, you've read that right. **DEMO.**
