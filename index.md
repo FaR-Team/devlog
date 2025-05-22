@@ -14,8 +14,7 @@
           {% assign images = post.content | split: "![" %}
           {% assign firstImage = images[1] | split: ")" | first %}
           {% assign imageUrl = firstImage | split: "](" | last %}
-        {% endif %}
-        <div style="display: flex; margin: 20px 0; background-image: url({{ imageUrl }}); background-size: cover; background-position: center; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        {% endif %}<div data-project="{{ post.project | downcase }}" data-tags="{{ post.tags | join: ',' | downcase }}" style="display: flex; margin: 20px 0; background-image: url({{ imageUrl }}); background-size: cover; background-position: center; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
           <div style="padding: 20px; flex: 1; background: rgba(245, 245, 245, 0.9);">
             <h2 style="margin-top: 0;"><a href="/devlog/{{ post.url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
             <p style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
@@ -23,7 +22,6 @@
               <div style="display: flex; align-items: center;">
              <img src="{{ '/assets/images/' | append: post.project | append: '-icon.png' | relative_url }}"
                   alt="{{ post.project }}" 
-                  data-project="{{ post.project }}"
                   style="height: 24px; margin-right: 10px;">
                 <span style="color: #888; font-size: 0.9em;">{{ post.date | date: "%B %d, %Y" }}</span>
                 {% if post.tags %}
@@ -56,6 +54,25 @@
           <img id="selectedIcon" src="" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; pointer-events: none;">
         </div>
       </div>
+      <!-- Tag Filter Box -->
+      <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
+        <h4 style="margin-top: 0; margin-bottom: 10px; color: #333;">Filter by Tag</h4>
+        <select id="tagFilter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: #f8f8f8; cursor: pointer;">
+          <option value="all">All Tags</option>
+          {% assign site_tags = "" %}
+          {% for post in site.posts %}
+            {% for tag in post.tags %}
+              {% unless site_tags contains tag %}
+                {% assign site_tags = site_tags | append: "," | append: tag %}
+              {% endunless %}
+            {% endfor %}
+          {% endfor %}
+          {% assign sorted_tags = site_tags | remove_first: "," | split: "," | uniq | sort %}
+          {% for tag_name in sorted_tags %}
+            <option value="{{ tag_name | downcase }}">{{ tag_name }}</option>
+          {% endfor %}
+        </select>
+      </div>
       <!-- Search and Archives Box -->
       <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
         <input type="search" id="searchPosts" placeholder="Search posts..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px;">
@@ -79,26 +96,28 @@
   
 <script>
   document.getElementById('projectFilter').addEventListener('change', filterPosts);
+  document.getElementById('tagFilter').addEventListener('change', filterPosts);
   document.getElementById('searchPosts').addEventListener('input', filterPosts);
 
   function filterPosts() {
-      const project = document.getElementById('projectFilter').value;
+      const selectedProject = document.getElementById('projectFilter').value.toLowerCase();
+      const selectedTag = document.getElementById('tagFilter').value.toLowerCase();
       const searchTerm = document.getElementById('searchPosts').value.toLowerCase();
       const posts = document.querySelectorAll('#postsContainer > div');
 
       posts.forEach(post => {
-          // Get the full post URL from the "Read more" link
           const postUrl = post.querySelector('a[href^="/devlog/"]').getAttribute('href');
-        
-          // Fetch and search through the full post content
+          const postProject = post.dataset.project || 'all';
+          const postTags = (post.dataset.tags || '').split(',');
+
+          const projectMatch = selectedProject === 'all' || postProject === selectedProject;
+          const tagMatch = selectedTag === 'all' || postTags.includes(selectedTag);
+
           fetch(postUrl)
               .then(response => response.text())
               .then(content => {
-                  const postProject = post.querySelector('img')?.getAttribute('data-project') || 'all';
-                  const projectMatch = project === 'all' || postProject === project;
                   const searchMatch = content.toLowerCase().includes(searchTerm);
-
-                  post.style.display = projectMatch && searchMatch ? 'flex' : 'none';
+                  post.style.display = projectMatch && tagMatch && searchMatch ? 'flex' : 'none';
               });
       });
   }  
@@ -111,6 +130,5 @@
     icon.style.display = selected.dataset.icon ? 'block' : 'none';
   });
 
-  // Set initial icon
   select.dispatchEvent(new Event('change'));
 </script>

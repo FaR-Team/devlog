@@ -116,6 +116,7 @@ body.dark-theme .dark-icon {
 
 #projectFilter,
 #searchPosts,
+#tagFilter,
 div[style*="width: 100%; padding: 25px;"] { 
     background: #D88E49 !important;
     border: 1px solid #ddd;
@@ -125,6 +126,7 @@ div[style*="width: 100%; padding: 25px;"] {
 
 body.dark-theme #projectFilter,
 body.dark-theme #searchPosts,
+body.dark-theme #tagFilter,
 body.dark-theme div[style*="width: 100%; padding: 25px;"] {
     background: #BA6F4A !important;
     border-color: #444;
@@ -137,18 +139,24 @@ body.dark-theme div[style*="width: 100%; padding: 25px;"] {
 }
 
 #projectFilter option {
+    /* Styles for project filter options */
     background-color: #D88E49 !important;
     color: #ffffff;
 }
 
-body.dark-theme #projectFilter option {
-    background-color: #BA6F4A !important;
+#projectFilter option, 
+#tagFilter option {
     color: #ffffff;
 }
 
 body.dark-theme #postsContainer > div {
   background: var(--background-color);
   color: #e0e0e0;
+}
+
+body.dark-theme #projectFilter option,
+body.dark-theme #tagFilter option {
+    background-color: #BA6F4A !important;
 }
 
 body.dark-theme select,
