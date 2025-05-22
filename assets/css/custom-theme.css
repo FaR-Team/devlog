@@ -218,6 +218,64 @@ h1, h2, h3, h4, h5, h6, .post-title {
   font-family: 'Courier Prime', monospace;
 }
 
+.post-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+body.dark-theme .post-header {
+  border-bottom-color: var(--border-color);
+}
+
+h1.post-title {
+  font-size: 2.8em;
+  margin-bottom: 0.3em;
+  line-height: 1.2;
+}
+
+.post-meta {
+  font-size: 0.9em;
+  color: #757575;
+  margin-bottom: 15px;
+}
+
+body.dark-theme .post-meta {
+  color: #a0a0a0;
+}
+
+.post-tags {
+  margin-top: 15px;
+}
+
+.post-tags .post-tag {
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: #333333;
+  padding: 5px 12px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.post-tags .post-tag:hover {
+  background-color: #D88E49; 
+  color: #ffffff;
+}
+
+body.dark-theme .post-tags .post-tag {
+  background-color: #444444;
+  color: #e0e0e0;
+}
+
+body.dark-theme .post-tags .post-tag:hover {
+  background-color: #BA6F4A;
+  color: #ffffff;
+}
+
 #searchPosts + div h3,
 #searchPosts + div details summary,
 #searchPosts + div details ul li a {
@@ -281,4 +339,22 @@ body.dark-theme .container > .container > div[style*="display: flex"][style*="ga
   transform: translateY(-50%);
   overflow-y: auto;
   z-index: 1000;
+}
+
+.post-content {
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+.post-content blockquote {
+  border-left: 4px solid #D88E49;
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #555555;
+}
+
+body.dark-theme .post-content blockquote {
+  border-left-color: #BA6F4A;
+  color: #b0b0b0;
 }
