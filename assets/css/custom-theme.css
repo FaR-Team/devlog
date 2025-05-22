@@ -213,3 +213,22 @@ h1, h2, h3, h4, h5, h6, .post-title {
 #searchPosts + div details {
     border-bottom-color: #ffffff !important;
 }
+
+.container > .container:has(> div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"]) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"] {
+  background-color: transparent !important;
+}
+
+.container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"] > div:first-child {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+body.dark-theme .container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"] > div:first-child {
+  background-color: #262626;
+}
