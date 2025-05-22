@@ -56,7 +56,6 @@
       </div>
       <!-- Tag Filter Box -->
       <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
-        <h4 style="margin-top: 0; margin-bottom: 10px; color: #333;">Filter by Tag</h4>
         <select id="tagFilter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: #f8f8f8; cursor: pointer;">
           <option value="all">All Tags</option>
           {% assign site_tags = "" %}
@@ -77,8 +76,8 @@
       <div style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
         <input type="search" id="searchPosts" placeholder="Search posts..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px;">
 
-        <div style="height: 500px; overflow-y: auto; width: 100%; overflow-x: hidden;">
-          <h3 style="color: #333; font-size: 1.2em; margin-bottom: 15px;">Archives</h3>
+        <div style="height: 300px; overflow-y: auto; width: 100%; overflow-x: hidden;">
+          <h3 style="font-size: 1.2em; margin-bottom: 15px;">Archives</h3>
           {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
           {% for year in postsByYear %}
             <details style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 12px; width: 100%; overflow-x: hidden;">
