@@ -192,6 +192,11 @@ body.dark-theme #postsContainer span {
   color: #e0e0e0;
 }
 
+
+body.dark-theme #postsContainer > div > div[style*="background: rgba(245, 245, 245, 0.9)"] {
+  background: var(--post-background) !important;
+}
+
 body.dark-theme #postsContainer .post-meta,
 body.dark-theme #postsContainer .post-excerpt {
   color: #cccccc;
