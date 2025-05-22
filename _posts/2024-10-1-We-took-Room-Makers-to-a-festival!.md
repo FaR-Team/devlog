@@ -41,7 +41,7 @@ Lo primero fue probarlo a fondo para encontrar cuanto bug sea posible. Para esto
 
 #### El bug.
 
-[![](https://blogger.googleusercontent.com/img/a/AVvXsEg3pYeNik9SbjSIxDePZgX2FkRAqlUp5ZAHWxxZwU3zQh_YukmfT5SE3TdTj-DfWciiKaZ1bFtf2z8aWTRuiUH2iN_2hYydo4M_h_l4s15aoKnGjuVXQI26u_qimxtLXwGp-FldYBl7pbU64YkYNTl4UDpePqQF7l4PtcQBB0Zzd1eccp_kSoEAULP67OBL=w640-h504)](https://blogger.googleusercontent.com/img/a/AVvXsEg3pYeNik9SbjSIxDePZgX2FkRAqlUp5ZAHWxxZwU3zQh_YukmfT5SE3TdTj-DfWciiKaZ1bFtf2z8aWTRuiUH2iN_2hYydo4M_h_l4s15aoKnGjuVXQI26u_qimxtLXwGp-FldYBl7pbU64YkYNTl4UDpePqQF7l4PtcQBB0Zzd1eccp_kSoEAULP67OBL)
+!["Veo que me ignoraste. Pon tu TV encima de la mesa."](https://blogger.googleusercontent.com/img/a/AVvXsEg3pYeNik9SbjSIxDePZgX2FkRAqlUp5ZAHWxxZwU3zQh_YukmfT5SE3TdTj-DfWciiKaZ1bFtf2z8aWTRuiUH2iN_2hYydo4M_h_l4s15aoKnGjuVXQI26u_qimxtLXwGp-FldYBl7pbU64YkYNTl4UDpePqQF7l4PtcQBB0Zzd1eccp_kSoEAULP67OBL)
 *"Veo que me ignoraste. Pon tu TV encima de la mesa."*
 
 Ese sarcástico cartel, que luce tan inocente, nos causó muchos problemas. 
