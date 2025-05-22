@@ -3,6 +3,18 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+a {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: #2374ab;
+}
+
+body.dark-theme a:visited {
+  color: #3e8cc7;
+}
+
 body.dark-theme {
   background-color: #1a1a1a;
   color: #ffffff;
@@ -76,6 +88,10 @@ body.dark-theme .dark-logo {
   color: #ffffff;
   font-weight: 500;
 }
+.nav-link:visited {
+  color: #ffffff;
+}
+
 
 body.dark-theme .nav-link {
   color: #E8F5D5;
