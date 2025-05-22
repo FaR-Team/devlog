@@ -194,6 +194,7 @@ body.dark-theme #postsContainer span {
 
 
 body.dark-theme #postsContainer > div > div[style*="background: rgba(245, 245, 245, 0.9)"] {
+  color: #ffffff !important;
   background: var(--post-background) !important;
 }
 
