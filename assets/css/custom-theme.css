@@ -214,21 +214,37 @@ h1, h2, h3, h4, h5, h6, .post-title {
     border-bottom-color: #ffffff !important;
 }
 
-.container > .container:has(> div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"]) {
+.container:has(
+  > .container:has(
+    > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"][style*="margin: 0 auto;"]
+  )
+) {
+  max-width: none !important;
+}
+
+.container > .container:has(> div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"][style*="margin: 0 auto;"]) {
   background-color: transparent !important;
   box-shadow: none !important;
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-.container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"] {
+.container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"][style*="margin: 0 auto;"] > div:first-child {
   background-color: transparent !important;
+  width: auto !important;
+  max-width: 1130px !important;
+  margin: 0 auto !important;
 }
 
-.container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"] > div:first-child {
+.container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"][style*="margin: 0 auto;"] > div:first-child {
   background-color: #ffffff;
   padding: 25px;
   border-radius: 12px;
+  max-width: 800px; 
 }
 
-body.dark-theme .container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"] > div:first-child {
+body.dark-theme .container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"][style*="margin: 0 auto;"] > div:first-child {
   background-color: #262626;
 }
