@@ -233,15 +233,17 @@ h1, h2, h3, h4, h5, h6, .post-title {
   margin: 0 !important;
 }
 
+
 .container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"][style*="margin: 0 auto;"] {
   display: grid !important;
-  grid-template-columns: 1fr minmax(0, 800px) 30px minmax(0, 300px) 1fr;
+  grid-template-columns: 1fr auto 1fr;
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
   gap: 0 !important;
   background-color: transparent !important;
+  position: relative;
 }
 
 .container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"][style*="margin: 0 auto;"] > div:first-child {
@@ -250,8 +252,8 @@ h1, h2, h3, h4, h5, h6, .post-title {
   padding: 25px;
   border-radius: 12px;
   width: 100%;
-  max-width: none;
-  margin: 0; 
+  max-width: 800px;
+  margin: 0;
 }
 
 body.dark-theme .container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"][style*="margin: 0 auto;"] > div:first-child {
@@ -259,6 +261,11 @@ body.dark-theme .container > .container > div[style*="display: flex"][style*="ga
 }
 
 .container > .container > div[style*="display: flex"][style*="gap: 30px"][style*="width: 95%"][style*="margin: 0 auto;"] > div:nth-child(2) {
-  grid-column: 3 / 5;
-  width: 100%;
+  position: fixed;
+  top: 92px;
+  right: 20px;
+  width: 300px;
+  height: calc(100vh - 112px);
+  overflow-y: auto;
+  z-index: 1000;
 }
