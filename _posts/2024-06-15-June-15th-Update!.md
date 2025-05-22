@@ -65,37 +65,22 @@ As of now, it can rain, snow or be sunny. None of them depend on the season and 
 
 Apples only had one growth stage: Apple. At first it was a realistic model, so at some point I decided to replace it with a voxel model made in minutes. Since neither the tree or the apples had a growth system, they were TINY:
 
-  
-
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEhzNLWXAdOqq-Im0Xz26dhuZNBCv5hIaHy3iZAyUQTnToYMuU-nWLHeao9yyyDCJvBfjiAxU1qFko39w67M4ULGrwuOO9xHp6EBZqfYYhDjGmaOZNaCnrPf89TKIW2CvE9DG8Zby6J1EcnUhjUavBou8pFLv_3x0enIfjRD89STTunK83qHEEDqqz0nxAPh)](https://blogger.googleusercontent.com/img/a/AVvXsEhzNLWXAdOqq-Im0Xz26dhuZNBCv5hIaHy3iZAyUQTnToYMuU-nWLHeao9yyyDCJvBfjiAxU1qFko39w67M4ULGrwuOO9xHp6EBZqfYYhDjGmaOZNaCnrPf89TKIW2CvE9DG8Zby6J1EcnUhjUavBou8pFLv_3x0enIfjRD89STTunK83qHEEDqqz0nxAPh) |
-| They were so cute! |
-
-  
+![](https://blogger.googleusercontent.com/img/a/AVvXsEhzNLWXAdOqq-Im0Xz26dhuZNBCv5hIaHy3iZAyUQTnToYMuU-nWLHeao9yyyDCJvBfjiAxU1qFko39w67M4ULGrwuOO9xHp6EBZqfYYhDjGmaOZNaCnrPf89TKIW2CvE9DG8Zby6J1EcnUhjUavBou8pFLv_3x0enIfjRD89STTunK83qHEEDqqz0nxAPh) 
+*They were so cute!*
 
 Now they grew up, learnt to drive, got a job and rented their first apartment:  
 
-  
+![](https://blogger.googleusercontent.com/img/a/AVvXsEidXHGZwpF84F3DI3agKOVGLMGIGDdrdRRS32z7hoHgcJDaE8uKHXHHK53sflqwpJxHH_HZyR6AA294xP7NMbOVkiIdMYg_i07x6UgD-4tmv9jyEUDV2rsyJO4ZndKlZ589_WMFmpiG548jP2S6Xv8eKyWdnuG01tfLkfYu2NNJ7hC04nuHomfcpP8FdsM8)
+*Oooh, so mature!*
 
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEidXHGZwpF84F3DI3agKOVGLMGIGDdrdRRS32z7hoHgcJDaE8uKHXHHK53sflqwpJxHH_HZyR6AA294xP7NMbOVkiIdMYg_i07x6UgD-4tmv9jyEUDV2rsyJO4ZndKlZ589_WMFmpiG548jP2S6Xv8eKyWdnuG01tfLkfYu2NNJ7hC04nuHomfcpP8FdsM8)](https://blogger.googleusercontent.com/img/a/AVvXsEidXHGZwpF84F3DI3agKOVGLMGIGDdrdRRS32z7hoHgcJDaE8uKHXHHK53sflqwpJxHH_HZyR6AA294xP7NMbOVkiIdMYg_i07x6UgD-4tmv9jyEUDV2rsyJO4ZndKlZ589_WMFmpiG548jP2S6Xv8eKyWdnuG01tfLkfYu2NNJ7hC04nuHomfcpP8FdsM8) |
-| Oooh, so mature! |
-
-  
 But that's not all about apples!
 
 #### Added first growth stage model for the apple.
 
 When making the model above, I investigated and found out that the apple flower is of a beautiful pink shade, so I decided to make that model too~
 
-  
-
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEgeKkAbELO87VWSCrXCyrTE2KS5i64XAXp7liXJdXsvvd1VeiYd_nBMQl9s1fuRwfygdaF6--fypZ2Em-L3sEKkV0Gy26WYrzctk-hKLaSDIq5zmgRyESVFx2ekD-HVNoStJpaKzy3wSJeifT0_f4HmsWtej92fQn3cWeqJexWUiZ3q2Mom9Rbctu9Tz0dh)](https://blogger.googleusercontent.com/img/a/AVvXsEgeKkAbELO87VWSCrXCyrTE2KS5i64XAXp7liXJdXsvvd1VeiYd_nBMQl9s1fuRwfygdaF6--fypZ2Em-L3sEKkV0Gy26WYrzctk-hKLaSDIq5zmgRyESVFx2ekD-HVNoStJpaKzy3wSJeifT0_f4HmsWtej92fQn3cWeqJexWUiZ3q2Mom9Rbctu9Tz0dh) |
-| Fancy~ |
+![](https://blogger.googleusercontent.com/img/a/AVvXsEgeKkAbELO87VWSCrXCyrTE2KS5i64XAXp7liXJdXsvvd1VeiYd_nBMQl9s1fuRwfygdaF6--fypZ2Em-L3sEKkV0Gy26WYrzctk-hKLaSDIq5zmgRyESVFx2ekD-HVNoStJpaKzy3wSJeifT0_f4HmsWtej92fQn3cWeqJexWUiZ3q2Mom9Rbctu9Tz0dh)
+*Fancy~*
 
   
 As of now, it is not in the game. We first wanna add a new tree model, all of it's stages and all of the apple's stages. But it is low in the priority list.
@@ -108,28 +93,15 @@ The first thing I had to do was to merge tiles into bigger chunks to avoid overl
   
 Here, some showcases of the models:
 
-  
+![](https://blogger.googleusercontent.com/img/a/AVvXsEi222IhVtazpEYIGNdWb_oXqcSKO8-93J0XCLcA65c09BwSgkEW2qdVPzQT_s5_sxe8AxA7Ind7g3KCwVGFuEYGF23zSAv_HeHwfHD5musmM23ephwF3eCU2o6qG9R3USIIOwWjj3ES5TT4wQwTaEchiHavr1bk6ye1S9eL-4lIPC__53dDG73EA1X3HG_C)
+*Oooh*
 
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEi222IhVtazpEYIGNdWb_oXqcSKO8-93J0XCLcA65c09BwSgkEW2qdVPzQT_s5_sxe8AxA7Ind7g3KCwVGFuEYGF23zSAv_HeHwfHD5musmM23ephwF3eCU2o6qG9R3USIIOwWjj3ES5TT4wQwTaEchiHavr1bk6ye1S9eL-4lIPC__53dDG73EA1X3HG_C)](https://blogger.googleusercontent.com/img/a/AVvXsEi222IhVtazpEYIGNdWb_oXqcSKO8-93J0XCLcA65c09BwSgkEW2qdVPzQT_s5_sxe8AxA7Ind7g3KCwVGFuEYGF23zSAv_HeHwfHD5musmM23ephwF3eCU2o6qG9R3USIIOwWjj3ES5TT4wQwTaEchiHavr1bk6ye1S9eL-4lIPC__53dDG73EA1X3HG_C) |
-| Oooh |
+![](https://blogger.googleusercontent.com/img/a/AVvXsEhoF47g89ZZGcekhOQ1aO3IpooLTBxT4gHG4d5RL06UMgT9qYkhM0n3R-eCG6rngK18UOKGiFcPiy9FenYuSKjLennacYBhbBB_bTRmaCeWC9sZINWAfxYlvit3dpLfJYAF4iNvdsqvHK_F5CM9gwITc9Lu0MWxlYSkn-mFoyEgU3syE0JXHjoETzTzKtwf)
+*Aaah*
 
-  
+![](https://blogger.googleusercontent.com/img/a/AVvXsEhsNJShnmu9_Lom43zup1t-N6yPbbvCP2zCG5qY_E2kuCRSD3SfPiVxoYLMOamYqXZ_DP3XsOMtJ4jfjq_A6RWRaQV9ulmP5Jt1XcmaJ2qnU5LxdkCm7RJ1m41bl6ptojb6vPi_XCRolr_nvgrauQqNqNF4-zGaegsi1-BeHibydh3MVwv8wY9dUNVe95dz)
+*Uuuh*
 
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEhoF47g89ZZGcekhOQ1aO3IpooLTBxT4gHG4d5RL06UMgT9qYkhM0n3R-eCG6rngK18UOKGiFcPiy9FenYuSKjLennacYBhbBB_bTRmaCeWC9sZINWAfxYlvit3dpLfJYAF4iNvdsqvHK_F5CM9gwITc9Lu0MWxlYSkn-mFoyEgU3syE0JXHjoETzTzKtwf)](https://blogger.googleusercontent.com/img/a/AVvXsEhoF47g89ZZGcekhOQ1aO3IpooLTBxT4gHG4d5RL06UMgT9qYkhM0n3R-eCG6rngK18UOKGiFcPiy9FenYuSKjLennacYBhbBB_bTRmaCeWC9sZINWAfxYlvit3dpLfJYAF4iNvdsqvHK_F5CM9gwITc9Lu0MWxlYSkn-mFoyEgU3syE0JXHjoETzTzKtwf) |
-| Aaah |
-
-  
-
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEhsNJShnmu9_Lom43zup1t-N6yPbbvCP2zCG5qY_E2kuCRSD3SfPiVxoYLMOamYqXZ_DP3XsOMtJ4jfjq_A6RWRaQV9ulmP5Jt1XcmaJ2qnU5LxdkCm7RJ1m41bl6ptojb6vPi_XCRolr_nvgrauQqNqNF4-zGaegsi1-BeHibydh3MVwv8wY9dUNVe95dz)](https://blogger.googleusercontent.com/img/a/AVvXsEhsNJShnmu9_Lom43zup1t-N6yPbbvCP2zCG5qY_E2kuCRSD3SfPiVxoYLMOamYqXZ_DP3XsOMtJ4jfjq_A6RWRaQV9ulmP5Jt1XcmaJ2qnU5LxdkCm7RJ1m41bl6ptojb6vPi_XCRolr_nvgrauQqNqNF4-zGaegsi1-BeHibydh3MVwv8wY9dUNVe95dz) |
-| Uuuh |
-
-  
 Textures may be tied to changes.
 
 #### Made a bunch of improvements performance-wise:
@@ -138,7 +110,7 @@ When looking at the whole map, we noticed the vertex count was... off.
 
   
 
-[![](https://blogger.googleusercontent.com/img/a/AVvXsEgvfQB_xmiCQGhGtCHLmCBqiTbGU2b3SZKKZSz1bT6zL7fgDmwZ-zX09m2wXrSrnOnehgHUcEkaYerWs04QV6G_e6RynLwGubLkvJU0YE-rnQz6vtszTzkTf9IAl5VpDoFYCV4zRdhI-KBB_YwfRLZhb1e-CpoGECYPF8HtFDnj7alG1u3zt9T5CX0WGwCS)](https://blogger.googleusercontent.com/img/a/AVvXsEgvfQB_xmiCQGhGtCHLmCBqiTbGU2b3SZKKZSz1bT6zL7fgDmwZ-zX09m2wXrSrnOnehgHUcEkaYerWs04QV6G_e6RynLwGubLkvJU0YE-rnQz6vtszTzkTf9IAl5VpDoFYCV4zRdhI-KBB_YwfRLZhb1e-CpoGECYPF8HtFDnj7alG1u3zt9T5CX0WGwCS)
+![](https://blogger.googleusercontent.com/img/a/AVvXsEgvfQB_xmiCQGhGtCHLmCBqiTbGU2b3SZKKZSz1bT6zL7fgDmwZ-zX09m2wXrSrnOnehgHUcEkaYerWs04QV6G_e6RynLwGubLkvJU0YE-rnQz6vtszTzkTf9IAl5VpDoFYCV4zRdhI-KBB_YwfRLZhb1e-CpoGECYPF8HtFDnj7alG1u3zt9T5CX0WGwCS)
 
   
 There were 5k tiles placed, which were al planes. We're talking about 4 vertex each, so, doing the maths, there were 100k vertex with no explanation.

@@ -44,15 +44,11 @@ Work on this revamp has already begun, but the only thing we can share for now i
 
   
 
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEhNdMGDKFFRzQKfpMj0b_UIADTK6nOFkUZTq6ZUae01wlhW_TGhwZ5U5uazZrDFHYrSnwnOrKczzMaIauiNXoVd33nMWYOTi-FQPdAogkiCjQm0wk589w7CzQa-u_d8v-QdPkNVWXq3tLImVInDzo0m-cEjVIEYDVzq9P9QfCEj74kyHS1DXfZm06ScwGy3=w294-h312)](https://blogger.googleusercontent.com/img/a/AVvXsEhNdMGDKFFRzQKfpMj0b_UIADTK6nOFkUZTq6ZUae01wlhW_TGhwZ5U5uazZrDFHYrSnwnOrKczzMaIauiNXoVd33nMWYOTi-FQPdAogkiCjQm0wk589w7CzQa-u_d8v-QdPkNVWXq3tLImVInDzo0m-cEjVIEYDVzq9P9QfCEj74kyHS1DXfZm06ScwGy3) |
-| Old Logo |
+![](https://blogger.googleusercontent.com/img/a/AVvXsEhNdMGDKFFRzQKfpMj0b_UIADTK6nOFkUZTq6ZUae01wlhW_TGhwZ5U5uazZrDFHYrSnwnOrKczzMaIauiNXoVd33nMWYOTi-FQPdAogkiCjQm0wk589w7CzQa-u_d8v-QdPkNVWXq3tLImVInDzo0m-cEjVIEYDVzq9P9QfCEj74kyHS1DXfZm06ScwGy3)
+*Old Logo*
 
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEh0OnoIUvByxdEdQVjQmtns0JgmO2Org0SdQGgUJ-WD33l_NFUGWG27FAp-__zf8TXxErjoXXMxer1Wcsps9ifXRn8f4VRcPhxnirJcnHi-DbDpxIP41Om_quR_Bow8KMGD2np-Y2jLIAIFHySZvXhaa3IJWsItWs1q-o8nNEAz0jLiLndrEksh9CsVLJ4x=w313-h313)](https://blogger.googleusercontent.com/img/a/AVvXsEh0OnoIUvByxdEdQVjQmtns0JgmO2Org0SdQGgUJ-WD33l_NFUGWG27FAp-__zf8TXxErjoXXMxer1Wcsps9ifXRn8f4VRcPhxnirJcnHi-DbDpxIP41Om_quR_Bow8KMGD2np-Y2jLIAIFHySZvXhaa3IJWsItWs1q-o8nNEAz0jLiLndrEksh9CsVLJ4x) |
-| New Logo |
+![](https://blogger.googleusercontent.com/img/a/AVvXsEh0OnoIUvByxdEdQVjQmtns0JgmO2Org0SdQGgUJ-WD33l_NFUGWG27FAp-__zf8TXxErjoXXMxer1Wcsps9ifXRn8f4VRcPhxnirJcnHi-DbDpxIP41Om_quR_Bow8KMGD2np-Y2jLIAIFHySZvXhaa3IJWsItWs1q-o8nNEAz0jLiLndrEksh9CsVLJ4x)
+*New Logo*
 
 
 This may not be the last change we will do to it tho.

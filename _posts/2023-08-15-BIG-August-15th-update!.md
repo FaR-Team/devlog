@@ -153,12 +153,8 @@ Seedless to nay, the bucket's model (As well as the hoe's model) is just a place
 
 During these three monts, our 3D modeler (hehe me) had enough time to model the protagonist's whole bedroom interior!  And even a bed model (Since we were using a placeholder 'till now). As of now, both models are in the farm scene since we don't have a proper save/load system between scenes, but in the future it'll have it's very own scene.
 
-  
-
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEim0sV6_GUxPRfY1JpkU-XKmZRVLZ5PZlpaAXSLYOacAHGP3icTyFYIyDIq84s-5tYPHZNY_e39CeH1rsM3dkPWxSpWsn34mnpZMT3acx6FS38MsUOMXJbiSbpoCh_b9OnEwrEg7Yl6btv6FgitADo0zD-XEYWmcQ4dJ8RvksS9RQgnOaqUS5X05PoP0v-e=w640-h360)](https://blogger.googleusercontent.com/img/a/AVvXsEim0sV6_GUxPRfY1JpkU-XKmZRVLZ5PZlpaAXSLYOacAHGP3icTyFYIyDIq84s-5tYPHZNY_e39CeH1rsM3dkPWxSpWsn34mnpZMT3acx6FS38MsUOMXJbiSbpoCh_b9OnEwrEg7Yl6btv6FgitADo0zD-XEYWmcQ4dJ8RvksS9RQgnOaqUS5X05PoP0v-e) |
-| Please ignore the placeholder hand ;-; |
+![](https://blogger.googleusercontent.com/img/a/AVvXsEim0sV6_GUxPRfY1JpkU-XKmZRVLZ5PZlpaAXSLYOacAHGP3icTyFYIyDIq84s-5tYPHZNY_e39CeH1rsM3dkPWxSpWsn34mnpZMT3acx6FS38MsUOMXJbiSbpoCh_b9OnEwrEg7Yl6btv6FgitADo0zD-XEYWmcQ4dJ8RvksS9RQgnOaqUS5X05PoP0v-e) 
+*Please ignore the placeholder hand ;-;*
 
   
 It looks really cute! And it feels really good to have our on models in the game!
