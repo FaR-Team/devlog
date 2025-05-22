@@ -222,6 +222,7 @@ h1, h2, h3, h4, h5, h6, .post-title {
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
+  text-align: center;
 }
 
 body.dark-theme .post-header {
