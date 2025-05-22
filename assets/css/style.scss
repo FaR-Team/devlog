@@ -50,7 +50,7 @@ article.post,
     }
 
     th {
-      background-color: darken(var(--post-background), 3%);
+      background-color: darken($post-background, 3%);
       color: var(--heading-color);
     }
 
