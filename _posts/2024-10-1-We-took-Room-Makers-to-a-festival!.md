@@ -41,7 +41,7 @@ Lo primero fue probarlo a fondo para encontrar cuanto bug sea posible. Para esto
 
 #### El bug.
 
-!["Veo que me ignoraste. Pon tu TV encima de la mesa."](https://blogger.googleusercontent.com/img/a/AVvXsEg3pYeNik9SbjSIxDePZgX2FkRAqlUp5ZAHWxxZwU3zQh_YukmfT5SE3TdTj-DfWciiKaZ1bFtf2z8aWTRuiUH2iN_2hYydo4M_h_l4s15aoKnGjuVXQI26u_qimxtLXwGp-FldYBl7pbU64YkYNTl4UDpePqQF7l4PtcQBB0Zzd1eccp_kSoEAULP67OBL)
+!["Sarcastic error message from Room Makers game: Veo que me ignoraste. Pon tu TV encima de la mesa."](https://blogger.googleusercontent.com/img/a/AVvXsEg3pYeNik9SbjSIxDePZgX2FkRAqlUp5ZAHWxxZwU3zQh_YukmfT5SE3TdTj-DfWciiKaZ1bFtf2z8aWTRuiUH2iN_2hYydo4M_h_l4s15aoKnGjuVXQI26u_qimxtLXwGp-FldYBl7pbU64YkYNTl4UDpePqQF7l4PtcQBB0Zzd1eccp_kSoEAULP67OBL)
 *"Veo que me ignoraste. Pon tu TV encima de la mesa."*
 
 Ese sarcástico cartel, que luce tan inocente, nos causó muchos problemas. 
@@ -54,10 +54,8 @@ Si el cartel se presenta mientras el jugador está en modo construcción, el jue
 
 La industria del juego es una selva salvaje donde es comer o ser comido... excepto en el ámbito indie. Sabíamos que, por muy mal que nuestro juego luzca, la gente iba a poner buena cara a la hora de jugarlo porque las buenas intenciones jamás faltan en este ámbito. Además, si hubiésemos llevado Farmoxel, hubiéramos preparado más merch; remeras del equipo, posters, stickers, pines. Tratándose de Room Makers, hicimos lo mínimo indispensable, un ploteo en hoja A5 y un QR para jugarlo en móvil... "UN" QR.
 
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEikuwKbUS1tPMZZzugQL8zoKOxAoTab1RKawfuAPKKil_2lYchB6Aua9vazayHKqYEKpOrSy7f9vTEJ_7aEEf1yzD9eXg1uvW20KHa7PPNAKRhclHqc0p-l8ZJxQY4Nj7TuehsAl_ch5AL6OHP31R58oQs-5BO1kBVEdZ2ts6z9vBiqtVfA4yE4zR9fAZT9=w640-h442)](https://blogger.googleusercontent.com/img/a/AVvXsEikuwKbUS1tPMZZzugQL8zoKOxAoTab1RKawfuAPKKil_2lYchB6Aua9vazayHKqYEKpOrSy7f9vTEJ_7aEEf1yzD9eXg1uvW20KHa7PPNAKRhclHqc0p-l8ZJxQY4Nj7TuehsAl_ch5AL6OHP31R58oQs-5BO1kBVEdZ2ts6z9vBiqtVfA4yE4zR9fAZT9) |
-| El ploteo quedó rebonito! |
+![El ploteo de Room Makers en el evento FIJA](https://blogger.googleusercontent.com/img/a/AVvXsEikuwKbUS1tPMZZzugQL8zoKOxAoTab1RKawfuAPKKil_2lYchB6Aua9vazayHKqYEKpOrSy7f9vTEJ_7aEEf1yzD9eXg1uvW20KHa7PPNAKRhclHqc0p-l8ZJxQY4Nj7TuehsAl_ch5AL6OHP31R58oQs-5BO1kBVEdZ2ts6z9vBiqtVfA4yE4zR9fAZT9=w640-h442)
+*El ploteo quedó rebonito!*
 
   
 El tema es que no podés mandar a hacer un QR en una hoja gigante, por lo que nos mandaron... quince QR. Pusimos un QR bajo el ploteo, otro sobre la mesa, incluso regalamos algunos a las personas más interesadas en el juego, pero sobraban MUCHOS. Así que yo \[Lead Developer\] tomé a los tres programadores, les pegué un QR a cada uno y los mandé a explorar el evento, en busca de gente interesada en jugar el juego.
@@ -134,10 +132,8 @@ The first thing we did was test it thoroughly to find as many bugs as possible. 
 
 #### The bug.
 
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEjHIW3RB5ywBjEW-bcrTTx5VuAWk7Sd-nVNp2h8wXpoGQpll_6KlSy9JOnuclY08qwH5ueuTj65NLy0sOiRRM5vjG2UAdIen4CP8KibpejQwc0a8-DH2SMBsABMfnBOottdb7gA1RzLI98CKvl5FQkWC7GmG3GHuKYFbvJQ_OEONXQpE8ns1cIde_sjsjFx=w640-h504)](https://blogger.googleusercontent.com/img/a/AVvXsEjHIW3RB5ywBjEW-bcrTTx5VuAWk7Sd-nVNp2h8wXpoGQpll_6KlSy9JOnuclY08qwH5ueuTj65NLy0sOiRRM5vjG2UAdIen4CP8KibpejQwc0a8-DH2SMBsABMfnBOottdb7gA1RzLI98CKvl5FQkWC7GmG3GHuKYFbvJQ_OEONXQpE8ns1cIde_sjsjFx) |
-| "I've noticed you ignored me. Put the TV over the table." |
+!["Sarcastic error message from Room Makers game: I've noticed you ignored me. Put the TV over the table."](https://blogger.googleusercontent.com/img/a/AVvXsEjHIW3RB5ywBjEW-bcrTTx5VuAWk7Sd-nVNp2h8wXpoGQpll_6KlSy9JOnuclY08qwH5ueuTj65NLy0sOiRRM5vjG2UAdIen4CP8KibpejQwc0a8-DH2SMBsABMfnBOottdb7gA1RzLI98CKvl5FQkWC7GmG3GHuKYFbvJQ_OEONXQpE8ns1cIde_sjsjFx=w640-h504)
+*"I've noticed you ignored me. Put the TV over the table."*
 
 That seemingly innocent, sarcastic pop-up caused us a lot of trouble.
 
@@ -149,10 +145,8 @@ If the pop-up appears while the player is in build mode, the game freezes and be
 
 The game industry is a ruthless jungle where it’s eat or be eaten... except in the indie scene. We knew that, no matter how rough our game looked, people would still be kind and put on a good face while playing it because good intentions are never in short supply in this community. Also, if we had brought Farmoxel, we would’ve prepped more merch—team t-shirts, posters, stickers, pins. But for Room Makers, we did the bare minimum: an A5 printed poster and a QR code so people could play it on their phones... "ONE" QR code.
 
-|     |
-| --- |
-| [![](https://blogger.googleusercontent.com/img/a/AVvXsEh98S9VjxSeWnT9bx6gFRoUBWKK6y2ff6slvUE25wzMVOC5EgmL3RKVG6_emDE_wJMYtcSOXNYXO2-WfIuWE0KY5eym_QGu51kBr-wWXtlFOliCL5N-3kGWbxsX0Xbe0vvMK0B5xXebPe0XGh5fxEQ1VUG3F8RBexSo_OZH5XdutGaDZrjWh0UIuTVZcIyb=w640-h442)](https://blogger.googleusercontent.com/img/a/AVvXsEh98S9VjxSeWnT9bx6gFRoUBWKK6y2ff6slvUE25wzMVOC5EgmL3RKVG6_emDE_wJMYtcSOXNYXO2-WfIuWE0KY5eym_QGu51kBr-wWXtlFOliCL5N-3kGWbxsX0Xbe0vvMK0B5xXebPe0XGh5fxEQ1VUG3F8RBexSo_OZH5XdutGaDZrjWh0UIuTVZcIyb) |
-| The poster looks so cute! |
+![The Room Makers poster for FIJA event](https://blogger.googleusercontent.com/img/a/AVvXsEh98S9VjxSeWnT9bx6gFRoUBWKK6y2ff6slvUE25wzMVOC5EgmL3RKVG6_emDE_wJMYtcSOXNYXO2-WfIuWE0KY5eym_QGu51kBr-wWXtlFOliCL5N-3kGWbxsX0Xbe0vvMK0B5xXebPe0XGh5fxEQ1VUG3F8RBexSo_OZH5XdutGaDZrjWh0UIuTVZcIyb=w640-h442)
+*The poster looks so cute!*
 
 The thing is, you can’t just print one giant QR code, so they sent us... fifteen of them. We put one under the poster, another on the table, and even gave a few away to the people most interested in the game, but we still had a LOT left over. So, I \[Lead Developer\] grabbed the three programmers, slapped a QR code on each of them, and sent them out to explore the event, looking for people interested in playing the game.
 
