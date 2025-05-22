@@ -119,6 +119,7 @@ body.dark-theme .dark-icon {
 div[style*="width: 100%; padding: 25px;"] { 
     background: #D88E49 !important;
     border: 1px solid #ddd;
+    box-sizing: border-box !important;
     color: #ffffff;
 }
 
@@ -127,7 +128,12 @@ body.dark-theme #searchPosts,
 body.dark-theme div[style*="width: 100%; padding: 25px;"] {
     background: #BA6F4A !important;
     border-color: #444;
+    box-sizing: border-box !important;
     color: #ffffff;
+}
+
+#searchPosts {
+    box-sizing: border-box !important;
 }
 
 #projectFilter option {
