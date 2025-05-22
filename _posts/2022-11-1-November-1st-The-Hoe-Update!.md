@@ -1,3 +1,11 @@
+---
+layout: post
+title: "November 1st - The Hoe Update!"
+date: 2022-11-01
+project: farmoxel
+tags: [Devlog]
+---
+
 Welcome The Hoe Update:
 
 ~We know what you are thinking. No, this is not a joke about your mom.~
