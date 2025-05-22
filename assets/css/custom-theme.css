@@ -1,10 +1,6 @@
 body {
   font-family: 'Courier Prime', monospace;
   transition: background-color 0.3s, color 0.3s;
-  /* Make space for the fixed sidebar to prevent body overflow */
-  /* Sidebar width (300px) + its right offset (20px) + a small visual gap (e.g., 20px) = 340px */
-  padding-right: 340px;
-  box-sizing: border-box; /* Ensures padding is included in the body's total width/height */
 }
 
 body.dark-theme {
@@ -243,8 +239,9 @@ h1, h2, h3, h4, h5, h6, .post-title {
   grid-template-columns: 1fr auto 1fr;
   width: 100% !important;
   max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0 auto !important;
+  padding: 0 340px 0 0 !important;
+  box-sizing: border-box !important;
   gap: 0 !important;
   background-color: transparent !important;
   position: relative;
