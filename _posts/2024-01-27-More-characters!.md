@@ -3,7 +3,7 @@ layout: post
 title: "More Characters!"
 date: 2024-01-27
 project: farmoxel
-tags: [devlog, characters, art]
+tags: [Devlog, Characters, Art]
 ---
 
 

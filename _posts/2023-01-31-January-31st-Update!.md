@@ -1,3 +1,11 @@
+---
+layout: post
+title: "January 31st Update!"
+date: 2023-01-31
+project: farmoxel
+tags: [Devlog]
+---
+
 We know it's been a while since the last time we updated you about the game, but with the holidays we weren't able to have a proper development schedule. Good thing is that, right now, we are finally back on track to work on the game. Today's update is one of the largest with a total of 34 changes since the last update. 
 
 Additionally, we are happy to announce that the development team grew a lot in the last few months. I'm going to introduce you to the new members at the end of the blog.

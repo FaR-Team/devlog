@@ -1,3 +1,11 @@
+---
+layout: post
+title: "August 1st Update!"
+date: 2022-08-01
+project: farmoxel
+tags: [Devlog]
+---
+
 It has been a long while since the last time we updated this blog, but we can ensure that we are making progress on the game! Sometimes we make **HUGE** improvements, and sometimes we fix a couple tiny details.
 
 Anyway! Let's jump to the boring bullet-point-list of all the changes, and later I'll explain some of them:

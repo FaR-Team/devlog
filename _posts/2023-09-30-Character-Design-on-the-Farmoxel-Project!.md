@@ -1,6 +1,12 @@
-  
+---
+layout: post
+title: "Character Design on the Farmoxel Project!"
+date: 2023-09-30
+project: farmoxel
+tags: [Art, Characters]
+---  
 
- Quick update first, from September 15th to September 25th, the main development team was participating on the GBJam 11. When you see this posted, the Jam should be over and the results public. If you want to see our game, you can check it out [**HERE**](https://justneki.itch.io/room-makers). Now back to the Devlog...
+Quick update first, from September 15th to September 25th, the main development team was participating on the GBJam 11. When you see this posted, the Jam should be over and the results public. If you want to see our game, you can check it out [**HERE**](https://justneki.itch.io/room-makers). Now back to the Devlog...
 
 At the begining of September, the F.a.R. Team received a new member, this time, a digital artist! Her name is Pipi La Filosofa, you can check her art Instagram [**HERE**](https://www.instagram.com/pipi_lafilosofa/).
 

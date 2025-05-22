@@ -3,7 +3,7 @@ layout: post
 title: "We Took Room Makers to a Festival!"
 date: 2024-10-01
 project: roommakers
-tags: [event]
+tags: [Event]
 ---
 
 **TOP NOTE: Since this festival took place in Argentina, the post will be in Spanish. But worry not! For an English version scroll down past a duck picture.**

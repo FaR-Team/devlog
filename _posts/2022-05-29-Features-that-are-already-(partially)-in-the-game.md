@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Features that are already (partially) in the game"
+date: 2022-05-29
+project: farmoxel
+tags: [Devlog]
+---
+
 I'm sure that none of what I'm about to show you will make you drop your jaw, but I feel the need to have an archive of every single progress made during the development of this game.
 
 *   **Crop growing system:**

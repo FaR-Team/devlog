@@ -1,4 +1,12 @@
- After a whole month of complications, we are back on making progress on the game's development. Currently we are working on a buy/sell system (more on that below), character development, music design, and a ton of bug fixing. Sadly, most of this won't be finished by the end of the month. To avoid a disappointing post, we decided to share with you a bit of the current concept art and talk about the future of the game.
+---
+layout: post
+title: "September 1st Update!"
+date: 2022-09-01
+project: farmoxel
+tags: [Devlog, Art]
+---
+
+After a whole month of complications, we are back on making progress on the game's development. Currently we are working on a buy/sell system (more on that below), character development, music design, and a ton of bug fixing. Sadly, most of this won't be finished by the end of the month. To avoid a disappointing post, we decided to share with you a bit of the current concept art and talk about the future of the game.
 
 **With that said, let's go!**
 

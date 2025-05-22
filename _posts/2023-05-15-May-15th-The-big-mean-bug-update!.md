@@ -1,3 +1,11 @@
+---
+layout: post
+title: "May 15th - The big mean bug update!"
+date: 2023-05-15
+project: farmoxel
+tags: [Devlog]
+---
+
 It feels like we've been gone for 3 and a half months... and we've been. I'm gonna explain what we've done these past months but before let me tell you, this blog is all about bug fixing and technical issues, so it could get kinda boring next to the other ones.
 
 First, the good ol' bullet-point-list:

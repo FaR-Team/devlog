@@ -1,3 +1,11 @@
+---
+layout: post
+title: "BIG August 15th update!"
+date: 2023-08-15
+project: farmoxel
+tags: [Devlog]
+---
+
 The past three monts were very important for our team, since we used them to reorgnize the development and to rework mechanics that were flawed and caused performance issues. By reworking these mechanics, many new bugs showed up, and we didn't want to make a blog about a totally glitched update. 
 
   

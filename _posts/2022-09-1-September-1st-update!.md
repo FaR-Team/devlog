@@ -1,3 +1,11 @@
+---
+layout: post
+title: "September 1st Update!"
+date: 2022-09-01
+project: farmoxel
+tags: [Devlog]
+---
+
 Our ideal was to create more blogposts during August to talk about trivia on the game's development. Sadly, it was a tough month for most of the team, so most of the improvements down below, if not all, were made by the lead programmer.
 
 Anyway! Cue the bullet-point-list!

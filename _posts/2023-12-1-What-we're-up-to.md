@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "June 15th Update!"
+title: "What we're up to"
 date: 2023-12-01
-tags: [devlog]
+tags: [Devlog]
 ---
 
 
