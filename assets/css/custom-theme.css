@@ -97,6 +97,10 @@ body.dark-theme .nav-link {
   color: #E8F5D5;
 }
 
+body.dark-theme .nav-link:visited {
+  color: #E8F5D5;
+}
+
 .nav-link:hover,
 body.dark-theme .nav-link:hover {
   color: #8d543a;
