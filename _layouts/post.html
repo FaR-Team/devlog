@@ -25,7 +25,6 @@ layout: default
       
       {% if page.tags %}
         <div class="post-tags" style="margin-top: 10px;">
-          {# Use the .post-tag class on the link itself and include the icon inside #}
           {% for tag in page.tags %}
             <a href="/devlog/tags/{{ tag | slugify }}/" class="post-tag">
               <i class="fas fa-tag"></i> {{ tag }}
