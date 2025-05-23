@@ -24,10 +24,14 @@ layout: default
       {% endif %}
       
       {% if page.tags %}
-      <div class="post-tags" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #{{ site.minima.skin == "dark" | default: "classic" | if: "dark", "404040", "eee" }};">
+      {%- comment %} Determine border color based on Minima skin setting {% endcomment -%}
+      {%- assign border_color = "#eee" -%}
+      {%- if site.minima.skin == "dark" -%}
+        {%- assign border_color = "#404040" -%}
+      {%- endif -%}
+      <div class="post-tags" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid {{ border_color }};">
           {% for tag in page.tags %}
               <a href="{{ '/tags/' | append: tag | slugify | append: '/' | relative_url }}" class="tag-link">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-            </a>
           {% endfor %}
         </div>
       {% endif %}

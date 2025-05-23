@@ -9,7 +9,9 @@ layout: default
     </header>
 
     <div class="home">
-      {%- assign posts_with_tag = site.tags[page.tag] | sort: "date" | reverse -%}
+      {%- comment %}Ensure posts_with_tag is an array, even if page.tag yields no posts or is nil, to prevent sort on null.{% endcomment %}
+      {%- assign tagged_posts_collection = site.tags[page.tag] | default: "" | split: "" -%}
+      {%- assign posts_with_tag = tagged_posts_collection | sort: "date" | reverse -%}
       {%- if posts_with_tag.size > 0 -%}
         <ul class="post-list">
           {%- for post in posts_with_tag -%}
