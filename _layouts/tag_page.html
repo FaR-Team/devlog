@@ -8,18 +8,6 @@ layout: default
       <h1 class="post-title">Posts tagged '{{ page.tag | escape }}'</h1>
     </header>
 
-    <div style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
-        <p><strong>DEBUGGING INFO:</strong></p>
-            <p>Current page.tag: '<code>{{ page.tag }}</code>'</p>
-            <p>Number of posts found by <code>site.tags['{{ page.tag }}']</code>: {{ site.tags[page.tag] | size }}</p>
-            <p>All tags Jekyll knows about (and their post counts):</p>
-            <ul>
-                {%- for tag in site.tags -%}
-                <li><code>{{ tag[0] }}</code>: {{ tag[1] | size }}</li>
-                {%- endfor -%}
-            </ul>
-    </div>
-
     <div class="home">
       {%- comment %} Get posts for this tag, defaulting to an empty array if none found, then sort. {% endcomment -%}
       {%- assign posts_for_this_tag = site.tags[page.tag] -%}
