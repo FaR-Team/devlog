@@ -20,7 +20,7 @@ His art hasn't been updated yet :(
 
   
 
-Back in the [**Character Design post**](https://blog.farteam.digital/2023/09/character-design-on-farmoxel-project.html) we referred to him as "The Pianist", now, he officially has a name; Theodore.
+Back in the [**Character Design post**](http://blog.farteam.digital/2023/09/30/Character-Design-on-the-Farmoxel-Project!.html) we referred to him as "The Pianist", now, he officially has a name; Theodore.
 
   
 
