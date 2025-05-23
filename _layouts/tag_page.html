@@ -22,7 +22,7 @@ layout: default
 
     <div class="home">
       {%- comment %} Get posts for this tag, defaulting to an empty array if none found, then sort. {% endcomment -%}
-      {%- assign posts_with_tag = site.tags[page.tag] | default: "" | split: "" | sort: "date" | reverse -%}
+      {%- assign posts_with_tag = site.tags[page.tag] | default: site.empty_array | sort: "date" | reverse -%}
       {%- if posts_with_tag.size > 0 -%}
         <ul class="post-list">
           {%- for post in posts_with_tag -%}
