@@ -1,6 +1,6 @@
 ---
 layout: tag_page
-tag: devlog
+tag: Devlog
 title: "Posts tagged 'Devlog'"
 permalink: /tags/devlog/
 ---
