@@ -31,7 +31,7 @@ layout: default
       {%- endif -%}
       <div class="post-tags" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid {{ border_color }};">
           {% for tag in page.tags %}
-              <a href="{{ ('/tags/' | append: (tag | slugify) | prepend: '/tags/') | relative_url }}" class="tag-link tag-pill p-category">
+              <a href="{{ (append: (tag | slugify) | prepend: '/tags/') | relative_url }}" class="tag-link tag-pill p-category">
                 <i class="fas fa-tag" style="margin-right: 0.25em;"></i>{{ tag | escape }}
               </a>{% unless forloop.last %},&nbsp;{% endunless %}
           {% endfor %}
