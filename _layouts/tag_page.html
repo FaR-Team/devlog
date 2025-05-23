@@ -10,7 +10,7 @@ layout: default
 
     <div class="home">
       {%- comment %}Ensure posts_with_tag is an array, even if page.tag yields no posts or is nil, to prevent sort on null.{% endcomment %}
-      {%- assign posts_for_this_tag = site.tags[page.tag] | default: site.empty_array -%}
+      {%- assign posts_for_this_tag = site.tags[page.tag] | default: "" | split: "" -%}
       {%- assign posts_with_tag = posts_for_this_tag | sort: "date" | reverse -%}
       {%- if posts_with_tag.size > 0 -%}
         <ul class="post-list">
