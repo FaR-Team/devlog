@@ -41,3 +41,8 @@ defaults:
 
 comments:
   provider: "utterances"
+  utterances:
+    repo: "FaR-Team/devlog"
+    issue_term: "pathname"
+    theme_light: "github-light"
+    theme_dark: "github-dark"

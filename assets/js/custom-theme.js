@@ -1,7 +1,12 @@
 function toggleTheme() {
     const body = document.body;
     body.classList.toggle('dark-theme');
-    localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
+    const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+    localStorage.setItem('theme', currentTheme);
+
+    if (typeof window.updateUtterancesTheme === 'function') {
+        window.updateUtterancesTheme();
+    }
 }
 
 // Apply saved theme and initialize Highlight.js on DOMContentLoaded

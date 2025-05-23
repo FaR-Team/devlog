@@ -1,13 +1,71 @@
 <section class="comments" style="margin-top: 2em; padding-top: 1em; border-top: 1px solid #eee;">
-  <h2 id="comments">Comments</h2>
-  <script src="https://utteranc.es/client.js"
-          repo="FaR-Team/devlog"
-          issue-term="pathname"
-          theme="preferred-color-scheme"
-          crossorigin="anonymous"
-          async>
-  </script>
-  <noscript>
-    Please enable JavaScript to view the comments powered by Utterances.
-  </noscript>
+    <h2 id="comments">Comments</h2>
+    {%- assign utterances_repo = site.comments.utterances.repo -%}
+    {%- assign utterances_issue_term = site.comments.utterances.issue_term | default: "pathname" -%}
+    {%- assign utterances_theme_light = site.comments.utterances.theme_light | default: "github-light" -%}
+    {%- assign utterances_theme_dark = site.comments.utterances.theme_dark | default: "github-dark" -%}
+
+    {%- if utterances_repo and utterances_repo != "" and utterances_repo != "YOUR_USERNAME/YOUR_REPOSITORY" -%}
+    <section class="comments" style="margin-top: 2em; padding-top: 1em; border-top: 1px solid #eee;">
+    <h2 id="comments-heading">Comments</h2>
+    <div id="utterances-container"></div>
+    <noscript>
+        Please enable JavaScript to view the comments powered by Utterances.
+    </noscript>
 </section>
+<script>
+  (function() {
+    const utterancesRepo = "{{ utterances_repo }}";
+    // Redundant check as Liquid already handles it, but good for JS context
+    if (!utterancesRepo || utterancesRepo === "YOUR_USERNAME/YOUR_REPOSITORY") {
+      console.warn("Utterances repository is not configured in _config.yml under comments.utterances.repo");
+      const utterancesContainer = document.getElementById('utterances-container');
+      if (utterancesContainer) {
+        utterancesContainer.innerHTML = "<p><em>Comments are enabled, but the Utterances repository is not configured. Please set <code>comments.utterances.repo</code> in <code>_config.yml</code>.</em></p>";
+      }
+      return;
+    }
+
+    const utterancesIssueTerm = "{{ utterances_issue_term }}";
+    const utterancesThemeLight = "{{ utterances_theme_light }}";
+    const utterancesThemeDark = "{{ utterances_theme_dark }}";
+    const utterancesContainer = document.getElementById('utterances-container');
+
+    function loadUtterances() {
+      if (!utterancesContainer) return;
+      utterancesContainer.innerHTML = ''; // Clear previous instance
+
+      const script = document.createElement('script');
+      const siteTheme = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      const currentUtterancesTheme = siteTheme === 'dark' ? utterancesThemeDark : utterancesThemeLight;
+
+      script.src = 'https://utteranc.es/client.js';
+      script.setAttribute('repo', utterancesRepo);
+      script.setAttribute('issue-term', utterancesIssueTerm);
+      script.setAttribute('theme', currentUtterancesTheme);
+      script.setAttribute('crossorigin', 'anonymous');
+      script.async = true;
+
+      utterancesContainer.appendChild(script);
+    }
+
+    window.updateUtterancesTheme = function() {
+      const iframe = document.querySelector('.utterances-frame');
+      if (!iframe || !iframe.contentWindow) return;
+
+      const siteTheme = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      const newUtterancesTheme = siteTheme === 'dark' ? utterancesThemeDark : utterancesThemeLight;
+      
+      iframe.contentWindow.postMessage({ type: 'set-theme', theme: newUtterancesTheme }, 'https://utteranc.es');
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadUtterances);
+    } else {
+      loadUtterances();
+    }
+  })();
+</script>
+{%- else -%}
+  <p style="margin-top: 2em; padding-top: 1em; border-top: 1px solid #eee;"><em>Comments are enabled, but the Utterances repository is not configured. Please set <code>comments.utterances.repo</code> in <code>_config.yml</code>.</em></p>
+{%- endif -%}
