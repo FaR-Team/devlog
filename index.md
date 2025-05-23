@@ -105,19 +105,38 @@
       const posts = document.querySelectorAll('#postsContainer > div');
 
       posts.forEach(post => {
-          const postUrl = post.querySelector('a[href^=""]').getAttribute('href');
           const postProject = post.dataset.project || 'all';
           const postTags = (post.dataset.tags || '').split(',');
 
           const projectMatch = selectedProject === 'all' || postProject === selectedProject;
           const tagMatch = selectedTag === 'all' || postTags.includes(selectedTag);
 
-          fetch(postUrl)
-              .then(response => response.text())
-              .then(content => {
-                  const searchMatch = content.toLowerCase().includes(searchTerm);
-                  post.style.display = projectMatch && tagMatch && searchMatch ? 'flex' : 'none';
-              });
+          if (!projectMatch || !tagMatch) {
+              post.style.display = 'none';
+              return; // Move to the next post
+          }
+
+          if (searchTerm === "") {
+              post.style.display = 'flex';
+          } else {
+              const postUrl = post.querySelector('a[href^=""]').getAttribute('href');
+              fetch(postUrl)
+                  .then(response => {
+                      if (!response.ok) {
+                          console.warn(`Failed to fetch ${postUrl} for search: ${response.status}`);
+                          return "";
+                      }
+                      return response.text();
+                  })
+                  .then(content => {
+                      const searchMatch = content.toLowerCase().includes(searchTerm);
+                      post.style.display = searchMatch ? 'flex' : 'none';
+                  })
+                  .catch(error => {
+                      console.error(`Error fetching ${postUrl} for search:`, error);
+                      post.style.display = 'none';
+                  });
+          }
       });
   }  
   const select = document.getElementById('projectFilter');
