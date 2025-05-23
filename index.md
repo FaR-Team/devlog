@@ -16,7 +16,7 @@
           {% assign imageUrl = firstImage | split: "](" | last %}
         {% endif %}<div data-project="{{ post.project | downcase }}" data-tags="{{ post.tags | join: ',' | downcase }}" style="display: flex; margin: 20px 0; background-image: url({{ imageUrl }}); background-size: cover; background-position: center; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
           <div style="padding: 20px; flex: 1; background: rgba(245, 245, 245, 0.9);">
-            <h2 style="margin-top: 0;"><a href="/devlog/{{ post.url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
+            <h2 style="margin-top: 0;"><a href="{{ post.url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
             <p style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
               <div style="display: flex; align-items: center;">
@@ -32,7 +32,7 @@
                   </div>
                 {% endif %}
               </div>
-              <a href="/devlog/{{ post.url }}" style="color: #4CAF50; text-decoration: none;">Read more →</a>
+              <a href="{{ post.url }}" style="color: #4CAF50; text-decoration: none;">Read more →</a>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
               <summary style="cursor: pointer; font-weight: 500; color: #444;">{{ year.name }}</summary>
               <ul style="list-style: none; padding-left: 15px; margin-top: 10px; width: 100%; overflow-x: hidden;">
                 {% for post in year.items %}
-                  <li style="margin-bottom: 8px; white-space: normal; overflow-wrap: break-word;"><a href="/devlog/{{ post.url }}" style="color: #666; text-decoration: none; transition: color 0.2s;">{{ post.title }}</a></li>
+                  <li style="margin-bottom: 8px; white-space: normal; overflow-wrap: break-word;"><a href="{{ post.url }}" style="color: #666; text-decoration: none; transition: color 0.2s;">{{ post.title }}</a></li>
                 {% endfor %}
               </ul>
             </details>
@@ -105,7 +105,7 @@
       const posts = document.querySelectorAll('#postsContainer > div');
 
       posts.forEach(post => {
-          const postUrl = post.querySelector('a[href^="/devlog/"]').getAttribute('href');
+          const postUrl = post.querySelector('a[href^=""]').getAttribute('href');
           const postProject = post.dataset.project || 'all';
           const postTags = (post.dataset.tags || '').split(',');
 
