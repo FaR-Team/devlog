@@ -68,7 +68,7 @@
           {% endfor %}
           {% assign sorted_tags = site_tags | remove_first: "," | split: "," | uniq | sort %}
           {% for tag_name in sorted_tags %}
-            <option value="{{ tag_name | downcase }}">{{ tag_name }}</option>
+            <option value="{{ tag_name }}">{{ tag_name }}</option>
           {% endfor %}
         </select>
       </div>
