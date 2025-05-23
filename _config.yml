@@ -38,3 +38,6 @@ defaults:
         - Characters
         - Art
         - Event
+
+comments:
+  provider: "utterances"
