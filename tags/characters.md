@@ -1,6 +1,6 @@
 ---
 layout: tag_page
-tag: characters
-title: "Posts tagged 'characters'"
+tag: Characters
+title: "Posts tagged 'Characters'"
 permalink: /tags/characters/
 ---
