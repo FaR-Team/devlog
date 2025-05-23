@@ -24,10 +24,9 @@ layout: default
       {% endif %}
       
       {% if page.tags %}
-        <div class="post-tags" style="margin-top: 10px;">
+      <div class="post-tags" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #{{ site.minima.skin == "dark" | default: "classic" | if: "dark", "404040", "eee" }};">
           {% for tag in page.tags %}
-            <a href="tags/{{ tag | slugify }}/" class="post-tag">
-              <i class="fas fa-tag"></i> {{ tag }}
+              <a href="{{ '/tags/' | append: tag | slugify | append: '/' | relative_url }}" class="tag-link">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
             </a>
           {% endfor %}
         </div>

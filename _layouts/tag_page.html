@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="page-content">
+  <div class="wrapper">
+    <header class="post-header">
+      <h1 class="post-title">Posts tagged '{{ page.tag | escape }}'</h1>
+    </header>
+
+    <div class="home">
+      {%- assign posts_with_tag = site.tags[page.tag] | sort: "date" | reverse -%}
+      {%- if posts_with_tag.size > 0 -%}
+        <ul class="post-list">
+          {%- for post in posts_with_tag -%}
+          <li>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if site.show_excerpts == true or site.show_excerpts_on_tag_pages == true -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+      {%- else -%}
+        <p>No posts found with the tag '{{ page.tag | escape }}'.</p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
