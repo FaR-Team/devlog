@@ -30,8 +30,9 @@ layout: default
         {%- assign border_color = "#404040" -%}
       {%- endif -%}
       <div class="post-tags" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid {{ border_color }};">
+          <strong>Tags:</strong>
           {% for tag in page.tags %}
-              <a href="{{ '/tags/' | append: tag | slugify | append: '/' | relative_url }}" class="tag-link">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+              <a href="{{ ('/tags/' | append: (tag | slugify) | append: '/') | relative_url }}" class="tag-link">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
           {% endfor %}
         </div>
       {% endif %}
