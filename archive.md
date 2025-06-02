@@ -4,7 +4,7 @@ title: Blog Archive
 ---
 
 {% for post in site.posts %}
-  <div style="display: flex; margin: 20px 0; background: #f5f5f5; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+  <div style="display: flex; width: 100%; box-sizing: border-box; margin: 20px 0; background: #f5f5f5; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
     {% if post.content contains "![" %}
       {% assign images = post.content | split: "![" %}
       {% assign firstImage = images[1] | split: ")" | first %}

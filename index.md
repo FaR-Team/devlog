@@ -20,7 +20,7 @@
             {% endif %}
           {% endif %}
         {% endif %}
-        <div class="devlog-post-card" data-project="{{ post.project | downcase }}" data-tags="{{ post.tags | join: ',' | downcase }}" style="display: flex; margin: 20px 0; {% if imageUrl != "" %}background-image: url('{{ imageUrl | relative_url }}');{% endif %} background-size: cover; background-position: center; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <div class="devlog-post-card" data-project="{{ post.project | downcase }}" data-tags="{{ post.tags | join: ',' | downcase }}" style="display: flex; width: 100%; box-sizing: border-box; margin: 20px 0; {% if imageUrl != "" %}background-image: url('{{ imageUrl | relative_url }}');{% endif %} background-size: cover; background-position: center; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
           <div class="devlog-post-card-inner" style="padding: 20px; flex: 1; background: rgba(245, 245, 245, 0.9);">
             <h2 style="margin-top: 0;"><a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
             <p class="devlog-post-excerpt" style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
