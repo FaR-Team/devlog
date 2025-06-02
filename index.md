@@ -104,7 +104,8 @@
 <style>
   /* Base Styles */
   .devlog-container {
-    display: flex;
+    display: grid;                     /* CHANGED to Grid */
+    grid-template-columns: 1fr 300px;  /* Main content takes available space, sidebar is 300px */
     gap: 30px;
     width: 95%;
     margin: 0 auto;
@@ -112,8 +113,8 @@
   }
 
   .main-content-area {
-    flex: 1;
-    min-width: 0;
+    /* flex: 1; REMOVED - Grid handles sizing */
+    min-width: 0; /* Still good for content within this area */
   }
 
   .devlog-header {
@@ -130,11 +131,11 @@
   }
 
   .sidebar-area {
-    display: flex;
+    display: flex; /* This is for the sidebar's internal items (filter boxes) */
     flex-direction: column;
     gap: 20px;
-    width: 300px;
-    flex-shrink: 0;
+    /* width: 300px; REMOVED - Handled by grid-template-columns on parent */
+    /* flex-shrink: 0; REMOVED - Not needed for grid item */
   }
 
   .post-card {
@@ -282,19 +283,18 @@
   /* Mobile Styles */
   @media (max-width: 768px) {
     .devlog-container {
-      flex-direction: column;
+      grid-template-columns: 1fr; /* Single column for mobile */
       gap: 20px; 
       width: 100%; 
       padding: 10px; 
     }
 
     .sidebar-area {
-      width: 100%; 
-      order: 2; 
+      display: none; /* Hide sidebar on mobile */
     }
 
     .main-content-area {
-      order: 1; 
+      /* order: 1; No longer needed as sidebar is hidden */
     }
     
     .post-card {
