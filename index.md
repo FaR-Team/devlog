@@ -46,11 +46,8 @@
     </div>
   </div>
 
-  <!-- Button to toggle sidebar visibility on mobile -->
-  <button id="toggleSidebarButton" class="devlog-toggle-sidebar-button">Show Filters</button>
-
   <!-- Sidebar Section -->
-  <div class="devlog-sidebar" id="devlogSidebarContent" style="display: flex; flex-direction: column; gap: 20px; width: 300px; flex-shrink: 0;">
+  <div class="devlog-sidebar" style="display: flex; flex-direction: column; gap: 20px; width: 300px; flex-shrink: 0;">
       <!-- Project Filter Box -->
       <div class="devlog-filter-box" style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
         <div class="devlog-project-filter-container" style="position: relative; width: 100%;">
@@ -105,20 +102,6 @@
   </div>
   
 <style>
-  .devlog-toggle-sidebar-button {
-    display: none;
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 1em;
-    text-align: center;
-    cursor: pointer;
-    box-sizing: border-box;
-  }
   @media (max-width: 768px) {
     .devlog-page-container {
       flex-direction: column !important;
@@ -130,21 +113,11 @@
     .devlog-main-content {
       width: 100% !important; 
       flex: none !important;
-      order: 1;
-    }
-    .devlog-toggle-sidebar-button {
-      display: block !important;
-      order: 2;
-      margin-top: 20px;
     }
     .devlog-sidebar {
-      display: none !important;
-      order: 3;
       width: 100% !important;
-      margin-top: 0 !important;
-    }
-    .devlog-sidebar.sidebar-visible {
-      display: flex !important;
+      margin-top: 20px !important;
+      flex-shrink: 1 !important;
     }
 
     .devlog-header {
@@ -263,21 +236,4 @@
   });
 
   select.dispatchEvent(new Event('change'));
-
-  // Sidebar toggle functionality
-  const toggleButton = document.getElementById('toggleSidebarButton');
-  const sidebarContent = document.getElementById('devlogSidebarContent');
-
-  if (toggleButton && sidebarContent) {
-    toggleButton.addEventListener('click', function() {
-      sidebarContent.classList.toggle('sidebar-visible');
-      // Change button text based on sidebar visibility
-      if (sidebarContent.classList.contains('sidebar-visible')) {
-        toggleButton.textContent = 'Hide Filters';
-        toggleButton.style.marginBottom = '15px'; // Keep space when sidebar is shown
-      } else {
-        toggleButton.textContent = 'Show Filters';
-      }
-    });
-  }
 </script>
