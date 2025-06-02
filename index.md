@@ -122,15 +122,17 @@
     .devlog-page-container {
       flex-direction: column !important;
       width: 100% !important;
-      padding: 15px !important;
+      padding: 20px 15px !important;
+      margin: 0 !important;
       box-sizing: border-box !important;
       gap: 20px !important;
       overflow-x: hidden;
     }
     .devlog-main-content {
-      width: 100% !important; 
+      width: 100% !important;
       flex: none !important;
       order: 1;
+      margin: 0;
     }
 
     .devlog-toggle-sidebar-button {
@@ -235,6 +237,17 @@
         width: 16px !important;
         height: 16px !important;
         left: 8px !important;
+    }
+    .devlog-post-card-inner {
+        line-height: 1.6;
+    }
+    .devlog-post-excerpt {
+        margin-bottom: 15px !important;
+    }
+    .devlog-read-more {
+      font-weight: bold !important;
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
     }
   }
 </style>
