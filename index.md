@@ -132,14 +132,13 @@
 
   .devlog-sidebar {
     position: fixed !important;
-    top: 0 !important;
+    top: 85px !important;
     right: 0 !important;
     width: 300px !important;
-    height: 100vh !important;
+    height: calc(100vh - 85px) !important;
     padding: 20px !important;
     box-sizing: border-box !important;
-    background-color: #fdfdfd !important;
-    box-shadow: -3px 0 10px rgba(0,0,0,0.1) !important;
+    background-color: transparent !important;;
     overflow-y: auto !important;
     z-index: 999 !important;
     transform: none !important;
