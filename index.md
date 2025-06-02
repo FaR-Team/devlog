@@ -125,33 +125,58 @@
       padding: 15px !important;
       box-sizing: border-box !important;
       gap: 20px !important;
+      overflow-x: hidden;
     }
     .devlog-main-content {
       width: 100% !important; 
       flex: none !important;
       order: 1;
     }
+
     .devlog-toggle-sidebar-button {
-      display: block !important; 
-      order: 2;
-      /* margin-top: 20px; /* Removed as 'position: fixed' takes it out of flow */
-      position: fixed !important;
-      bottom: 20px !important;
-      right: 20px !important;
-      width: auto !important; /* Override the 100% width from base style */
-      padding: 10px 20px !important; /* Adjusted padding for a pill shape */
-      border-radius: 25px !important; /* Pill shape */
-      z-index: 1000 !important; /* Ensure it's on top of other content */
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important; /* Floating effect */
-    }
-    .devlog-sidebar {
-      display: none !important; 
-      order: 3;
-      width: 100% !important;
-      margin-top: 0 !important; 
-    }
-    .devlog-sidebar.sidebar-visible {
       display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      position: fixed !important;
+      top: 50% !important;
+      right: 0px !important;
+      transform: translateY(-50%) !important;
+      width: 30px !important; 
+      height: 70px !important;
+      padding: 0 !important;
+      background-color: #4CAF50 !important;
+      color: white !important;
+      border: none !important;
+      border-top-left-radius: 15px !important;
+      border-bottom-left-radius: 15px !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      z-index: 1010 !important;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.2) !important;
+      cursor: pointer !important;
+      font-size: 20px !important;
+      line-height: 1 !important;
+      transition: right 0.3s ease-in-out, background-color 0.3s ease-in-out !important;
+    }
+
+    .devlog-sidebar {
+      position: fixed !important;
+      top: 0 !important;
+      right: 0 !important;
+      width: min(300px, 85vw) !important;
+      height: 100vh !important;
+      background-color: #ffffff !important;
+      padding: 20px !important; 
+      box-sizing: border-box !important;
+      transform: translateX(100%) !important;
+      transition: transform 0.3s ease-in-out !important;
+      z-index: 1000 !important;
+      box-shadow: -3px 0 10px rgba(0,0,0,0.15) !important;
+      overflow-y: auto;
+    }
+
+    .devlog-sidebar.sidebar-visible {
+      transform: translateX(0) !important; /* Slide in to be visible */
     }
 
     .devlog-header {
@@ -276,14 +301,25 @@
   const sidebarContent = document.getElementById('devlogSidebarContent');
 
   if (toggleButton && sidebarContent) {
+    toggleButton.innerHTML = '&#9664;'; 
+
     toggleButton.addEventListener('click', function() {
       sidebarContent.classList.toggle('sidebar-visible');
-      // Change button text based on sidebar visibility
+
+      const sidebarActualWidth = sidebarContent.offsetWidth;
+
       if (sidebarContent.classList.contains('sidebar-visible')) {
-        toggleButton.textContent = 'Hide Filters';
+        toggleButton.innerHTML = '&#9654;';
+
+        toggleButton.style.right = `${sidebarActualWidth}px`; 
       } else {
-        toggleButton.textContent = 'Show Filters';
+        toggleButton.innerHTML = '&#9664;';
+        toggleButton.style.right = '0px';
       }
     });
+
+    if (!sidebarContent.classList.contains('sidebar-visible')) {
+        toggleButton.style.right = '0px';
+    }
   }
 </script>
