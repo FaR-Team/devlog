@@ -105,7 +105,7 @@
   
 <style>
   .devlog-toggle-sidebar-button {
-    display: none;
+    display: none !important;
     width: 100%;
     padding: 12px 15px;
     margin-bottom: 15px;
@@ -118,6 +118,20 @@
     cursor: pointer;
     box-sizing: border-box;
   }
+
+  .devlog-sidebar {
+    position: static !important;
+    transform: none !important;
+    width: 300px !important;
+    height: auto !important;
+    top: auto !important;
+    right: auto !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    z-index: auto !important;
+    transition: none !important;
+  }
+
   @media (max-width: 768px) {
     .devlog-page-container {
       flex-direction: column !important;
@@ -185,7 +199,7 @@
       margin: 20px 0 !important;
     }
     .devlog-title {
-      font-size: 1.8em !important; 
+      font-size: 1.8em !important;
     }
     .devlog-quote {
       font-size: 0.85em !important;
