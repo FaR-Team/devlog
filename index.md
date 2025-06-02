@@ -119,16 +119,30 @@
     box-sizing: border-box;
   }
 
+  .devlog-page-container {
+    padding-right: calc(300px + 40px) !important; /* sidebar_width + desired_gap_from_content */
+    box-sizing: border-box !important;
+  }
+
+  .devlog-main-content {
+    flex: 1 !important;
+    width: auto !important;
+    order: initial !important;
+  }
+
   .devlog-sidebar {
-    position: static !important;
-    transform: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
     width: 300px !important;
-    height: auto !important;
-    top: auto !important;
-    right: auto !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-    z-index: auto !important;
+    height: 100vh !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    background-color: #fdfdfd !important;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.1) !important;
+    overflow-y: auto !important;
+    z-index: 999 !important;
+    transform: none !important;
     transition: none !important;
   }
 
