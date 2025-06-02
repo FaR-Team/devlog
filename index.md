@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  <button id="toggleSidebarButton" class="devlog-toggle-sidebar-button">Show Filters</button>
+  <button id="toggleSidebarButton" class="devlog-toggle-sidebar-button" aria-controls="devlogSidebarContent" aria-expanded="false">Show Filters</button>
 
   <!-- Sidebar Section -->
   <div class="devlog-sidebar" id="devlogSidebarContent" style="display: flex; flex-direction: column; gap: 20px; width: 300px; flex-shrink: 0;">
@@ -103,6 +103,9 @@
       </div>
   </div>
   
+</div>
+<div id="sidebarScrim" class="devlog-sidebar-scrim"></div>
+
 <style>
   .devlog-toggle-sidebar-button {
     display: none !important;
@@ -140,6 +143,23 @@
     transition: none !important;
   }
 
+  body.devlog-sidebar-open-no-scroll {
+    overflow: hidden !important;
+  }
+
+  .devlog-sidebar-scrim {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
   @media (max-width: 768px) {
     .devlog-page-container {
       flex-direction: column !important;
@@ -165,7 +185,7 @@
       top: 50% !important;
       right: 0px !important;
       transform: translateY(-50%) !important;
-      width: 30px !important; 
+      width: 30px !important;
       height: 70px !important;
       padding: 0 !important;
       background-color: #4CAF50 !important;
@@ -193,14 +213,19 @@
       padding: 20px !important;
       box-sizing: border-box !important;
       transform: translateX(100%) !important;
-      transition: transform 0.3s ease-in-out !important;
-      z-index: 1000 !important;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+      z-index: 1005 !important;
       box-shadow: -3px 0 10px rgba(0,0,0,0.15) !important;
       overflow-y: auto;
     }
+    
+    .devlog-sidebar-scrim.visible {
+      display: block;
+      opacity: 1;
+    }
 
     .devlog-sidebar.sidebar-visible {
-      transform: translateX(0) !important; /* Slide in to be visible */
+      transform: translateX(0) !important;
     }
 
     .devlog-header {
@@ -331,30 +356,58 @@
 
   select.dispatchEvent(new Event('change'));
 
-  // Sidebar toggle functionality
   const toggleButton = document.getElementById('toggleSidebarButton');
   const sidebarContent = document.getElementById('devlogSidebarContent');
+  const sidebarScrim = document.getElementById('sidebarScrim');
+  const body = document.body;
 
   if (toggleButton && sidebarContent) {
-    toggleButton.innerHTML = '&#9664;'; 
+    sidebarContent.setAttribute('aria-hidden', 'true');
+    toggleButton.setAttribute('aria-expanded', 'false');
+    toggleButton.innerHTML = '&#9664;';
 
-    toggleButton.addEventListener('click', function() {
+    function openSidebar() {
+      sidebarContent.classList.add('sidebar-visible');
+      sidebarContent.setAttribute('aria-hidden', 'false');
+      toggleButton.setAttribute('aria-expanded', 'true');
+      toggleButton.innerHTML = '&#9654;';
+      
+      requestAnimationFrame(() => {
+        const sidebarActualWidth = sidebarContent.offsetWidth;
+        toggleButton.style.right = `${sidebarActualWidth}px`;
+      });
+      
+      if (sidebarScrim) sidebarScrim.classList.add('visible');
+      body.classList.add('devlog-sidebar-open-no-scroll');
+    }
+
+    function closeSidebar() {
+      sidebarContent.classList.remove('sidebar-visible');
+      sidebarContent.setAttribute('aria-hidden', 'true');
+      toggleButton.setAttribute('aria-expanded', 'false');
+      toggleButton.innerHTML = '&#9664;';
+      toggleButton.style.right = '0px';
+
+      if (sidebarScrim) sidebarScrim.classList.remove('visible');
+      body.classList.remove('devlog-sidebar-open-no-scroll');
+    }
+
+    toggleButton.addEventListener('click', function(event) {
+      event.stopPropagation();
       sidebarContent.classList.toggle('sidebar-visible');
-
-      const sidebarActualWidth = sidebarContent.offsetWidth;
-
       if (sidebarContent.classList.contains('sidebar-visible')) {
-        toggleButton.innerHTML = '&#9654;';
-
-        toggleButton.style.right = `${sidebarActualWidth}px`; 
+        openSidebar();
       } else {
-        toggleButton.innerHTML = '&#9664;';
-        toggleButton.style.right = '0px';
+        closeSidebar();
       }
     });
 
-    if (!sidebarContent.classList.contains('sidebar-visible')) {
-        toggleButton.style.right = '0px';
+    if (sidebarScrim) {
+      sidebarScrim.addEventListener('click', function() {
+        if (sidebarContent.classList.contains('sidebar-visible')) {
+          closeSidebar();
+        }
+      });
     }
   }
 </script>
