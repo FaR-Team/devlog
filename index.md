@@ -119,11 +119,6 @@
     box-sizing: border-box;
   }
 
-  .devlog-page-container {
-    padding-right: calc(300px + 40px) !important; /* sidebar_width + desired_gap_from_content */
-    box-sizing: border-box !important;
-  }
-
   .devlog-main-content {
     flex: 1 !important;
     width: auto !important;
@@ -195,7 +190,7 @@
       width: min(300px, 85vw) !important;
       height: 100vh !important;
       background-color: #ffffff !important;
-      padding: 20px !important; 
+      padding: 20px !important;
       box-sizing: border-box !important;
       transform: translateX(100%) !important;
       transition: transform 0.3s ease-in-out !important;
