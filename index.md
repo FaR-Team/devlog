@@ -134,7 +134,15 @@
     .devlog-toggle-sidebar-button {
       display: block !important; 
       order: 2;
-      margin-top: 20px;
+      /* margin-top: 20px; /* Removed as 'position: fixed' takes it out of flow */
+      position: fixed !important;
+      bottom: 20px !important;
+      right: 20px !important;
+      width: auto !important; /* Override the 100% width from base style */
+      padding: 10px 20px !important; /* Adjusted padding for a pill shape */
+      border-radius: 25px !important; /* Pill shape */
+      z-index: 1000 !important; /* Ensure it's on top of other content */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important; /* Floating effect */
     }
     .devlog-sidebar {
       display: none !important; 
@@ -273,7 +281,6 @@
       // Change button text based on sidebar visibility
       if (sidebarContent.classList.contains('sidebar-visible')) {
         toggleButton.textContent = 'Hide Filters';
-        toggleButton.style.marginBottom = '15px'; // Keep space when sidebar is shown
       } else {
         toggleButton.textContent = 'Show Filters';
       }
