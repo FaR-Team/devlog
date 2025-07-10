@@ -13,27 +13,27 @@ We don't have much to say that haven't already been said in the previous posts, 
 * Added an entire main menu!
 * Added localization to the main menu.
 * Added localization to the labeler.
-* Added a Tag Notification that shows the current room’s tag when entering a new room
+* Added a Tag Notification that shows the current roomâs tag when entering a new room
 * Added a credit screen to the menu
 * Added a confirmation screen for tutorial skipping.
 * **Added a furniture info menu when pressing the start button.**
 * Added a sprite for the furniture info menu prompt.
 * Added descriptions to all the furniture.
-* Added google play’s leaderboard.
-* Improved the placing system so now Wall Objects are placed as boxes if they’re not against a wall.
+* Added google playâs leaderboard.
+* Improved the placing system so now Wall Objects are placed as boxes if theyâre not against a wall.
 * Improved the game over screen.
 * Fixed some tutorial animations.
-* Fixed the Restock Machine’s cost text weird overlap depending on player’s position
-* Fixed shake. Now it doesn’t offset the object anymore.
-* Fixed door’s shake, same as above, plus made it shakier.
+* Fixed the Restock Machineâs cost text weird overlap depending on playerâs position
+* Fixed shake. Now it doesnât offset the object anymore.
+* Fixed doorâs shake, same as above, plus made it shakier.
 * Fixed an issue with the main menu... we actually just told one of our programmers not to use the enter button anymore.
-* Fixed wall object’s indicator when boxed not showing up.
-* Fixed a bug where the correct localization of the tutorial skip prompt didn’t show up.
+* Fixed wall objectâs indicator when boxed not showing up.
+* Fixed a bug where the correct localization of the tutorial skip prompt didnât show up.
 * Updated our csv tool to reflect the new fields in the data.
 * Made a devtool to quickly change the build parameters (WIP)
 * Made a devtool to visualize the furniture relationships.
-* Made a devtool to analyze the game’s balance.
-* Made a devtool to manage the game’s localizations.
+* Made a devtool to analyze the gameâs balance.
+* Made a devtool to manage the gameâs localizations.
 
 #### Added a preview of the kit placement during the tutorial with a cutesy animation
 <video controls>
