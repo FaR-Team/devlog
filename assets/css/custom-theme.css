@@ -429,7 +429,6 @@ body.dark-theme .post-content > p:has(> img:first-child + em:last-child) > em {
 .post-content img,
 .post-content video {
   display: block;
-  margin: 30px auto;
   max-width: 700px;
   max-height: 550px;
   width: auto;
