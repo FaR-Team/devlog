@@ -51,43 +51,36 @@ article.post,
 .white-background {
   background-color: var(--post-background) !important;
 
-  table {
-    width: 100%;
-    margin: 1.5em 0;
-    border-collapse: collapse;
-    background-color: transparent;
+  img, video {
+    display: block !important;
+    margin: 30px auto !important;
+    max-width: 700px !important;
+    max-height: 550px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
 
-    th, td {
-      padding: 0.5em 0.75em;
-      border: 1px solid var(--border-color);
-      text-align: left;
-    }
+  video {
+    background-color: #000 !important;
+  }
 
-    th {
-      background-color: darken($post-background-light, 3%);
-      color: var(--heading-color);
-    }
-
-    tr {
-      background-color: transparent !important; 
-    }
-
-    td {
-      text-align: center;
-      background-color: var(--post-background);
-
-      a {
-        display: inline-block;
-        line-height: 0;
-      }
-
-      img {
-        display: block;
-        margin: 1em auto;
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
+  .post-image-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 30px auto !important;
+    max-width: 700px !important;
+    max-height: 550px !important;
+    
+    img, video {
+      max-width: 100% !important;
+      max-height: 100% !important;
+      width: auto !important;
+      height: auto !important;
+      margin: 0 !important;
     }
   }
 }

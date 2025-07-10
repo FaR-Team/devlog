@@ -427,18 +427,61 @@ body.dark-theme .post-content > p:has(> img:first-child + em:last-child) > em {
 }
 
 .post-content img,
-.post-content video {
-  display: block;
-  max-width: 760px;
-  max-height: 610px;
-  width: auto;
-  height: auto;
+.post-content video,
+.post-content p img,
+.post-content div img,
+.post-content figure img,
+.post-content figure video {
+  display: block !important;
+  margin: 30px auto !important;
+  max-width: 700px !important;
+  max-height: 550px !important;
+  width: auto !important;
+  height: auto !important;
   border-radius: 8px;
   object-fit: contain;
+  text-align: center;
+}
+
+.post-content p:has(img),
+.post-content div:has(img),
+.post-content div:has(video) {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
 }
 
 .post-content video {
-  background-color: #000;
+  background-color: #000 !important;
+}
+
+.post-content .media-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.post-content .media-wrapper img,
+.post-content .media-wrapper video {
+  max-width: 700px !important;
+  max-height: 550px !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+.post-image-container,
+.post-image-container img {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  max-width: 700px !important;
+  max-height: 550px !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 30px auto !important;
 }
 
 body.dark-theme .post-content img,
@@ -446,18 +489,22 @@ body.dark-theme .post-content video {
   box-shadow: 0 3px 10px rgba(255,255,255,0.1);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 800px) {
   .post-content img,
-  .post-content video {
-    max-width: 90vw;
-    max-height: 70vh;
+  .post-content video,
+  .post-content p img,
+  .post-content div img {
+    max-width: 90vw !important;
+    max-height: 70vh !important;
   }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 600px) {
   .post-content img,
-  .post-content video {
-    max-width: 95vw;
-    max-height: 60vh;
+  .post-content video,
+  .post-content p img,
+  .post-content div img {
+    max-width: 95vw !important;
+    max-height: 60vh !important;
   }
 }
