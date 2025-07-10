@@ -145,13 +145,40 @@ code {
 }
 
 /* Images */
-.post-content img {
+.post-content img,
+.post-content video {
   display: block;
   margin: 30px auto;
-  max-width: 100%;
+  max-width: 700px;
+  max-height: 550px;
+  width: auto;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  object-fit: contain;
+}
+
+.post-content video {
+  background-color: #000;
+}
+
+/* Media container for responsive behavior */
+.post-content .media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 700px;
+  max-height: 550px;
+}
+
+.post-content .media-container img,
+.post-content .media-container video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: 0;
 }
 
 .post-image-container {
