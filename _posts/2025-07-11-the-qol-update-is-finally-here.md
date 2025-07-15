@@ -52,6 +52,7 @@ From now on, if you press START while holding an object in your inventory, you'l
 *that's quite literally an anecdote, that happened that way.*
 
 ---
+
 And that would be it for Room Makers. It is finally in a state we are proud to announce it and promote it. It took a while, but we are finally here.
 Does this mean Room Makers will never recevie another update? Not at all. In fact, we look forwards to yoour feedback and comments, so expect future patch in case they are necessary. 
 But that's not the only thing, we're also planning in many updates to come for Room Makers, but those are low priority right now.
