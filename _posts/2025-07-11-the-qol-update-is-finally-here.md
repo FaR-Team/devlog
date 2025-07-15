@@ -9,7 +9,7 @@ tags: [Devlog]
 After the release of Room Makers, we received tons of feedback that could improve the game into something more entertaining, user friendly and less janky. We are more than thankful for all that feedback, because not only it is invaluable to have so many points of view over our project, but also because it humbled us and allowed us to learn a lot of things.
 
 We don't have much to say that haven't already been said in the previous posts, so let's jump to all the changes:
-* ** Added a preview of the kit placement during the tutorial with a cutesy animation.**
+* **Added a preview of the kit placement during the tutorial with a cutesy animation.**
 * Added an entire main menu!
 * Added localization to the main menu.
 * Added localization to the labeler.
@@ -48,8 +48,8 @@ Now you can't miss your steps!
 #### Added a furniture info menu when pressing the start button.
 Another complaint we received was about readability... if that's a thing. Basically, thanks to the tiny font (That we also changed in the last update) and the art style, understanding what furniture the player was carrying was a bit of a challenge.
 From now on, if you press START while holding an object in your inventory, you'll get a full preview of the object and a description (maybe not a helpful one) about it. Is there lore in these descriptions? Yes.
-<div style="text-align: center;">![](https://raw.githubusercontent.com/FaR-Team/devlog/main/images/the-qol-update-is-finally-here-0mwpbb.jpg)</div>
-<div style="text-align: center;">*that's quite literally an anecdote, that happened that way.*</div>
+![](https://raw.githubusercontent.com/FaR-Team/devlog/main/images/the-qol-update-is-finally-here-0mwpbb.jpg)
+*that's quite literally an anecdote, that happened that way.*
 
 ---
 And that would be it for Room Makers. It is finally in a state we are proud to announce it and promote it. It took a while, but we are finally here.
