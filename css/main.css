@@ -149,6 +149,7 @@ code {
   font-family: 'Courier New', Courier, monospace;
 }
 
+/* Media container wrapper */
 .post-content img,
 .post-content video,
 article.post img,
@@ -156,15 +157,14 @@ article.post video,
 .white-background img,
 .white-background video {
   display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
+  margin: 30px auto !important;
   width: 700px !important;
   height: 550px !important;
   object-fit: contain !important;
+  object-position: center !important;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
 .post-content p,

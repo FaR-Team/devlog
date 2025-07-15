@@ -147,13 +147,21 @@ hr {
   opacity: 1;
 }
 
-.post-content img {
+.post-content img,
+.post-content video {
   display: block;
   margin: 30px auto;
-  max-width: 100%;
-  height: auto;
+  width: 700px;
+  height: 550px;
+  object-fit: contain;
+  object-position: center;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.post-content video {
+  background-color: #000;
 }
 
 .post-image-container {
