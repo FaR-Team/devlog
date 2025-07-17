@@ -150,7 +150,7 @@ Okay, maybe it's not a big deal, but I drew them and they look cute 🥺
 
 [![](https://blogger.googleusercontent.com/img/a/AVvXsEik0Fjot2z4mxk4faDw67Rz2wfEUGEpjU4gRf-ahr4ogqT4Fqr_MeUa4z49RzHrdDn4zvyDfYPYf5TtCNukBC_wVMVE4LlskQq0lwgTBazuLBwoOR8Eg_mljPxjfAdeBTnqvkgQXlwziTKvvyd4omFe11GbUCytyd6-_GBqsL9a9Ks8EkbnOpXge7JG3Itf=w640-h573)](https://blogger.googleusercontent.com/img/a/AVvXsEik0Fjot2z4mxk4faDw67Rz2wfEUGEpjU4gRf-ahr4ogqT4Fqr_MeUa4z49RzHrdDn4zvyDfYPYf5TtCNukBC_wVMVE4LlskQq0lwgTBazuLBwoOR8Eg_mljPxjfAdeBTnqvkgQXlwziTKvvyd4omFe11GbUCytyd6-_GBqsL9a9Ks8EkbnOpXge7JG3Itf)
 
-RELEASED THE GAME ON GOOGLE PLAY STORE!**
+## **RELEASED THE GAME ON GOOGLE PLAY STORE!**
 
 Okay, MAYBE this one should've come first since it is a tad bit more important, but you've already read about it at the beginning. Anyway, ROOM MAKERS IS AVAILABLE TO DOWNLOAD! [**GO PLAY IT NOW!**](https://play.google.com/store/apps/details?id=com.FaRTeam.RoomMakers)
 
