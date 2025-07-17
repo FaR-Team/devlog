@@ -148,8 +148,6 @@ As well as most of the changes for the DEMO, this set was added thanks to the aw
 
 Okay, maybe it's not a big deal, but I drew them and they look cute 🥺
 
-#### **
-
 [![](https://blogger.googleusercontent.com/img/a/AVvXsEik0Fjot2z4mxk4faDw67Rz2wfEUGEpjU4gRf-ahr4ogqT4Fqr_MeUa4z49RzHrdDn4zvyDfYPYf5TtCNukBC_wVMVE4LlskQq0lwgTBazuLBwoOR8Eg_mljPxjfAdeBTnqvkgQXlwziTKvvyd4omFe11GbUCytyd6-_GBqsL9a9Ks8EkbnOpXge7JG3Itf=w640-h573)](https://blogger.googleusercontent.com/img/a/AVvXsEik0Fjot2z4mxk4faDw67Rz2wfEUGEpjU4gRf-ahr4ogqT4Fqr_MeUa4z49RzHrdDn4zvyDfYPYf5TtCNukBC_wVMVE4LlskQq0lwgTBazuLBwoOR8Eg_mljPxjfAdeBTnqvkgQXlwziTKvvyd4omFe11GbUCytyd6-_GBqsL9a9Ks8EkbnOpXge7JG3Itf)
 
 RELEASED THE GAME ON GOOGLE PLAY STORE!**
