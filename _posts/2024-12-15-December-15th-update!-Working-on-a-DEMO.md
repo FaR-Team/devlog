@@ -98,7 +98,7 @@ Ah, I missed that! Now let's talk about the highlighted parts, shall we?
 
 ### **Added the farm map, consisting of a series of tiles and chunks.**
 
-As we hinted in **[this blog post](https://blog.farteam.digital/2024/06/may-15th-update.html),** we've been working on a full tile set to build the map piece by piece, this way making it easier to load and unload huge chunks of terrain. This system went through tons of testing, some related to performance, buggy hitboxes, interaction, design and more. And now, we've got this:
+As we hinted in **[this blog post](https://blog.farteam.com.ar/2024/06/may-15th-update.html),** we've been working on a full tile set to build the map piece by piece, this way making it easier to load and unload huge chunks of terrain. This system went through tons of testing, some related to performance, buggy hitboxes, interaction, design and more. And now, we've got this:
 
   
 
@@ -155,7 +155,7 @@ As of now, the chest will be in the middle of the farm. In the future, it ill be
 
 ### **Added a selling stand only for the DEMO and** **Added Ragout. The stand needed Ragout.**
 
-Remember Ragout? We talked about him in [**this devlog**](https://blog.farteam.digital/2023/09/character-design-on-farmoxel-project.html). In the full game, Ragout will serve as the cleric for most of the stores. However, in the DEMO, only a single shop—"The Store"—will be available.
+Remember Ragout? We talked about him in [**this devlog**](https://blog.farteam.com.ar/2023/09/character-design-on-farmoxel-project.html). In the full game, Ragout will serve as the cleric for most of the stores. However, in the DEMO, only a single shop—"The Store"—will be available.
 
   
 

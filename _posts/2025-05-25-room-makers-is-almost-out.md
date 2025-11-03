@@ -10,11 +10,11 @@ The title is not a lie. The title is not click bait. The title is COMPLETELY tru
 
 The past few weeks we resume work on Room Makers since we've been invited to participate in an indie game showcase here in our country. Technically we had a working DEMO, but we wanted to bring a full game, ready to download on the day of the showcase. We're talking about new mechanics, bug fixing, QoL changes, new furniture sets, and some surprises-
 
-Of course, none of this means that Farmoxel has been left on a side. Since December **[the last time we updated you,](https://blog.farteam.digital/2024/12/15/December-15th-update!-Working-on-a-DEMO.html)** we've been working on improving Farmoxel as much as we could. Yes, the project is pause, but we are excited to show you all the things that changed since then.
+Of course, none of this means that Farmoxel has been left on a side. Since December **[the last time we updated you,](https://blog.farteam.com.ar/2024/12/15/December-15th-update!-Working-on-a-DEMO.html)** we've been working on improving Farmoxel as much as we could. Yes, the project is pause, but we are excited to show you all the things that changed since then.
 
 There is a whole story to tell here, in fact, some of our team members don't have some of the specifics I'm about to share with you here, so... surprise? 
 
-On April 3rd, our Lead Programmer received an email from Google Play. Our developer account had been inactive for a long time and we were given a 60 days deadline to either update one of our published games (We only have KTA) or publish a game to fix the issue. The solution was very simple, we just had to update [**KTA's**](https://farteam.digital/kta.html?lang=en) logo and push that as an update and everything would be fine, in fact, we were actually planning to do that sooner or later. But then our LP had an idea; let's pretend this does not fix the issue and, therefore, we were forced to finish Room Makers in a record time. No crunch was intended, just a challenge to see how creative our team will be to sort this obstacle.
+On April 3rd, our Lead Programmer received an email from Google Play. Our developer account had been inactive for a long time and we were given a 60 days deadline to either update one of our published games (We only have KTA) or publish a game to fix the issue. The solution was very simple, we just had to update [**KTA's**](https://blog.farteam.com.ar/kta.html?lang=en) logo and push that as an update and everything would be fine, in fact, we were actually planning to do that sooner or later. But then our LP had an idea; let's pretend this does not fix the issue and, therefore, we were forced to finish Room Makers in a record time. No crunch was intended, just a challenge to see how creative our team will be to sort this obstacle.
 
 But then, something happened… the lie turned into a reality. For some reason our LP couldn't compile a build for KTA, making our swift update impossible. Karma, I guess. We actually had a 60 days deadline to finish Room Makers. Not much was ins stakes. If they closed out developer account we could just pay 25USD to get another… but they were going to be MY 25USD! I couldn't let that happen!
 
@@ -144,7 +144,7 @@ Those are, I think, about 150 changes. I don't know, I don't want to count them.
 
 #### **Added a Gym furniture set.**
 
-As well as most of the changes for the DEMO, this set was added thanks to the awesome feedback we received when we went to **[FIJA](https://blog.farteam.digital/2024/10/01/We-took-Room-Makers-to-a-festival!.html).** I am... not entirely sure why so many people wanted this but HURRAY!
+As well as most of the changes for the DEMO, this set was added thanks to the awesome feedback we received when we went to **[FIJA](https://blog.farteam.com.ar/2024/10/01/We-took-Room-Makers-to-a-festival!.html).** I am... not entirely sure why so many people wanted this but HURRAY!
 
 Okay, maybe it's not a big deal, but I drew them and they look cute 🥺
 

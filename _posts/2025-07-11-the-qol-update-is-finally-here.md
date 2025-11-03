@@ -37,7 +37,7 @@ We don't have much to say that haven't already been said in the previous posts, 
 
 #### Added a preview of the kit placement during the tutorial with a cutesy animation.
 An important piece of feedback we received was how unnecessarily complicated the tutorial was. When we took the 1.0.0 to the GameMakers event, a lot of the questions we've received were about the tutorial, more specifically, the part where it thought you how to place a kit.
-Due to this HUGE design flaw, we decided to make two changes; **[last update](http://blog.farteam.digital/2025/06/05/june-5ft-room-makers-1-0-2-hot-fix.html)** we added the possibility to place the kit over furniture, skiping some unnecessary steps that may make the whole process tedious rather than fun. Now, we've also added this illustrative animation during the tutorial~
+Due to this HUGE design flaw, we decided to make two changes; **[last update](http://blog.farteam.com.ar/2025/06/05/june-5ft-room-makers-1-0-2-hot-fix.html)** we added the possibility to place the kit over furniture, skiping some unnecessary steps that may make the whole process tedious rather than fun. Now, we've also added this illustrative animation during the tutorial~
 
 <video controls>
   <source src="https://raw.githubusercontent.com/FaR-Team/devlog/main/videos/the-qol-update-is-finally-here-nkyrxe.mp4" type="video/mp4">
