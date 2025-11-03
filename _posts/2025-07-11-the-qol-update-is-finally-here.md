@@ -6,7 +6,7 @@ project: roommakers
 tags: [Devlog]
 ---
 
-After the release of Room Makers, we received tons of feedback that could improve the game into something more entertaining, user friendly and less janky. We are more than thankful for all that feedback, because not only it is invaluable to have so many points of view over our project, but also because it humbled us and allowed us to learn a lot of things.
+After the release of Room Makers, we received tons of feedback that could improve the game into something more entertaining, user friendly and less janky. We are more than thankful for all that feedback, because not only it is invaluable to have so many points of view over our project, but also because it humbled us and allowed us to learn a lot of things.2
 
 We don't have much to say that haven't already been said in the previous posts, so let's jump to all the changes:
 * **Added a preview of the kit placement during the tutorial with a cutesy animation.**
