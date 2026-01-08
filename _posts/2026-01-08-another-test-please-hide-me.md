@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "ANOTHER TEST. PLEASE HIDE ME"
 date: 2026-01-08
-project: kta
+project: "kta"
 tags: []
-published: false
+published: true
 ---
 
 YOU BETTER HIDE THIIIIIS AOJDASLHNFAS JVNWAHDLAJMPCWA
