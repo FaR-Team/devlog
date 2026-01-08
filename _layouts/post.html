@@ -12,31 +12,32 @@ layout: default
       </time>
       {% assign author = page.author | default: site.author %}
       {%- if author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+          itemprop="name">{{ author }}</span></span>
       {%- endif -%}
-      
+
       {% if page.project %}
       • <span class="project-badge">
-        <img src="{{ '/assets/images/' | append: page.project | append: '-icon.png' | relative_url }}" 
-             alt="{{ page.project }}" style="height: 20px; vertical-align: middle; margin-right: 5px;">
+        <img src="{{ '/assets/images/' | append: page.project | append: '-icon.png' | relative_url }}"
+          alt="{{ page.project }}" style="height: 20px; vertical-align: middle; margin-right: 5px;">
         {{ page.project | capitalize }}
       </span>
       {% endif %}
-      
+
       {% if page.tags %}
-        {%- comment %} Determine border color based on Minima skin setting {% endcomment -%}
-        {%- assign border_color = "#eee" -%}
-        {%- if site.minima.skin == "dark" -%}
-        {%- assign border_color = "#404040" -%}
+      {%- comment %} Determine border color based on Minima skin setting {% endcomment -%}
+      {%- assign border_color = "#eee" -%}
+      {%- if site.minima.skin == "dark" -%}
+      {%- assign border_color = "#404040" -%}
       {%- endif -%}
-      <div class="post-tags" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid {{ border_color }};">
-          {% for tag in page.tags %}
-              <a href="{{ ('/tags/' | append: (tag | slugify) | prepend: '/tags/') | relative_url }}" class="tag-link tag-pill p-category">
-                <i class="fas fa-tag" style="margin-right: 0.25em;"></i>{{ tag | escape }}
-              </a>{% unless forloop.last %},&nbsp;{% endunless %}
-          {% endfor %}
-        </div>
-      {% endif %}
+    <div class="post-tags" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid {{ border_color }};">
+      {% for tag in page.tags %}
+      <a href="{{ tag | slugify | prepend: '/tags/' | relative_url }}" class="tag-link tag-pill p-category">
+        <i class="fas fa-tag" style="margin-right: 0.25em;"></i>{{ tag | escape }}
+      </a>{% unless forloop.last %},&nbsp;{% endunless %}
+      {% endfor %}
+    </div>
+    {% endif %}
     </p>
   </header>
 
@@ -47,13 +48,13 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
-  
+
   <div class="post-navigation">
     {% include navlinks.html %}
   </div>
 
   {%- if site.comments.provider == "utterances" and page.comments != false -%}
-    {% include comments.html %}
+  {% include comments.html %}
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
