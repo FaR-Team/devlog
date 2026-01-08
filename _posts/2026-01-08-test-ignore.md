@@ -1,10 +1,9 @@
 ---
-layout: post
 title: "TEST, IGNORE"
 date: 2026-01-08
-project: kta
+project: "kta"
 tags: []
-published: false
+published: true
 ---
 
 THIS IS A TEST, IGNORE ME
