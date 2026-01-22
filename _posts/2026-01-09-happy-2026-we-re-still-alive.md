@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Happy 2026! We're still alive~"
-date: 2026-01-09
-project: farmoxel
+date: 2026-01-23
+project: roommakers
 tags: [Devlog, Other]
-published: false
+published: true
 ---
 
 Last time we posted an update about our games was in **[This blog post](http://blog.farteam.com.ar/2025/07/11/the-qol-update-is-finally-here.html)**, and that was back in July 2025- Yikes.
@@ -15,7 +15,7 @@ You might be wondering what did we do since the last time we posted here. Well, 
 We also brought in a new programmer and a new 3D modeler, both of whom required* training and guidance* for well over two months.
 Toward the end of 2025, some conditions and schedules with several members of the team had to be updated, which required a round of meetings and negociations which, fortunately, helped the team move forward without disagreements. 
 On top of that, some of us live in the south hemisphere, which means it's summer, and heat waves combined with a lack of ACs or proper ventilation systems are brutal. You know [that episode of The Simpsons in which the sun tried to obliterate Milhouse?](https://tenor.com/es/view/milhouse-simpson-simpsons-gif-21176028) *My past few weeks were like that.* And yes, heat makes us WAY less productive.
-Now, you may have noticed that some things are marked in italics? That's because I was the one who had to personally lead with all of those things. I'm the one training artists, coordinating with programmers who are training juniors, making decisions and handling negotiations related to the company's networking, and effectively filling an HR role for the team. 
+Now, you may have noticed that some things are marked in italics? That's because I was the one who had to personally lead with all of those things. I'Âm the one training artists, coordinating with programmers who are training juniors, making decisions and handling negotiations related to the company's networking, and effectively filling an HR role for the team. 
 Back in 2024, I had delegated some of these responsibilities to another team member, but he left the team quite a while ago.
 So, what I'm trying to say is this: the stagnation in our game development over the past months is entirely my responsibility. It is my job to manage all of these situations and find the right path to take to help the team survive.
 ### This almost led to the cancellation of the Farmoxel project.
