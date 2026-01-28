@@ -13,23 +13,28 @@ This update is the last one Room Makers will receive before the HUGE secret upda
 I know you may be anxious to know what's new, so let's jump to the pin-point-list of changes:
 
 * **Added a new gamemode: Classic!**
-* Shops do not appear on classic mode.
-* Kits do not appear and are not necesary on classic mode.
-* Labels are not important for scoring.
-* Wall objects do not care about their placement.
-* Added a “Classic” mode option in the main menu.
-* Added localization to the "Classic" mode side of the menu.
+	* Shops do not appear on classic mode.
+	* Kits do not appear and are not necesary on classic mode.
+	* Labels are not important for scoring.
+	* Wall objects do not care about their placement.
+	* Added a "Classic" mode option in the main menu.
+	* Added localization to the "Classic" mode side of the menu.
 * Added 8 new pallettes for the rooms
 * **Added a full landscape orientation to the game!**
 * **Added a landscape layout, with a cute sticker and everything.**
 * Updated some of the color palettes to make them more appealing.
-* Upgraded google play’s plugins.
+* Added a reset button (Pressing the on-off switch)
+* Added bulk import and checking if they're equal to our palette manager unity-addon.
+* Added an easter egg. (You can find it, I trust you.)
+* Upgraded google play's plugins.
 * Upgraded D-pad usability by enforcing strict 4-way input detection.
 * Renamed choppingboard because it was too long.
-* Fixed a bug with the main menu’s localization.
-* Fixed a bug with the bookshelf’s stacking.
+* Now the "DMG" color palette it's only used in the main room.
+* Now we're using a palette database instead of having a list of palettes on each scene, and each screen.
+* Fixed a bug with the main menu's localization.
+* Fixed a bug with the bookshelf's stacking.
 * Fixed a bug where the first placement bonus would be given multiple times.
-* Fixed a bug with the orientationmanager’s position.
+* Fixed a bug with the orientationmanagerâs position.
 * Fixed a bug with the screen's position and scale on landscape.
 * Fixed a bug where objects on the floor wouldn't give points when unboxed.
 
@@ -56,7 +61,7 @@ Maybe we should add a description for each game mode, since the title doesn't sa
 
 When we first started the beta testing for Room Makers in actual phone devices, a lot of people instinctively rotated their phone to play on landscape. This was not part of our plans at the time, after all, the Gameboy Advance was a vertical rectangle, we had to remain faithfull to its desing.
 
-But prioritizing aesthetics over player comfort is… not a great idea. That's why we decided to desing a layout for landscape orientation and, honestly, it turned out to be REALLY comfortable to play. I strongly encourage you to test it as much as you can and leave your thoughts about it [here](https://farteam.com.ar/RoomMakersFeedback/)
+But prioritizing aesthetics over player comfort isâ¦ not a great idea. That's why we decided to desing a layout for landscape orientation and, honestly, it turned out to be REALLY comfortable to play. I strongly encourage you to test it as much as you can and leave your thoughts about it [here](https://farteam.com.ar/RoomMakersFeedback/)
 We'll make any tweak necesary for it to be the best gaming experience.
 
 ---
