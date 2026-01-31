@@ -25,7 +25,7 @@ I know you may be anxious to know what's new, so let's jump to the pin-point-lis
 * Updated some of the color palettes to make them more appealing.
 * Added a reset button (Pressing the on-off switch)
 * Added bulk import and checking if they're equal to our palette manager unity-addon.
-* Added an easter egg. (You can find it, I trust you.)
+* Added an easter egg.
 * Upgraded google play's plugins.
 * Upgraded D-pad usability by enforcing strict 4-way input detection.
 * Renamed choppingboard because it was too long.
