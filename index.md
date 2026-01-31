@@ -10,6 +10,11 @@
 
     <div id="postsContainer">
       {% for post in site.posts %}
+        {% assign isLatest = false %}
+        {% if forloop.first %}
+          {% assign isLatest = true %}
+        {% endif %}
+
         {% assign imageUrl = "" %}
         {% if post.content contains "![" %}
           {% assign images = post.content | split: "![" %}
@@ -20,8 +25,18 @@
             {% endif %}
           {% endif %}
         {% endif %}
-        <div class="devlog-post-card" data-project="{{ post.project | downcase }}" data-tags="{{ post.tags | join: ',' | downcase }}" style="display: flex; width: 100%; box-sizing: border-box; margin: 20px 0; {% if imageUrl != "" %}background-image: url('{{ imageUrl | relative_url }}');{% endif %} background-size: cover; background-position: center; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <div class="devlog-post-card-inner" style="padding: 20px; flex: 1; background: rgba(245, 245, 245, 0.9);">
+
+        <div class="devlog-post-card {% if isLatest %}latest-post{% endif %} {% if imageUrl != "" %}has-image{% endif %}" 
+             data-project="{{ post.project | downcase }}" 
+             data-tags="{{ post.tags | join: ',' | downcase }}">
+          
+          {% if imageUrl != "" %}
+            <div class="devlog-post-image-side" style="background-image: url('{{ imageUrl | relative_url }}');">
+              <div class="devlog-post-image-gradient"></div>
+            </div>
+          {% endif %}
+
+          <div class="devlog-post-card-inner">
             <h2 style="margin-top: 0;"><a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
             <p class="devlog-post-excerpt" style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
             <div class="devlog-post-meta" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
@@ -107,6 +122,78 @@
 <div id="sidebarScrim" class="devlog-sidebar-scrim"></div>
 
 <style>
+  .devlog-post-card {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    background: #fdfdfd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px;
+    position: relative;
+  }
+
+  .devlog-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  }
+
+  .devlog-post-card.latest-post {
+    margin: 30px 0;
+    min-height: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .devlog-post-card.latest-post .devlog-post-card-inner {
+    padding: 40px;
+  }
+
+  .devlog-post-card.latest-post h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .devlog-post-card.latest-post .devlog-post-excerpt {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  .devlog-post-card.has-image .devlog-post-image-side {
+    flex: 0 0 40%;
+    min-width: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .devlog-post-card.latest-post.has-image .devlog-post-image-side {
+    flex: 0 0 50%;
+  }
+
+  .devlog-post-image-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    background: linear-gradient(to right, transparent, #fdfdfd);
+    z-index: 1;
+  }
+
+  .devlog-post-card-inner {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    background: #fdfdfd;
+  }
+
   .devlog-toggle-sidebar-button {
     display: none !important;
     width: 100%;
@@ -240,7 +327,32 @@
 
     .devlog-post-card {
       margin: 15px 0 !important;
+      flex-direction: column;
+      min-height: auto !important;
     }
+    
+    .devlog-post-card.has-image .devlog-post-image-side {
+      flex: none;
+      width: 100%;
+      height: 200px;
+    }
+
+    .devlog-post-image-gradient {
+      width: 100%;
+      height: 60px;
+      top: auto;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent, #fdfdfd);
+    }
+
+    .devlog-post-card.latest-post .devlog-post-card-inner {
+      padding: 20px !important;
+    }
+
+    .devlog-post-card.latest-post h2 {
+      font-size: 1.5em;
+    }
+
     .devlog-post-meta {
       flex-direction: column !important;
       align-items: flex-start !important;
