@@ -10,19 +10,19 @@ body {
   padding: 20px;
   background-color: var(--post-background);
   color: var(--text-color);
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 body.dark-theme .container {
-  background-color: var(--post-background); /* Use theme variable for consistency */
-  color: var(--text-color); /* Use theme variable */
-  box-shadow: 0 0 10px rgba(255,255,255,0.05); /* Adjusted shadow for dark theme */
+  background-color: var(--post-background);
+  color: var(--text-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 .post {
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
 }
 
@@ -51,7 +51,12 @@ body.dark-theme .container {
   border-radius: 8px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Montserrat', sans-serif;
   color: var(--heading-color);
   margin-top: 1.5em;
@@ -88,7 +93,6 @@ hr {
   border-top: 1px solid var(--border-color);
 }
 
-/* Post navigation links */
 .post_navi {
   display: flex;
   margin-top: 40px;
@@ -156,7 +160,7 @@ hr {
   object-fit: contain;
   object-position: center;
   border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -203,7 +207,6 @@ code {
   font-family: 'Courier New', Courier, monospace;
 }
 
-/* Share links styling */
 .share-links {
   margin: 20px 0;
   padding: 15px;
@@ -218,14 +221,13 @@ code {
   font-size: 1.2em;
 }
 
-/* Site-wide container */
 .wrapper {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Remove hardcoded background colors */
-.site-header, .site-footer {
+.site-header,
+.site-footer {
   background-color: var(--post-background);
 }

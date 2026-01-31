@@ -79,11 +79,13 @@
           </div>
 
           <div class="devlog-post-card-inner">
-            <h2 style="margin-top: 0;"><a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
+            <h2 style="margin-top: 0;"><a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333; position: relative; z-index: 2;">{{ post.title }}</a></h2>
             <p class="devlog-post-excerpt" style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
             <div class="devlog-post-meta-bottom">
-              <a href="{{ post.url | relative_url }}" class="devlog-read-more" style="color: #4CAF50; text-decoration: none; font-weight: 500;">Read more →</a>
+              <a href="{{ post.url | relative_url }}" class="devlog-read-more" style="color: #4CAF50; text-decoration: none; font-weight: 500; position: relative; z-index: 2;">Read more →</a>
             </div>
+            <!-- Stretched Link to make whole card clickable -->
+            <a href="{{ post.url | relative_url }}" class="devlog-stretched-link" aria-label="Read more about {{ post.title | escape }}"></a>
           </div>
         </div>
       {% endfor %}
@@ -159,11 +161,21 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-height: 200px;
     position: relative;
+    cursor: pointer;
   }
 
   .devlog-post-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  }
+
+  .devlog-stretched-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
 
   .devlog-post-card.latest-post {
