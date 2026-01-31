@@ -1,4 +1,4 @@
-<div class="devlog-page-container" style="display: flex; gap: 30px; width: 95%; margin: 0 auto;">
+<div class="devlog-page-container" style="display: flex; gap: 30px; width: 98%; margin: 0 auto; max-width: 1800px;">
   <!-- Main Content -->
   <div class="devlog-main-content" style="flex: 1;">
     <div class="devlog-header" style="text-align: center; margin: 40px 0;">
