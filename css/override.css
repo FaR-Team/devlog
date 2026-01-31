@@ -66,6 +66,7 @@ body.dark-theme .post {
 
 .post-title {
   font-size: 2.5em;
+  font-weight: bold;
   margin-bottom: 10px;
   color: var(--heading-color);
 }
@@ -91,6 +92,7 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   color: var(--heading-color);
   margin-top: 1.5em;
   margin-bottom: 0.5em;
