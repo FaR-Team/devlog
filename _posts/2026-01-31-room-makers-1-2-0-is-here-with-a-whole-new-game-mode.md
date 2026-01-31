@@ -67,7 +67,7 @@ But prioritizing aesthetics over player comfort is not a great idea. That's why 
 ---
 And that's it. It may not be the biggest update ever, but it contains two of the most requested features for the game. We hope it encourages you to jump back into Room Makers and play a bit more.
 
-That being said, we can talk about the next big update for Room Makers. 1.3.0 will be called... **THE ROGELITE UPDATE!!**
+That being said, we can talk about the next big update for Room Makers. 1.3.0 will be called... **THE ROGUELITE UPDATE!!**
 You may be really confused right now. Good for you.
 
 Of course, that update is not at the top of our priorities, so don't expect that anytime soon. With that being said, I'll leave back to working on huge voxel art buildings.
