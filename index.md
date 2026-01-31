@@ -52,13 +52,15 @@
           {% unless imageUrl contains "://" %}
             {% assign finalImageUrl = imageUrl | relative_url %}
           {% endunless %}
+        {% else %}
+          {% assign finalImageUrl = '/assets/images/FaRLogo.jpg' | relative_url %}
         {% endif %}
 
-        <div class="devlog-post-card {% if isLatest %}latest-post{% endif %} {% if imageUrl != "" and imageUrl != nil %}has-image{% endif %}" 
+        <div class="devlog-post-card {% if isLatest %}latest-post{% endif %} has-image" 
              data-project="{{ post.project | downcase }}" 
              data-tags="{{ post.tags | join: ',' | downcase }}">
           
-          <div class="devlog-post-image-side" style="{% if imageUrl != "" and imageUrl != nil %}background-image: url('{{ finalImageUrl }}');{% else %}background: #e0e0e0; flex: 0 0 80px; min-width: 80px;{% endif %}">
+          <div class="devlog-post-image-side" style="background-image: url('{{ finalImageUrl }}');">
             <div class="devlog-post-image-gradient"></div>
             
             <div class="devlog-post-overlay-meta">
