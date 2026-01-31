@@ -1,11 +1,3 @@
-<div class="devlog-top-bar" style="display: flex; justify-content: space-between; align-items: center; width: 95%; margin: 10px auto; padding: 10px 0; border-bottom: 2px solid #eee;">
-  <div class="devlog-top-logo" style="font-weight: bold; font-size: 1.2em; color: #333;">Logo</div>
-  <a href="/" class="devlog-back-to-main" style="text-decoration: none; color: #666; font-size: 0.9em; display: flex; align-items: center;">
-    Back to main 
-    <span style="display: inline-block; margin-left: 5px; border: 1px solid #666; border-radius: 50%; width: 16px; height: 16px; line-height: 14px; text-align: center; font-size: 10px;">&olarr;</span>
-  </a>
-</div>
-
 <div class="devlog-page-container" style="display: flex; gap: 30px; width: 95%; margin: 0 auto;">
   <!-- Main Content -->
   <div class="devlog-main-content" style="flex: 1;">
@@ -14,10 +6,6 @@
       <blockquote class="devlog-quote" style="font-style: italic; color: #666; font-size: 0.9em;">
         "Dive into the F.a.R. Team Devlog! From dev updates to creative insights, we share everything that goes into crafting our unique gaming experiences."
       </blockquote>
-    </div>
-
-    <div id="searchResultsHeader" style="display: none; margin-bottom: 20px; font-size: 1.2em; color: #444;">
-      Search results for "<span id="searchQueryText"></span>"
     </div>
 
     <div id="postsContainer">
@@ -79,23 +67,21 @@
           <div class="devlog-post-card-inner">
             <h2 style="margin-top: 0;"><a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
             <p class="devlog-post-excerpt" style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
-            
-            <div class="devlog-post-meta">
-              <div class="devlog-post-meta-left">
-                <div class="devlog-project-badge-pill">
-                  <img src="{{ '/assets/images/' | append: post.project | append: '-icon.png' | relative_url }}" alt="{{ post.project }}">
-                  <span>{{ post.project | capitalize }}</span>
-                </div>
-                <span class="devlog-post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+            <div class="devlog-post-meta" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+              <div class="devlog-post-meta-left" style="display: flex; align-items: center;">
+             <img src="{{ '/assets/images/' | append: post.project | append: '-icon.png' | relative_url }}"
+                  alt="{{ post.project }}" 
+                  style="height: 24px; margin-right: 10px;">
+                <span class="devlog-post-date" style="color: #888; font-size: 0.9em;">{{ post.date | date: "%B %d, %Y" }}</span>
                 {% if post.tags %}
-                  <div class="devlog-post-tags">
+                  <div class="devlog-post-tags" style="margin-left: 15px;">
                     {% for tag in post.tags %}
-                      <span class="devlog-tag-span">{{ tag }}</span>
+                      <span class="devlog-tag-span" style="background: #e0e0e0; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px; color: #333;">{{ tag }}</span>
                     {% endfor %}
                   </div>
                 {% endif %}
               </div>
-              <a href="{{ post.url | relative_url }}" class="devlog-read-more-btn">Read more</a>
+              <a href="{{ post.url | relative_url }}" class="devlog-read-more" style="color: #4CAF50; text-decoration: none;">Read more →</a>
             </div>
           </div>
         </div>
@@ -107,23 +93,14 @@
 
   <div class="devlog-sidebar" id="devlogSidebarContent" style="display: flex; flex-direction: column; gap: 20px; width: 300px; flex-shrink: 0;">
       <div class="devlog-filter-box" style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
-        <h3 style="margin-top: 0; font-size: 1.1em; margin-bottom: 15px;">Projects</h3>
-        <div id="projectFilterList" style="display: flex; flex-direction: column; gap: 10px;">
-          <div class="project-filter-item active" data-value="all">
-             <span>All posts</span>
-          </div>
-          <div class="project-filter-item" data-value="farmoxel">
-             <img src="{{ '/assets/images/farmoxel-icon.png' | relative_url }}" alt="">
-             <span>Farmoxel</span>
-          </div>
-          <div class="project-filter-item" data-value="roommakers">
-             <img src="{{ '/assets/images/roommakers-icon.png' | relative_url }}" alt="">
-             <span>Room Makers</span>
-          </div>
-          <div class="project-filter-item" data-value="kta">
-             <img src="{{ '/assets/images/kta-icon.png' | relative_url }}" alt="">
-             <span>KTA</span>
-          </div>
+        <div class="devlog-project-filter-container" style="position: relative; width: 100%;">
+          <select id="projectFilter" style="width: 100%; padding: 10px 10px 10px 35px; border: 1px solid #ddd; border-radius: 6px; background: #f8f8f8; cursor: pointer; appearance: none;">
+            <option value="all">All Projects</option>
+            <option value="farmoxel" data-icon="{{ '/assets/images/farmoxel-icon.png' | relative_url }}">Farmoxel</option>
+            <option value="roommakers" data-icon="{{ '/assets/images/roommakers-icon.png' | relative_url }}">Room Makers</option>
+            <option value="kta" data-icon="{{ '/assets/images/kta-icon.png' | relative_url }}">KTA</option>
+          </select>
+          <img id="selectedIcon" src="" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; pointer-events: none;">
         </div>
       </div>
       <div class="devlog-filter-box" style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
@@ -241,103 +218,6 @@
     position: relative;
     z-index: 2;
     background: transparent;
-  }
-
-  .devlog-post-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    width: 100%;
-  }
-
-  .devlog-post-meta-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .devlog-project-badge-pill {
-    display: flex;
-    align-items: center;
-    background: #FFD966; /* Default yellow */
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 0.85em;
-    color: #333;
-    box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
-  }
-
-  .devlog-post-card[data-project="farmoxel"] .devlog-project-badge-pill { background: #ffd966; }
-  .devlog-post-card[data-project="roommakers"] .devlog-project-badge-pill { background: #ffd966; }
-  .devlog-post-card[data-project="kta"] .devlog-project-badge-pill { background: #ffd966; }
-
-  .project-filter-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 15px;
-    background: #fdfdfd;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-weight: 500;
-  }
-
-  .project-filter-item:hover {
-    background: #f0f0f0;
-  }
-
-  .project-filter-item.active {
-    background: #FFD966;
-    border-color: #e6c25a;
-    box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
-  }
-
-  .project-filter-item img {
-    height: 20px;
-    margin-right: 10px;
-  }
-
-  .devlog-project-badge-pill img {
-    height: 18px;
-    margin-right: 8px;
-  }
-
-  .devlog-post-date {
-    color: #888;
-    font-size: 0.9em;
-  }
-
-  .devlog-post-tags {
-    display: flex;
-    gap: 5px;
-  }
-
-  .devlog-tag-span {
-    background: #e0e0e0;
-    padding: 3px 8px;
-    border-radius: 12px;
-    font-size: 0.8em;
-    color: #333;
-  }
-
-  .devlog-read-more-btn {
-    padding: 8px 16px;
-    border: 1px solid #333;
-    border-radius: 20px;
-    color: #333;
-    text-decoration: none;
-    font-size: 0.9em;
-    font-weight: 500;
-    transition: all 0.2s;
-  }
-
-  .devlog-read-more-btn:hover {
-    background: #333;
-    color: #fff;
   }
 
   .devlog-toggle-sidebar-button {
@@ -558,33 +438,15 @@
 </style>
 
 <script>
-  let selectedProject = 'all';
-
-  document.querySelectorAll('.project-filter-item').forEach(item => {
-      item.addEventListener('click', function() {
-          document.querySelectorAll('.project-filter-item').forEach(i => i.classList.remove('active'));
-          this.classList.add('active');
-          selectedProject = this.dataset.value;
-          filterPosts();
-      });
-  });
-
+  document.getElementById('projectFilter').addEventListener('change', filterPosts);
   document.getElementById('tagFilter').addEventListener('change', filterPosts);
   document.getElementById('searchPosts').addEventListener('input', filterPosts);
 
   function filterPosts() {
+      const selectedProject = document.getElementById('projectFilter').value.toLowerCase();
       const selectedTag = document.getElementById('tagFilter').value.toLowerCase();
       const searchTerm = document.getElementById('searchPosts').value.toLowerCase();
       const posts = document.querySelectorAll('#postsContainer > div');
-      const searchHeader = document.getElementById('searchResultsHeader');
-      const searchQueryText = document.getElementById('searchQueryText');
-
-      if (searchTerm !== "") {
-          searchHeader.style.display = 'block';
-          searchQueryText.textContent = searchTerm;
-      } else {
-          searchHeader.style.display = 'none';
-      }
 
       posts.forEach(post => {
           const postProject = post.dataset.project || 'all';
