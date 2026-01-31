@@ -1,6 +1,5 @@
-<div class="devlog-page-container" style="display: flex; gap: 30px; width: 98%; margin: 0 auto; max-width: 1800px;">
-  <!-- Main Content -->
-  <div class="devlog-main-content" style="flex: 1;">
+<div class="devlog-page-container devlog-v2-container" style="display: flex; gap: 30px; width: 100%; margin: 0; padding-right: 380px; box-sizing: border-box;">
+<div class="devlog-main-content" style="flex: 1; min-width: 0;">
     <div class="devlog-header" style="text-align: center; margin: 40px 0;">
       <h1 class="devlog-title" style="font-family: 'Montserrat', sans-serif;">F.a.R. Team Devlog</h1>
       <blockquote class="devlog-quote" style="font-style: italic; color: #666; font-size: 0.9em;">
@@ -213,7 +212,7 @@
 
   .devlog-post-overlay-meta {
     position: absolute;
-    top: 15px;
+    bottom: 15px;
     left: 15px;
     z-index: 10;
     display: flex;
