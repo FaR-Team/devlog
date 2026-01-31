@@ -8,10 +8,11 @@ body {
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: 20px;
+  padding: 0 10%;
   background-color: transparent !important;
   color: var(--text-color);
   box-shadow: none !important;
+  box-sizing: border-box;
 }
 
 body.dark-theme .container {
@@ -21,17 +22,23 @@ body.dark-theme .container {
 }
 
 .post {
-  padding: 60px 200px;
-  max-width: 1200px;
-  margin: 0 auto 60px auto;
+  padding: 80px 250px;
+  max-width: 850px;
+  margin: 40px auto 80px auto;
   border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
   background: #ffffff;
 }
 
 body.dark-theme .post {
   background: #262626;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1400px) {
+  .post {
+    padding: 60px 150px;
+  }
 }
 
 @media (max-width: 900px) {
