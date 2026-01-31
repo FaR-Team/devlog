@@ -62,8 +62,7 @@ Maybe we should add a description for each game mode, since the title doesn't sa
 
 When we first started the beta testing for Room Makers in actual phone devices, a lot of people instinctively rotated their phone to play on landscape. This was not part of our plans at the time, after all, the Gameboy Advance was a vertical rectangle, we had to remain faithfull to its desing.
 
-But prioritizing aesthetics over player comfort is not a great idea. That's why we decided to desing a layout for landscape orientation and, honestly, it turned out to be REALLY comfortable to play. I strongly encourage you to test it as much as you can and leave your thoughts about it [here](https://farteam.com.ar/RoomMakersFeedback/)
-We'll make any tweak necesary for it to be the best gaming experience.
+But prioritizing aesthetics over player comfort is not a great idea. That's why we decided to desing a layout for landscape orientation and, honestly, it turned out to be REALLY comfortable to play. I strongly encourage you to test it as much as you can and leave your thoughts about. We'll make any tweak necesary for it to be the best gaming experience.
 
 ---
 And that's it. It may not be the biggest update ever, but it contains two of the most requested features for the game. We hope it encourages you to jump back into Room Makers and play a bit more.
