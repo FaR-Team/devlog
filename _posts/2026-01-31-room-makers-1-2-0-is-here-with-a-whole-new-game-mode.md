@@ -43,7 +43,7 @@ Now, I know there is not much to show visually, but this update has finally lays
 Let's talk about the highlighted ones;
 
 ### Added a new gamemode: Classic!
-<div style="text-align: center;">![](https://raw.githubusercontent.com/FaR-Team/devlog/main/images/room-makers-1-2-0-is-here-with-a-whole-new-game-mode-93ulhz.png)</div>
+![](https://raw.githubusercontent.com/FaR-Team/devlog/main/images/room-makers-1-2-0-is-here-with-a-whole-new-game-mode-93ulhz.png)
 This gamemode was entirelly built around players' feedback. While my original intention was to make the game more complex, assuming complexity would equal deeper, more engaging gameplay, the truth is that some more cassual players found it frustrating. Players who were lucky enough to try our very first DEMOs even mentioned that the game felt more fun back then.
 
 Therefore, we added a **Classic** mode!
