@@ -15,26 +15,51 @@
           {% assign isLatest = true %}
         {% endif %}
 
-        {% assign imageUrl = "" %}
-        {% if post.content contains "![" %}
-          {% assign images = post.content | split: "![" %}
-          {% for img in images offset:1 %}
-            {% if img contains "](" %}
-              {% assign firstImagePart = img | split: ")" | first %}
-              {% if firstImagePart contains "](" %}
-                {% assign imageUrl = firstImagePart | split: "](" | last | strip %}
-                {% break %}
+        {% assign imageUrl = post.image %}
+        {% if imageUrl == nil or imageUrl == "" %}
+          {% if post.content contains "![" %}
+            {% assign postImages = post.content | split: "![" %}
+            {% for img in postImages offset:1 %}
+              {% if img contains "](" %}
+                {% assign parts = img | split: ")" | first | split: "](" %}
+                {% if parts.size > 1 %}
+                  {% assign imageUrl = parts[1] | strip %}
+                  {% break %}
+                {% endif %}
               {% endif %}
-            {% endif %}
-          {% endfor %}
+            {% endfor %}
+          {% endif %}
         {% endif %}
 
-        <div class="devlog-post-card {% if isLatest %}latest-post{% endif %} {% if imageUrl != "" %}has-image{% endif %}" 
+        {% if imageUrl == nil or imageUrl == "" %}
+          {% if post.content contains "<img" %}
+            {% assign postHtmlImages = post.content | split: "<img" %}
+            {% for img in postHtmlImages offset:1 %}
+              {% if img contains "src=" %}
+                {% assign srcPart = img | split: 'src="' | last %}
+                {% if srcPart == img %}{% assign srcPart = img | split: "src='" | last %}{% endif %}
+                {% if srcPart != img %}
+                  {% assign imageUrl = srcPart | split: '"' | first | split: "'" | first | strip %}
+                  {% break %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+
+        {% assign finalImageUrl = imageUrl %}
+        {% if imageUrl != "" and imageUrl != nil %}
+          {% unless imageUrl contains "://" %}
+            {% assign finalImageUrl = imageUrl | relative_url %}
+          {% endunless %}
+        {% endif %}
+
+        <div class="devlog-post-card {% if isLatest %}latest-post{% endif %} {% if imageUrl != "" and imageUrl != nil %}has-image{% endif %}" 
              data-project="{{ post.project | downcase }}" 
              data-tags="{{ post.tags | join: ',' | downcase }}">
           
-          {% if imageUrl != "" %}
-            <div class="devlog-post-image-side" style="background-image: url('{{ imageUrl | relative_url }}');">
+          {% if imageUrl != "" and imageUrl != nil %}
+            <div class="devlog-post-image-side" style="background-image: url('{{ finalImageUrl }}');">
               <div class="devlog-post-image-gradient"></div>
             </div>
           {% endif %}
