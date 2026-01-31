@@ -91,9 +91,7 @@
 
   <button id="toggleSidebarButton" class="devlog-toggle-sidebar-button" aria-controls="devlogSidebarContent" aria-expanded="false">Show Filters</button>
 
-  <!-- Sidebar Section -->
   <div class="devlog-sidebar" id="devlogSidebarContent" style="display: flex; flex-direction: column; gap: 20px; width: 300px; flex-shrink: 0;">
-      <!-- Project Filter Box -->
       <div class="devlog-filter-box" style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
         <div class="devlog-project-filter-container" style="position: relative; width: 100%;">
           <select id="projectFilter" style="width: 100%; padding: 10px 10px 10px 35px; border: 1px solid #ddd; border-radius: 6px; background: #f8f8f8; cursor: pointer; appearance: none;">
@@ -105,7 +103,6 @@
           <img id="selectedIcon" src="" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; pointer-events: none;">
         </div>
       </div>
-      <!-- Tag Filter Box -->
       <div class="devlog-filter-box" style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
         <select id="tagFilter" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; background: #f8f8f8; cursor: pointer;">
           <option value="all">All Tags</option>
@@ -125,7 +122,6 @@
           {% endfor %}
         </select>
       </div>
-      <!-- Search and Archives Box -->
       <div class="devlog-filter-box" style="width: 100%; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: fit-content;">
         <input type="search" id="searchPosts" placeholder="Search posts..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 20px;">
 
@@ -171,22 +167,22 @@
 
   .devlog-post-card.latest-post {
     margin: 30px 0;
-    min-height: 400px;
+    min-height: 280px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
 
   .devlog-post-card.latest-post .devlog-post-card-inner {
-    padding: 40px;
+    padding: 25px;
   }
 
   .devlog-post-card.latest-post h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
+    font-size: 1.6em;
+    margin-bottom: 15px;
   }
 
   .devlog-post-card.latest-post .devlog-post-excerpt {
-    font-size: 1.15em;
-    line-height: 1.6;
+    font-size: 1.05em;
+    line-height: 1.5;
   }
 
   .devlog-post-card.has-image .devlog-post-image-side {
@@ -200,7 +196,7 @@
   }
 
   .devlog-post-card.latest-post.has-image .devlog-post-image-side {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
   }
 
   .devlog-post-image-gradient {
