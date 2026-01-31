@@ -58,30 +58,30 @@
              data-project="{{ post.project | downcase }}" 
              data-tags="{{ post.tags | join: ',' | downcase }}">
           
-          {% if imageUrl != "" and imageUrl != nil %}
-            <div class="devlog-post-image-side" style="background-image: url('{{ finalImageUrl }}');">
-              <div class="devlog-post-image-gradient"></div>
+          <div class="devlog-post-image-side" style="{% if imageUrl != "" and imageUrl != nil %}background-image: url('{{ finalImageUrl }}');{% else %}background: #e0e0e0; flex: 0 0 80px; min-width: 80px;{% endif %}">
+            <div class="devlog-post-image-gradient"></div>
+            
+            <div class="devlog-post-overlay-meta">
+              <div class="devlog-overlay-top">
+                <img src="{{ '/assets/images/' | append: post.project | append: '-icon.png' | relative_url }}"
+                     alt="{{ post.project }}" class="devlog-overlay-icon">
+                <span class="devlog-overlay-date">{{ post.date | date: "%B %d, %Y" }}</span>
+              </div>
+              {% if post.tags %}
+                <div class="devlog-overlay-tags">
+                  {% for tag in post.tags %}
+                    <span class="devlog-overlay-tag">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
             </div>
-          {% endif %}
+          </div>
 
           <div class="devlog-post-card-inner">
             <h2 style="margin-top: 0;"><a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h2>
             <p class="devlog-post-excerpt" style="color: #666;">{{ post.content | strip_html | truncatewords: 50 }}</p>
-            <div class="devlog-post-meta" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
-              <div class="devlog-post-meta-left" style="display: flex; align-items: center;">
-             <img src="{{ '/assets/images/' | append: post.project | append: '-icon.png' | relative_url }}"
-                  alt="{{ post.project }}" 
-                  style="height: 24px; margin-right: 10px;">
-                <span class="devlog-post-date" style="color: #888; font-size: 0.9em;">{{ post.date | date: "%B %d, %Y" }}</span>
-                {% if post.tags %}
-                  <div class="devlog-post-tags" style="margin-left: 15px;">
-                    {% for tag in post.tags %}
-                      <span class="devlog-tag-span" style="background: #e0e0e0; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; margin-right: 5px; color: #333;">{{ tag }}</span>
-                    {% endfor %}
-                  </div>
-                {% endif %}
-              </div>
-              <a href="{{ post.url | relative_url }}" class="devlog-read-more" style="color: #4CAF50; text-decoration: none;">Read more →</a>
+            <div class="devlog-post-meta-bottom">
+              <a href="{{ post.url | relative_url }}" class="devlog-read-more" style="color: #4CAF50; text-decoration: none; font-weight: 500;">Read more →</a>
             </div>
           </div>
         </div>
@@ -209,6 +209,54 @@
     z-index: 1;
   }
 
+  .devlog-post-overlay-meta {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: calc(100% - 30px);
+  }
+
+  .devlog-overlay-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: fit-content;
+  }
+
+  .devlog-overlay-icon {
+    height: 20px;
+  }
+
+  .devlog-overlay-date {
+    font-size: 0.85em;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .devlog-overlay-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .devlog-overlay-tag {
+    background: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
   .devlog-post-card-inner {
     padding: 25px;
     flex: 1;
@@ -218,6 +266,10 @@
     position: relative;
     z-index: 2;
     background: transparent;
+  }
+
+  .devlog-post-meta-bottom {
+    margin-top: 15px;
   }
 
   .devlog-toggle-sidebar-button {
