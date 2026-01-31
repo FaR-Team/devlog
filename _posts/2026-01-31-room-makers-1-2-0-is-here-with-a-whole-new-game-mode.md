@@ -57,7 +57,8 @@ Of course, the old Casual Mode it's still there, for those who want to experienc
 
 Maybe we should add a description for each game mode, since the title doesn't say much. But working with such limited UI is a challenge we, sometimes, cannot overcome. That said, this is VERY necessary for our next update.
 
-<h3 id="UwU">Added a full landscape orientation to the game! and Added a landscape layout, with a cute sticker and everything</h3>![](https://raw.githubusercontent.com/FaR-Team/devlog/main/images/room-makers-1-2-0-is-here-with-a-whole-new-game-mode-a50tkb.png)
+### Added a full landscape orientation to the game! and Added a landscape layout, with a cute sticker and everything
+![](https://raw.githubusercontent.com/FaR-Team/devlog/main/images/room-makers-1-2-0-is-here-with-a-whole-new-game-mode-a50tkb.png)
 
 When we first started the beta testing for Room Makers in actual phone devices, a lot of people instinctively rotated their phone to play on landscape. This was not part of our plans at the time, after all, the Gameboy Advance was a vertical rectangle, we had to remain faithfull to its desing.
 
