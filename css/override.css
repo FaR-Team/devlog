@@ -5,14 +5,13 @@ body {
 }
 
 .container {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 15% !important;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 20px;
   background-color: transparent !important;
-  color: var(--text-color) !important;
+  color: var(--text-color);
   box-shadow: none !important;
-  box-sizing: border-box !important;
 }
 
 body.dark-theme .container {
@@ -22,39 +21,29 @@ body.dark-theme .container {
 }
 
 .post {
-  padding: 100px 300px !important;
-  max-width: 800px !important;
-  margin: 40px auto 100px auto !important;
-  border-radius: 16px !important;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.08) !important;
-  background: #ffffff !important;
-  box-sizing: border-box !important;
-}
-
-.post-page-wrapper {
-  padding: 100px 300px !important;
-  max-width: 800px !important;
+  padding: 60px 180px;
+  max-width: 1300px;
+  margin: 0 auto 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
 }
 
 body.dark-theme .post {
-  background: #262626 !important;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+  background: #262626;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 1400px) {
-
-  .post,
-  .post-page-wrapper {
-    padding: 60px 100px !important;
+@media (max-width: 1200px) {
+  .post {
+    padding: 60px 80px;
   }
 }
 
 @media (max-width: 900px) {
-
-  .post,
-  .post-page-wrapper {
-    padding: 40px 30px !important;
-    margin: 0 15px 30px 15px !important;
+  .post {
+    padding: 40px 30px;
+    margin: 0 15px 30px 15px;
   }
 }
 
