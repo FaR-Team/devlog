@@ -18,12 +18,15 @@
         {% assign imageUrl = "" %}
         {% if post.content contains "![" %}
           {% assign images = post.content | split: "![" %}
-          {% if images.size > 1 %}
-            {% assign firstImagePart = images[1] | split: ")" | first %}
-            {% if firstImagePart contains "](" %}
-              {% assign imageUrl = firstImagePart | split: "](" | last %}
+          {% for img in images offset:1 %}
+            {% if img contains "](" %}
+              {% assign firstImagePart = img | split: ")" | first %}
+              {% if firstImagePart contains "](" %}
+                {% assign imageUrl = firstImagePart | split: "](" | last | strip %}
+                {% break %}
+              {% endif %}
             {% endif %}
-          {% endif %}
+          {% endfor %}
         {% endif %}
 
         <div class="devlog-post-card {% if isLatest %}latest-post{% endif %} {% if imageUrl != "" %}has-image{% endif %}" 
@@ -130,7 +133,7 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    background: #fdfdfd;
+    background: #f5f5f5;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-height: 200px;
     position: relative;
@@ -143,7 +146,7 @@
 
   .devlog-post-card.latest-post {
     margin: 30px 0;
-    min-height: 350px;
+    min-height: 400px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
 
@@ -152,21 +155,23 @@
   }
 
   .devlog-post-card.latest-post h2 {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-bottom: 20px;
   }
 
   .devlog-post-card.latest-post .devlog-post-excerpt {
-    font-size: 1.1em;
+    font-size: 1.15em;
     line-height: 1.6;
   }
 
   .devlog-post-card.has-image .devlog-post-image-side {
     flex: 0 0 40%;
     min-width: 300px;
+    min-height: 200px;
     background-size: cover;
     background-position: center;
     position: relative;
+    background-repeat: no-repeat;
   }
 
   .devlog-post-card.latest-post.has-image .devlog-post-image-side {
@@ -178,8 +183,8 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 100px;
-    background: linear-gradient(to right, transparent, #fdfdfd);
+    width: 150px;
+    background: linear-gradient(to right, transparent, #f5f5f5);
     z-index: 1;
   }
 
@@ -191,7 +196,7 @@
     justify-content: center;
     position: relative;
     z-index: 2;
-    background: #fdfdfd;
+    background: transparent;
   }
 
   .devlog-toggle-sidebar-button {
@@ -339,10 +344,10 @@
 
     .devlog-post-image-gradient {
       width: 100%;
-      height: 60px;
+      height: 80px;
       top: auto;
       bottom: 0;
-      background: linear-gradient(to bottom, transparent, #fdfdfd);
+      background: linear-gradient(to bottom, transparent, #f5f5f5);
     }
 
     .devlog-post-card.latest-post .devlog-post-card-inner {
