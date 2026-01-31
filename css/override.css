@@ -22,8 +22,8 @@ body.dark-theme .container {
 }
 
 .post {
-  padding: 80px 250px !important;
-  max-width: 1000px !important;
+  padding: 100px 300px !important;
+  max-width: 800px !important;
   margin: 40px auto 100px auto !important;
   border-radius: 16px !important;
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.08) !important;
@@ -31,21 +31,30 @@ body.dark-theme .container {
   box-sizing: border-box !important;
 }
 
+.post-page-wrapper {
+  padding: 100px 300px !important;
+  max-width: 800px !important;
+}
+
 body.dark-theme .post {
-  background: #262626;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  background: #262626 !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
 }
 
 @media (max-width: 1400px) {
-  .post {
-    padding: 60px 150px;
+
+  .post,
+  .post-page-wrapper {
+    padding: 60px 100px !important;
   }
 }
 
 @media (max-width: 900px) {
-  .post {
-    padding: 40px 30px;
-    margin: 0 15px 30px 15px;
+
+  .post,
+  .post-page-wrapper {
+    padding: 40px 30px !important;
+    margin: 0 15px 30px 15px !important;
   }
 }
 
