@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "What the hell is a Within Reach? October 1st update"
-date: 2026-09-22
+date: 2026-10-01
 project: farmoxel
-tags: []
-published: false
+tags: [Devlog, Art]
+published: true
 ---
 
 Allow me to tell you a completely unrelated story;
@@ -27,4 +27,7 @@ ANYWAY, with that said, soon enough we'll post the new logo, which it is already
 
 ---
 Boy do I love talking...
-Well,
+Well, now let's go back to normal. I KNOW, we've been gone for a while, but, as always, that does not mean we haven't been working on our games. In two weeks from now, I'll post the huge changelog of all the things we've been working on. 
+I hope you like what there's to come.
+
+**Bye! Have a great time~ **
