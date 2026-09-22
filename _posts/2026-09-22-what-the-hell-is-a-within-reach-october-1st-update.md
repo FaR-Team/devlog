@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What the hell is a Within Reach? October 1st update"
+title: "What the hell is a Within Reach? "
 date: 2026-10-01
 project: farmoxel
 tags: [Devlog, Art]
