@@ -12,9 +12,9 @@ There was this indie shortfilm which, initially, it was called "Withered Rose". 
 The idea was to record a whole timelapse of an actual rose slowly withering. The problem was, this was way before digital cameras, therefore they had to record the whole timelapse for hours with film, which was pretty expensive. After some thinking, the timelapse was removed from the script and the rose lost all of its protagonism. 
 After that, the title was completely missleading. Of course, there was a withered rose at some point, but it did not hold the staring role it used to. After some deliberance, the title was changed to "The man in the way", which was related to an important plot point.
 
-Now, you might be wndering...
+Now, you might be wondering...
 # Why the fluffs are you telling me this???
-The answer is pretty simple: Titles are VERY important. You cannot simply name your product however you feel like (Although some would), You need to be mindful about it. Until today, our project was called "Project: Farmoxel" cause it was a silly little name one of the devs gave it combining "Farm" and "Voxel" (such and artist with words, I know.), but that name was simply not fitting at all. 
+The answer is pretty simple: Titles are VERY important. You cannot simply name your product however you feel like (Although some would), You need to be mindful about it. Until today, our project was called "Project: Farmoxel" cause it was a silly little name one of the devs gave it combining "Farm" and "Voxel" (such an artist with words, I know.), but that name was simply not fitting at all. 
 I've been thinking about it for a while now and a couple things came to the table at some point, names as "Echoes of Bibury", "Mind over soil" (???) and things like that... all were terrible.
 
 I'm happy to announce that the game FINALLY has a name:
